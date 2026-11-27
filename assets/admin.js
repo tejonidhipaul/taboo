@@ -108,6 +108,7 @@ async function loadSession(id) {
   wordsRevealed = false;
   showOnly('livePanel');
   renderSession();
+  if (activeSession.timer_running) startLocalTimer();
 }
 
 function engineerLink() {
@@ -285,7 +286,9 @@ function addCustomCard(event) {
   const target = $('customTarget').value.trim();
   const forbidden = $('customForbidden').value.split(',').map((word) => word.trim()).filter(Boolean);
   if (forbidden.length < 4 || forbidden.length > 6) { $('customStatus').textContent = 'Enter between 4 and 6 forbidden words.'; return; }
-  if (!isOneOrTwoWords(target) || forbidden.some((word) => !isOneOrTwoWords(word))) { $('customStatus').textContent = 'Keep the target and every forbidden entry to one or two words.'; return; }
+  if (!target || !isOneOrTwoWords(target) || forbidden.some((word) => !isOneOrTwoWords(word))) { $('customStatus').textContent = 'Enter a target and keep it and every forbidden entry to one or two words.'; return; }
+  const explanation = $('customExplanation').value.trim();
+  if (!explanation) { $('customStatus').textContent = 'Enter a model explanation.'; return; }
   const cards = customCards();
   cards.push({
     id: `custom-${crypto.randomUUID()}`,
@@ -294,7 +297,7 @@ function addCustomCard(event) {
     category: 'Custom card',
     level: 'intermediate',
     forbidden,
-    explanation: $('customExplanation').value.trim()
+    explanation
   });
   saveCustomCards(cards);
   $('customCardForm').reset();

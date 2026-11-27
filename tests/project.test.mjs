@@ -39,6 +39,17 @@ test('theme and difficulty behavior matches the UI', () => {
   assert.deepEqual(['beginner', 'intermediate', 'advanced'].map(forbiddenCount), [4, 5, 6]);
 });
 
+test('homepage card count and resumed mentor timer match the current library', () => {
+  const homepage = read('index.html');
+  const adminScript = read('assets/admin.js');
+  assert.match(homepage, /<strong>350<\/strong><span>built-in cards<\/span>/);
+  const loadSessionBody = adminScript.slice(adminScript.indexOf('async function loadSession'), adminScript.indexOf('function engineerLink'));
+  assert.match(loadSessionBody, /if \(activeSession\.timer_running\) startLocalTimer\(\)/);
+  const addCustomCardBody = adminScript.slice(adminScript.indexOf('function addCustomCard'), adminScript.indexOf('function exportCustomCards'));
+  assert.match(addCustomCardBody, /if \(!target \|\| !isOneOrTwoWords\(target\)/);
+  assert.match(addCustomCardBody, /if \(!explanation\)/);
+});
+
 test('every JavaScript DOM id exists in its page', () => {
   for (const [scriptName, htmlName] of [['assets/admin.js', 'admin.html'], ['assets/engineer.js', 'engineer.html']]) {
     const script = read(scriptName);
