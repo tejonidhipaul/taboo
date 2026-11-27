@@ -1,5 +1,5 @@
-import { THEME_LABELS, DIFFICULTY_LABELS } from './cards.js';
-import { createSupabaseClient, fitTextToWidth, formatTimer } from './common.js';
+import { THEME_LABELS } from './cards.js?v=2026112705';
+import { createSupabaseClient, fitTextToWidth, formatTimer, setAnimatedVisibility, celebrate, updateTimerAlert } from './common.js?v=2026112710';
 
 const $ = (id) => document.getElementById(id);
 const sessionId = new URLSearchParams(location.search).get('s');
@@ -8,8 +8,12 @@ let pollHandle;
 let fetching = false;
 let lastState = null;
 let lastCardIndex = null;
+let timerVisible = false;
+let timerObservedAt = 0;
+let timerConnected = false;
 let submittingAction = false;
 let waitingCardIndex = null;
+let celebratedCardIndex = null;
 
 function showOnly(panel) {
   ['engineerLoading', 'engineerError', 'engineerWaiting', 'engineerGame', 'engineerEnded'].forEach((id) => $(id).classList.toggle('is-hidden', id !== panel));
@@ -27,9 +31,35 @@ function fitCardWords() {
   document.querySelectorAll('#engineerCard .card-word').forEach(fitTextToWidth);
 }
 
+function renderTimer() {
+  if (!lastState || lastState.phase !== 'active') return;
+  const timerCell = $('engineerTimerCell');
+  if (Number(lastState.timer_seconds) === 0) {
+    $('engineerTimer').textContent = 'Untimed';
+    updateTimerAlert(timerCell, 0, 0, false);
+    return;
+  }
+  const elapsed = lastState.timer_running && timerConnected
+    ? Math.floor(Math.max(0, Date.now() - timerObservedAt) / 1000)
+    : 0;
+  const remaining = Math.max(0, Number(lastState.timer_remaining) - elapsed);
+  $('engineerTimer').textContent = formatTimer(remaining);
+  if (remaining <= 5) timerCell.classList.remove('timer-pulse');
+  updateTimerAlert(timerCell, lastState.timer_seconds, remaining, lastState.timer_running && timerConnected);
+}
+
 function render(state) {
+  if (lastState && lastState.id === state.id && Number(state.score_correct) > Number(lastState.score_correct)
+      && celebratedCardIndex !== Number(lastState.card_index)) {
+    celebrate($('engineerActions'));
+    celebratedCardIndex = Number(lastState.card_index);
+  }
   lastState = state;
+  timerObservedAt = Date.now();
+  timerConnected = true;
   const cardIndex = Number(state.card_index || 0);
+  const firstCard = lastCardIndex === null;
+  const cardChanged = !firstCard && cardIndex !== lastCardIndex;
   if (lastCardIndex !== null && cardIndex !== lastCardIndex) {
     waitingCardIndex = null;
     $('engineerActionStatus').textContent = '';
@@ -52,20 +82,29 @@ function render(state) {
     return;
   }
   $('engineerTheme').textContent = THEME_LABELS[state.mode] || state.mode;
-  $('engineerDifficulty').textContent = DIFFICULTY_LABELS[state.difficulty] || state.difficulty;
   setCardText($('engineerTarget'), card.target);
   $('engineerForbidden').replaceChildren(...(card.forbidden || []).map((entry) => {
     const element = document.createElement('span');
     setCardText(element, entry);
     return element;
   }));
-  $('engineerClueText').textContent = card.clue || '';
-  $('engineerClue').classList.toggle('is-hidden', !card.clue);
+  if (card.clue) $('engineerClueText').textContent = card.clue;
+  setAnimatedVisibility($('engineerClue'), Boolean(card.clue), {
+    immediate: firstCard || cardChanged,
+    expand: true,
+    onHidden: () => { $('engineerClueText').textContent = ''; }
+  });
   $('engineerRound').textContent = state.card_index || 1;
-  const timerHidden = card.timer_visible !== true;
-  $('engineerTimerCell').classList.toggle('is-hidden', timerHidden);
-  $('engineerFooter').classList.toggle('timer-hidden', timerHidden);
-  $('engineerTimer').textContent = state.timer_seconds === 0 ? 'Untimed' : formatTimer(state.timer_remaining);
+  const showTimer = card.timer_visible === true;
+  const timerCell = $('engineerTimerCell');
+  setAnimatedVisibility(timerCell, showTimer);
+  if (showTimer && !timerVisible) {
+    timerCell.classList.remove('timer-pulse');
+    void timerCell.offsetWidth;
+    timerCell.classList.add('timer-pulse');
+  }
+  timerVisible = showTimer;
+  renderTimer();
   $('engineerScore').textContent = state.score_correct || 0;
   const pending = Boolean(state.pending_mentee_action) || waitingCardIndex === cardIndex;
   $('engineerGuessed').disabled = submittingAction || pending;
@@ -88,6 +127,10 @@ async function submitAction(action) {
     });
     if (error) throw error;
     if (Number(lastState.card_index) === cardIndex) {
+      if (action === 'correct' && celebratedCardIndex !== cardIndex) {
+        celebrate($('engineerActions'));
+        celebratedCardIndex = cardIndex;
+      }
       waitingCardIndex = cardIndex;
       $('engineerActionStatus').textContent = 'Recorded. Waiting for the mentor console to show the next card…';
     }
@@ -113,6 +156,8 @@ async function fetchState() {
     if (!data) throw new Error('This session does not exist.');
     render(data);
   } catch (error) {
+    timerConnected = false;
+    renderTimer();
     if (!lastState) {
       $('engineerErrorTitle').textContent = 'Unable to join';
       $('engineerErrorText').textContent = error.message || 'Check the session link with your mentor.';
@@ -137,8 +182,14 @@ async function init() {
       .subscribe((status) => {
         $('engineerConnection').textContent = status === 'SUBSCRIBED' ? 'Live · connected' : 'Connecting…';
       });
-    pollHandle = setInterval(fetchState, 3000);
-    window.addEventListener('beforeunload', () => clearInterval(pollHandle));
+    const poll = async () => {
+      await fetchState();
+      const interval = lastState?.timer_running && lastState.current_card?.timer_visible ? 1000 : 3000;
+      pollHandle = setTimeout(poll, interval);
+    };
+    pollHandle = setTimeout(poll, lastState?.timer_running && lastState.current_card?.timer_visible ? 1000 : 3000);
+    const timerHandle = setInterval(renderTimer, 250);
+    window.addEventListener('beforeunload', () => { clearTimeout(pollHandle); clearInterval(timerHandle); });
   } catch (error) {
     $('engineerErrorTitle').textContent = 'Unable to connect';
     $('engineerErrorText').textContent = error.message || 'Check the link and try again.';
@@ -148,6 +199,9 @@ async function init() {
 }
 
 window.addEventListener('resize', fitCardWords);
+$('engineerTimerCell').addEventListener('animationend', (event) => {
+  if (event.animationName === 'timer-pulse') $('engineerTimerCell').classList.remove('timer-pulse');
+});
 $('engineerGuessed').addEventListener('click', () => submitAction('correct'));
 $('engineerTaboo').addEventListener('click', () => submitAction('taboo'));
 document.fonts.ready.then(fitCardWords);

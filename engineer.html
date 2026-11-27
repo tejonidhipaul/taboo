@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Engineer game screen for Say It!">
   <title>Say It! · Live challenge</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=2026112710">
 </head>
 <body class="engineer-body">
   <header class="engineer-top"><a class="wordmark light" href="index.html"><span class="brand-mark small">SI</span><span>Say It!</span></a><span id="engineerConnection" class="connection-pill">Connecting…</span></header>
@@ -14,21 +14,21 @@
     <section id="engineerError" class="engineer-message is-hidden"><p class="eyebrow">Unable to join</p><h1 id="engineerErrorTitle">Session not found</h1><p id="engineerErrorText">Check the link with your mentor.</p></section>
     <section id="engineerWaiting" class="engineer-message engineer-waiting is-hidden"><div class="waiting-pulse" aria-hidden="true"><span></span></div><p class="eyebrow">You’re connected</p><h1 id="waitingGreeting">Welcome!</h1><p id="waitingName">Your mentor will start the first card when ready.</p><p class="waiting-tip">Keep this screen open. Your first word will appear automatically.</p><div class="waiting-rules"><h2 id="waitingRulesTitle">Quick rules</h2><ul><li>Describe the large word on your card without saying it.</li><li>Do not use any of the forbidden words shown below it.</li><li>Do not spell or translate the word; explain it in your own words.</li><li>When your mentor guesses, select Guessed. If you say a forbidden word, select Taboo.</li></ul></div></section>
     <section id="engineerGame" class="engineer-game is-hidden">
-      <div class="engineer-meta"><span id="engineerTheme" class="pill light-pill">Everyday English</span><span id="engineerDifficulty">Intermediate</span></div>
+      <div class="engineer-meta"><span id="engineerTheme" class="pill light-pill">Everyday English</span><div id="engineerTimerCell" class="engineer-timer is-hidden"><small>Time</small><strong id="engineerTimer">01:30</strong></div></div>
       <article id="engineerCard" class="engineer-taboo-card">
         <div class="taboo-card-heading"><strong>SAY IT!</strong><span>DESCRIBE THE WORD</span></div>
         <h1 id="engineerTarget">Umbrella</h1>
         <p class="taboo-words-label">Forbidden words</p>
         <div id="engineerForbidden" class="engineer-forbidden"></div>
-        <section id="engineerClue" class="engineer-clue is-hidden" aria-live="polite"><strong>A clue from your mentor</strong><p id="engineerClueText"></p></section>
+        <section id="engineerClue" class="engineer-clue-container is-hidden" aria-live="polite"><div class="engineer-clue"><strong>Hint</strong><p id="engineerClueText"></p></div></section>
       </article>
-      <div class="engineer-actions"><button id="engineerGuessed" class="btn btn-accent" type="button">Guessed</button><button id="engineerTaboo" class="btn btn-danger" type="button">Taboo</button></div>
+      <div id="engineerActions" class="engineer-actions celebration-anchor"><button id="engineerGuessed" class="btn btn-accent" type="button">Guessed</button><button id="engineerTaboo" class="btn btn-danger" type="button">Taboo</button></div>
       <p id="engineerActionStatus" class="engineer-action-status" role="status" aria-live="polite"></p>
-      <div id="engineerFooter" class="engineer-footer"><div><small>Round</small><strong id="engineerRound">1</strong></div><div id="engineerTimerCell"><small>Time</small><strong id="engineerTimer">01:30</strong></div><div><small>Correct</small><strong id="engineerScore">0</strong></div></div>
+      <div id="engineerFooter" class="engineer-footer"><div><small>Round</small><strong id="engineerRound">1</strong></div><div><small>Correct</small><strong id="engineerScore">0</strong></div></div>
     </section>
     <section id="engineerEnded" class="engineer-message is-hidden"><p class="eyebrow">Session complete</p><h1>Well done!</h1><p>Your mentor has ended this challenge.</p></section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script type="module" src="assets/engineer.js"></script>
+  <script type="module" src="assets/engineer.js?v=2026112710"></script>
 </body>
 </html>

@@ -14,7 +14,8 @@
       "Vehicle"
     ],
     "explanation": "Describe Car by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about a daily commute."
   },
   {
     "id": "pdf-01-2-dragonfly",
@@ -31,7 +32,8 @@
       "Pond"
     ],
     "explanation": "Describe Dragonfly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Picture a slender creature near water."
   },
   {
     "id": "pdf-01-3-snowflake",
@@ -48,7 +50,8 @@
       "Unique"
     ],
     "explanation": "Describe Snowflake by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Picture a tiny crystal from the sky."
   },
   {
     "id": "pdf-01-4-hungry",
@@ -65,7 +68,8 @@
       "Appetite"
     ],
     "explanation": "Describe Hungry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about the time before lunch."
   },
   {
     "id": "pdf-01-5-duck",
@@ -82,7 +86,8 @@
       "Pond"
     ],
     "explanation": "Describe Duck by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Picture a creature with a bill."
   },
   {
     "id": "pdf-01-6-pillow",
@@ -99,7 +104,8 @@
       "Cushion"
     ],
     "explanation": "Describe Pillow by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about settling in for the night."
   },
   {
     "id": "pdf-01-7-dance",
@@ -116,7 +122,8 @@
       "Rhythm"
     ],
     "explanation": "Describe Dance by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about moving to a beat."
   },
   {
     "id": "pdf-01-8-proud",
@@ -133,7 +140,8 @@
       "Confidence"
     ],
     "explanation": "Describe Proud by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about a personal achievement."
   },
   {
     "id": "pdf-02-1-blanket",
@@ -150,7 +158,8 @@
       "Cover"
     ],
     "explanation": "Describe Blanket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about getting cosy on a sofa."
   },
   {
     "id": "pdf-02-2-shanghai",
@@ -167,7 +176,8 @@
       "City"
     ],
     "explanation": "Describe Shanghai by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about a major port on the Huangpu."
   },
   {
     "id": "pdf-02-3-soccer",
@@ -184,7 +194,8 @@
       "Goal"
     ],
     "explanation": "Describe Soccer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Picture players trying to score with their feet."
   },
   {
     "id": "pdf-02-4-cheese",
@@ -201,7 +212,8 @@
       "Dairy"
     ],
     "explanation": "Describe Cheese by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about something aged or grated."
   },
   {
     "id": "pdf-02-5-snail",
@@ -218,7 +230,8 @@
       "Shell"
     ],
     "explanation": "Describe Snail by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Picture a tiny garden visitor."
   },
   {
     "id": "pdf-02-6-dinosaur",
@@ -235,7 +248,8 @@
       "Fossil"
     ],
     "explanation": "Describe Dinosaur by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about prehistoric giants."
   },
   {
     "id": "pdf-02-7-japan",
@@ -252,7 +266,8 @@
       "Island"
     ],
     "explanation": "Describe Japan by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about the land of Mount Fuji."
   },
   {
     "id": "pdf-02-8-new-york",
@@ -269,7 +284,8 @@
       "Manhattan"
     ],
     "explanation": "Describe New York by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Picture skyscrapers and Broadway."
   },
   {
     "id": "pdf-03-1-husband",
@@ -286,7 +302,8 @@
       "Spouse"
     ],
     "explanation": "Describe Husband by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about a family relationship."
   },
   {
     "id": "pdf-03-2-michael-jackson",
@@ -303,7 +320,8 @@
       "Pop"
     ],
     "explanation": "Describe Michael Jackson by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about the moonwalk."
   },
   {
     "id": "pdf-03-3-underwear",
@@ -320,7 +338,8 @@
       "Garment"
     ],
     "explanation": "Describe Underwear by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about the first layer you put on."
   },
   {
     "id": "pdf-03-4-girlfriend",
@@ -337,7 +356,8 @@
       "Partner"
     ],
     "explanation": "Describe Girlfriend by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about a romantic relationship."
   },
   {
     "id": "pdf-03-5-giraffe",
@@ -354,7 +374,8 @@
       "Spots"
     ],
     "explanation": "Describe Giraffe by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Picture an animal reaching high branches."
   },
   {
     "id": "pdf-03-6-wok",
@@ -371,7 +392,8 @@
       "Pan"
     ],
     "explanation": "Describe Wok by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about stir-frying ingredients."
   },
   {
     "id": "pdf-03-7-camera",
@@ -388,7 +410,8 @@
       "Lens"
     ],
     "explanation": "Describe Camera by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about capturing a moment."
   },
   {
     "id": "pdf-03-8-slippers",
@@ -405,7 +428,8 @@
       "Indoor"
     ],
     "explanation": "Describe Slippers by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about relaxing after taking off shoes."
   },
   {
     "id": "pdf-04-1-comb",
@@ -422,7 +446,8 @@
       "Teeth"
     ],
     "explanation": "Describe Comb by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about untangling strands."
   },
   {
     "id": "pdf-04-2-hamburger",
@@ -439,7 +464,8 @@
       "Bun"
     ],
     "explanation": "Describe Hamburger by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Picture a patty between two halves."
   },
   {
     "id": "pdf-04-3-polar-bear",
@@ -456,7 +482,8 @@
       "Arctic"
     ],
     "explanation": "Describe Polar Bear by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about a powerful northern hunter."
   },
   {
     "id": "pdf-04-4-penguin",
@@ -473,7 +500,8 @@
       "Antarctica"
     ],
     "explanation": "Describe Penguin by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Picture a creature waddling on ice."
   },
   {
     "id": "pdf-04-5-glasses",
@@ -490,7 +518,8 @@
       "Vision"
     ],
     "explanation": "Describe Glasses by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about reading something far away."
   },
   {
     "id": "pdf-04-6-popcorn",
@@ -507,7 +536,8 @@
       "Movie"
     ],
     "explanation": "Describe Popcorn by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about what happens to heated corn."
   },
   {
     "id": "pdf-04-7-speech",
@@ -524,7 +554,8 @@
       "Orator"
     ],
     "explanation": "Describe Speech by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about addressing a group formally."
   },
   {
     "id": "pdf-04-8-furious",
@@ -541,7 +572,8 @@
       "Temper"
     ],
     "explanation": "Describe Furious by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about an intense reaction to injustice."
   },
   {
     "id": "pdf-05-1-jealousy",
@@ -558,7 +590,8 @@
       "Possessive"
     ],
     "explanation": "Describe Jealousy by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about wanting what someone else has."
   },
   {
     "id": "pdf-05-2-chicken-leg",
@@ -575,7 +608,8 @@
       "Drumstick"
     ],
     "explanation": "Describe Chicken Leg by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a part served at dinner."
   },
   {
     "id": "pdf-05-3-toilet",
@@ -592,7 +626,8 @@
       "Flush"
     ],
     "explanation": "Describe Toilet by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a household fixture."
   },
   {
     "id": "pdf-05-4-wish",
@@ -609,7 +644,8 @@
       "Star"
     ],
     "explanation": "Describe Wish by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about blowing out birthday candles."
   },
   {
     "id": "pdf-05-5-bench",
@@ -626,7 +662,8 @@
       "Seat"
     ],
     "explanation": "Describe Bench by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about resting beside a path."
   },
   {
     "id": "pdf-05-6-exercise",
@@ -643,7 +680,8 @@
       "Fitness"
     ],
     "explanation": "Describe Exercise by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about moving your body regularly."
   },
   {
     "id": "pdf-05-7-crown",
@@ -660,7 +698,8 @@
       "Royalty"
     ],
     "explanation": "Describe Crown by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a ceremonial object."
   },
   {
     "id": "pdf-05-8-princess",
@@ -677,7 +716,8 @@
       "Fairy Tale"
     ],
     "explanation": "Describe Princess by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a character in a palace."
   },
   {
     "id": "pdf-06-1-internet",
@@ -694,7 +734,8 @@
       "Online"
     ],
     "explanation": "Describe Internet by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about connecting people worldwide."
   },
   {
     "id": "pdf-06-2-jacket",
@@ -711,7 +752,8 @@
       "Outerwear"
     ],
     "explanation": "Describe Jacket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about an extra layer outdoors."
   },
   {
     "id": "pdf-06-3-shower",
@@ -728,7 +770,8 @@
       "Soap"
     ],
     "explanation": "Describe Shower by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about a daily hygiene routine."
   },
   {
     "id": "pdf-06-4-wind",
@@ -745,7 +788,8 @@
       "Breeze"
     ],
     "explanation": "Describe Wind by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about leaves moving outdoors."
   },
   {
     "id": "pdf-06-5-ice-cream",
@@ -762,7 +806,8 @@
       "Frozen"
     ],
     "explanation": "Describe Ice Cream by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about a treat in a bowl."
   },
   {
     "id": "pdf-06-6-foreigner",
@@ -779,7 +824,8 @@
       "Abroad"
     ],
     "explanation": "Describe Foreigner by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about someone visiting from elsewhere."
   },
   {
     "id": "pdf-06-7-church",
@@ -796,7 +842,8 @@
       "Worship"
     ],
     "explanation": "Describe Church by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about a place for a congregation."
   },
   {
     "id": "pdf-06-8-police",
@@ -813,7 +860,8 @@
       "Officer"
     ],
     "explanation": "Describe Police by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about responding to emergencies."
   },
   {
     "id": "pdf-07-1-boots",
@@ -830,7 +878,8 @@
       "Footwear"
     ],
     "explanation": "Describe Boots by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about protection for muddy ground."
   },
   {
     "id": "pdf-07-2-plane-ticket",
@@ -847,7 +896,8 @@
       "Boarding"
     ],
     "explanation": "Describe Plane Ticket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about proof of a booked journey."
   },
   {
     "id": "pdf-07-3-turkey",
@@ -864,7 +914,8 @@
       "Gobble"
     ],
     "explanation": "Describe Turkey by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about a traditional festive dinner."
   },
   {
     "id": "pdf-07-4-freezer",
@@ -881,7 +932,8 @@
       "Appliance"
     ],
     "explanation": "Describe Freezer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about storing things for months."
   },
   {
     "id": "pdf-07-5-soy-sauce",
@@ -898,7 +950,8 @@
       "Condiment"
     ],
     "explanation": "Describe Soy Sauce by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about seasoning a stir-fry."
   },
   {
     "id": "pdf-07-6-yoga-teacher",
@@ -915,7 +968,8 @@
       "Pose"
     ],
     "explanation": "Describe Yoga Teacher by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about guidance during stretching."
   },
   {
     "id": "pdf-07-7-straw",
@@ -932,7 +986,8 @@
       "Tube"
     ],
     "explanation": "Describe Straw by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about sipping through something narrow."
   },
   {
     "id": "pdf-07-8-leaf",
@@ -949,7 +1004,8 @@
       "Branch"
     ],
     "explanation": "Describe Leaf by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about what changes colour in autumn."
   },
   {
     "id": "pdf-08-1-noun",
@@ -966,7 +1022,8 @@
       "Grammar"
     ],
     "explanation": "Describe Noun by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a category of naming words."
   },
   {
     "id": "pdf-08-2-carry",
@@ -983,7 +1040,8 @@
       "Lift"
     ],
     "explanation": "Describe Carry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about taking something with you."
   },
   {
     "id": "pdf-08-3-taxi",
@@ -1000,7 +1058,8 @@
       "Cab"
     ],
     "explanation": "Describe Taxi by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about hiring a trip across town."
   },
   {
     "id": "pdf-08-4-blossom",
@@ -1017,7 +1076,8 @@
       "Petal"
     ],
     "explanation": "Describe Blossom by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a garden coming to life."
   },
   {
     "id": "pdf-08-5-broom",
@@ -1034,7 +1094,8 @@
       "Handle"
     ],
     "explanation": "Describe Broom by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about tidying a dusty room."
   },
   {
     "id": "pdf-08-6-witch",
@@ -1051,7 +1112,8 @@
       "Spell"
     ],
     "explanation": "Describe Witch by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a figure in folklore."
   },
   {
     "id": "pdf-08-7-fork",
@@ -1068,7 +1130,8 @@
       "Utensil"
     ],
     "explanation": "Describe Fork by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a tool at the dinner table."
   },
   {
     "id": "pdf-08-8-parade",
@@ -1085,7 +1148,8 @@
       "March"
     ],
     "explanation": "Describe Parade by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a procession through town."
   },
   {
     "id": "pdf-09-1-fashion",
@@ -1102,7 +1166,8 @@
       "Style"
     ],
     "explanation": "Describe Fashion by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about trends on a runway."
   },
   {
     "id": "pdf-09-2-wedding-dress",
@@ -1119,7 +1184,8 @@
       "Bride"
     ],
     "explanation": "Describe Wedding Dress by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about an outfit for a ceremony."
   },
   {
     "id": "pdf-09-3-kungfu-panda",
@@ -1136,7 +1202,8 @@
       "Animation"
     ],
     "explanation": "Describe Kungfu Panda by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about an unlikely martial-arts hero."
   },
   {
     "id": "pdf-09-4-marker",
@@ -1153,7 +1220,8 @@
       "Pen"
     ],
     "explanation": "Describe Marker by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about making bold strokes on paper."
   },
   {
     "id": "pdf-09-5-trash-can",
@@ -1170,7 +1238,8 @@
       "Garbage"
     ],
     "explanation": "Describe Trash Can by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about where unwanted things go."
   },
   {
     "id": "pdf-09-6-snowman",
@@ -1187,7 +1256,8 @@
       "Carrot"
     ],
     "explanation": "Describe Snowman by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about a figure built outdoors."
   },
   {
     "id": "pdf-09-7-wings",
@@ -1204,7 +1274,8 @@
       "Flight"
     ],
     "explanation": "Describe Wings by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about what helps a creature take off."
   },
   {
     "id": "pdf-09-8-pilot",
@@ -1221,7 +1292,8 @@
       "Cockpit"
     ],
     "explanation": "Describe Pilot by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about who controls an aircraft."
   },
   {
     "id": "pdf-10-1-lawyer",
@@ -1238,7 +1310,8 @@
       "Court"
     ],
     "explanation": "Describe Lawyer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about representation in a dispute."
   },
   {
     "id": "pdf-10-2-hair-salon",
@@ -1255,7 +1328,8 @@
       "Stylist"
     ],
     "explanation": "Describe Hair Salon by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about an appointment to change your look."
   },
   {
     "id": "pdf-10-3-picture-frame",
@@ -1272,7 +1346,8 @@
       "Display"
     ],
     "explanation": "Describe Picture Frame by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a border around a keepsake."
   },
   {
     "id": "pdf-10-4-purse",
@@ -1289,7 +1364,8 @@
       "Handbag"
     ],
     "explanation": "Describe Purse by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a small personal accessory."
   },
   {
     "id": "pdf-10-5-alligator",
@@ -1306,7 +1382,8 @@
       "Swamp"
     ],
     "explanation": "Describe Alligator by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a large creature near wetlands."
   },
   {
     "id": "pdf-10-6-orange",
@@ -1323,7 +1400,8 @@
       "Peel"
     ],
     "explanation": "Describe Orange by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a breakfast juice."
   },
   {
     "id": "pdf-10-7-makeup",
@@ -1340,7 +1418,8 @@
       "Cosmetics"
     ],
     "explanation": "Describe Makeup by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about getting ready for an event."
   },
   {
     "id": "pdf-10-8-tutor",
@@ -1357,7 +1436,8 @@
       "Lesson"
     ],
     "explanation": "Describe Tutor by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about one-to-one academic support."
   },
   {
     "id": "pdf-11-1-worry",
@@ -1374,7 +1454,8 @@
       "Concern"
     ],
     "explanation": "Describe Worry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about imagining what might go wrong."
   },
   {
     "id": "pdf-11-2-moose",
@@ -1391,7 +1472,8 @@
       "Canada"
     ],
     "explanation": "Describe Moose by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a very large woodland grazer."
   },
   {
     "id": "pdf-11-3-shampoo",
@@ -1408,7 +1490,8 @@
       "Bottle"
     ],
     "explanation": "Describe Shampoo by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a routine before rinsing."
   },
   {
     "id": "pdf-11-4-bridge",
@@ -1425,7 +1508,8 @@
       "Span"
     ],
     "explanation": "Describe Bridge by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about getting across an obstacle."
   },
   {
     "id": "pdf-11-5-nervous",
@@ -1442,7 +1526,8 @@
       "Uneasy"
     ],
     "explanation": "Describe Nervous by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about waiting for an interview."
   },
   {
     "id": "pdf-11-6-camel",
@@ -1459,7 +1544,8 @@
       "Caravan"
     ],
     "explanation": "Describe Camel by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a journey across sand."
   },
   {
     "id": "pdf-11-7-watch",
@@ -1476,7 +1562,8 @@
       "Clock"
     ],
     "explanation": "Describe Watch by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about something worn on your arm."
   },
   {
     "id": "pdf-11-8-brush",
@@ -1493,7 +1580,8 @@
       "Paint"
     ],
     "explanation": "Describe Brush by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a tool with many fine strands."
   },
   {
     "id": "pdf-12-1-license",
@@ -1510,7 +1598,8 @@
       "Identification"
     ],
     "explanation": "Describe License by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about official permission."
   },
   {
     "id": "pdf-12-2-librarian",
@@ -1527,7 +1616,8 @@
       "Shelves"
     ],
     "explanation": "Describe Librarian by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about someone organising a collection."
   },
   {
     "id": "pdf-12-3-liberty",
@@ -1544,7 +1634,8 @@
       "Rights"
     ],
     "explanation": "Describe Liberty by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about being able to make choices."
   },
   {
     "id": "pdf-12-4-radio",
@@ -1561,7 +1652,8 @@
       "Broadcast"
     ],
     "explanation": "Describe Radio by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about tuning in while driving."
   },
   {
     "id": "pdf-12-5-shout",
@@ -1578,7 +1670,8 @@
       "Scream"
     ],
     "explanation": "Describe Shout by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about raising your voice."
   },
   {
     "id": "pdf-12-6-unlock",
@@ -1595,7 +1688,8 @@
       "Open"
     ],
     "explanation": "Describe Unlock by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about gaining access to something secured."
   },
   {
     "id": "pdf-12-7-pear",
@@ -1612,7 +1706,8 @@
       "Green"
     ],
     "explanation": "Describe Pear by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Picture something rounded that narrows upward."
   },
   {
     "id": "pdf-12-8-jumping",
@@ -1629,7 +1724,8 @@
       "Bounce"
     ],
     "explanation": "Describe Jumping by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about both feet leaving the ground."
   },
   {
     "id": "pdf-13-1-glove",
@@ -1646,7 +1742,8 @@
       "Fingers"
     ],
     "explanation": "Describe Glove by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about protection for each digit."
   },
   {
     "id": "pdf-13-2-tornado",
@@ -1663,7 +1760,8 @@
       "Funnel"
     ],
     "explanation": "Describe Tornado by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about a rotating column of air."
   },
   {
     "id": "pdf-13-3-wheelchair",
@@ -1680,7 +1778,8 @@
       "Ramp"
     ],
     "explanation": "Describe Wheelchair by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about independent movement and access."
   },
   {
     "id": "pdf-13-4-monster",
@@ -1697,7 +1796,8 @@
       "Creature"
     ],
     "explanation": "Describe Monster by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about an imaginary bedtime fright."
   },
   {
     "id": "pdf-13-5-midterm",
@@ -1714,7 +1814,8 @@
       "Semester"
     ],
     "explanation": "Describe Midterm by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about an assessment partway through a course."
   },
   {
     "id": "pdf-13-6-melt",
@@ -1731,7 +1832,8 @@
       "Thaw"
     ],
     "explanation": "Describe Melt by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about a solid changing state."
   },
   {
     "id": "pdf-13-7-mature",
@@ -1748,7 +1850,8 @@
       "Adult"
     ],
     "explanation": "Describe Mature by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about growing in judgement."
   },
   {
     "id": "pdf-13-8-daisy",
@@ -1765,7 +1868,8 @@
       "Petals"
     ],
     "explanation": "Describe Daisy by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Picture a simple meadow bloom."
   },
   {
     "id": "pdf-14-1-custom",
@@ -1782,7 +1886,8 @@
       "Habit"
     ],
     "explanation": "Describe Custom by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about practices passed between generations."
   },
   {
     "id": "pdf-14-2-curtain",
@@ -1799,7 +1904,8 @@
       "Drapes"
     ],
     "explanation": "Describe Curtain by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about controlling privacy in a room."
   },
   {
     "id": "pdf-14-3-cruel",
@@ -1816,7 +1922,8 @@
       "Harsh"
     ],
     "explanation": "Describe Cruel by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about deliberately causing distress."
   },
   {
     "id": "pdf-14-4-milk",
@@ -1833,7 +1940,8 @@
       "Dairy"
     ],
     "explanation": "Describe Milk by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about what often goes on cereal."
   },
   {
     "id": "pdf-14-5-politics",
@@ -1850,7 +1958,8 @@
       "Government"
     ],
     "explanation": "Describe Politics by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about how public decisions are made."
   },
   {
     "id": "pdf-14-6-guitar",
@@ -1867,7 +1976,8 @@
       "Chords"
     ],
     "explanation": "Describe Guitar by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about something held against the body at a concert."
   },
   {
     "id": "pdf-14-7-chalk",
@@ -1884,7 +1994,8 @@
       "Board"
     ],
     "explanation": "Describe Chalk by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about a classroom before markers."
   },
   {
     "id": "pdf-14-8-bottle",
@@ -1901,7 +2012,8 @@
       "Container"
     ],
     "explanation": "Describe Bottle by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about packaging for a beverage."
   },
   {
     "id": "pdf-15-1-table",
@@ -1918,7 +2030,8 @@
       "Furniture"
     ],
     "explanation": "Describe Table by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about a surface shared at dinner."
   },
   {
     "id": "pdf-15-2-distance",
@@ -1935,7 +2048,8 @@
       "Measure"
     ],
     "explanation": "Describe Distance by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about how far apart two points are."
   },
   {
     "id": "pdf-15-3-elderly",
@@ -1952,7 +2066,8 @@
       "Senior"
     ],
     "explanation": "Describe Elderly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about people in later life."
   },
   {
     "id": "pdf-15-4-fish",
@@ -1969,7 +2084,8 @@
       "Fins"
     ],
     "explanation": "Describe Fish by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about life beneath the surface."
   },
   {
     "id": "pdf-15-5-famous",
@@ -1986,7 +2102,8 @@
       "Celebrity"
     ],
     "explanation": "Describe Famous by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about being recognised by many people."
   },
   {
     "id": "pdf-15-6-nyc",
@@ -2003,7 +2120,8 @@
       "Manhattan"
     ],
     "explanation": "Describe NYC by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about Broadway and five boroughs."
   },
   {
     "id": "pdf-15-7-train",
@@ -2020,7 +2138,8 @@
       "Station"
     ],
     "explanation": "Describe Train by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about a journey along tracks."
   },
   {
     "id": "pdf-15-8-needle",
@@ -2037,7 +2156,8 @@
       "Thread"
     ],
     "explanation": "Describe Needle by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about a tool for mending fabric."
   },
   {
     "id": "pdf-16-1-joy",
@@ -2054,7 +2174,8 @@
       "Delight"
     ],
     "explanation": "Describe Joy by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a wonderful surprise."
   },
   {
     "id": "pdf-16-2-firecracker",
@@ -2071,7 +2192,8 @@
       "Fireworks"
     ],
     "explanation": "Describe Firecracker by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a festive sudden bang."
   },
   {
     "id": "pdf-16-3-superman",
@@ -2088,7 +2210,8 @@
       "Kryptonite"
     ],
     "explanation": "Describe Superman by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a cape and a hidden identity."
   },
   {
     "id": "pdf-16-4-sun",
@@ -2105,7 +2228,8 @@
       "Star"
     ],
     "explanation": "Describe Sun by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about what rises each morning."
   },
   {
     "id": "pdf-16-5-monkey",
@@ -2122,7 +2246,8 @@
       "Ape"
     ],
     "explanation": "Describe Monkey by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a playful tree-dweller."
   },
   {
     "id": "pdf-16-6-shark",
@@ -2139,7 +2264,8 @@
       "Fin"
     ],
     "explanation": "Describe Shark by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a predator beneath the waves."
   },
   {
     "id": "pdf-16-7-window",
@@ -2156,7 +2282,8 @@
       "View"
     ],
     "explanation": "Describe Window by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about letting daylight into a room."
   },
   {
     "id": "pdf-16-8-desk",
@@ -2173,7 +2300,8 @@
       "Office"
     ],
     "explanation": "Describe Desk by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a dedicated workspace."
   },
   {
     "id": "pdf-17-1-coffee",
@@ -2190,7 +2318,8 @@
       "Mug"
     ],
     "explanation": "Describe Coffee by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a roasted morning favourite."
   },
   {
     "id": "pdf-17-2-candle",
@@ -2207,7 +2336,8 @@
       "Scent"
     ],
     "explanation": "Describe Candle by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a small flame at dinner."
   },
   {
     "id": "pdf-17-3-egg-roll",
@@ -2224,7 +2354,8 @@
       "Appetizer"
     ],
     "explanation": "Describe Egg Roll by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a crispy filled starter."
   },
   {
     "id": "pdf-17-4-santa",
@@ -2241,7 +2372,8 @@
       "Reindeer"
     ],
     "explanation": "Describe Santa by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a visitor on a December night."
   },
   {
     "id": "pdf-17-5-bells",
@@ -2258,7 +2390,8 @@
       "Chime"
     ],
     "explanation": "Describe Bells by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a sound from a tower."
   },
   {
     "id": "pdf-17-6-heart",
@@ -2275,7 +2408,8 @@
       "Organ"
     ],
     "explanation": "Describe Heart by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about what keeps blood moving."
   },
   {
     "id": "pdf-17-7-headache",
@@ -2292,7 +2426,8 @@
       "Pain"
     ],
     "explanation": "Describe Headache by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about discomfort after a long day."
   },
   {
     "id": "pdf-17-8-discuss",
@@ -2309,7 +2444,8 @@
       "Conversation"
     ],
     "explanation": "Describe Discuss by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about exploring a topic together."
   },
   {
     "id": "pdf-18-1-debate",
@@ -2326,7 +2462,8 @@
       "Argument"
     ],
     "explanation": "Describe Debate by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about presenting competing viewpoints."
   },
   {
     "id": "pdf-18-2-eraser",
@@ -2343,7 +2480,8 @@
       "Rubber"
     ],
     "explanation": "Describe Eraser by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about correcting something on paper."
   },
   {
     "id": "pdf-18-3-prisoner",
@@ -2360,7 +2498,8 @@
       "Inmate"
     ],
     "explanation": "Describe Prisoner by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about someone held in custody."
   },
   {
     "id": "pdf-18-4-murder",
@@ -2377,7 +2516,8 @@
       "Homicide"
     ],
     "explanation": "Describe Murder by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about an unlawful intentional act."
   },
   {
     "id": "pdf-18-5-defend",
@@ -2394,7 +2534,8 @@
       "Protect"
     ],
     "explanation": "Describe Defend by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about standing up for someone."
   },
   {
     "id": "pdf-18-6-deer",
@@ -2411,7 +2552,8 @@
       "Buck"
     ],
     "explanation": "Describe Deer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about a shy woodland grazer."
   },
   {
     "id": "pdf-18-7-zoo",
@@ -2428,7 +2570,8 @@
       "Safari"
     ],
     "explanation": "Describe Zoo by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about seeing wildlife in a public attraction."
   },
   {
     "id": "pdf-18-8-crawl",
@@ -2445,7 +2588,8 @@
       "Floor"
     ],
     "explanation": "Describe Crawl by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about movement before walking."
   },
   {
     "id": "pdf-19-1-bank",
@@ -2462,7 +2606,8 @@
       "Teller"
     ],
     "explanation": "Describe Bank by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about where savings are kept."
   },
   {
     "id": "pdf-19-2-caterpillar",
@@ -2479,7 +2624,8 @@
       "Cocoon"
     ],
     "explanation": "Describe Caterpillar by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about an early stage of metamorphosis."
   },
   {
     "id": "pdf-19-3-pregnant",
@@ -2496,7 +2642,8 @@
       "Expecting"
     ],
     "explanation": "Describe Pregnant by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about a family preparing for arrival."
   },
   {
     "id": "pdf-19-4-towel",
@@ -2513,7 +2660,8 @@
       "Cloth"
     ],
     "explanation": "Describe Towel by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about what you reach for after bathing."
   },
   {
     "id": "pdf-19-5-promise",
@@ -2530,7 +2678,8 @@
       "Commitment"
     ],
     "explanation": "Describe Promise by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about giving your word."
   },
   {
     "id": "pdf-19-6-ugly",
@@ -2547,7 +2696,8 @@
       "Unattractive"
     ],
     "explanation": "Describe Ugly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about an unflattering appearance."
   },
   {
     "id": "pdf-19-7-stupid",
@@ -2564,7 +2714,8 @@
       "Ignorant"
     ],
     "explanation": "Describe Stupid by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about a harsh judgement of thinking."
   },
   {
     "id": "pdf-19-8-spoon",
@@ -2581,7 +2732,8 @@
       "Scoop"
     ],
     "explanation": "Describe Spoon by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about a tool used with a bowl."
   },
   {
     "id": "pdf-20-1-infant",
@@ -2598,7 +2750,8 @@
       "Toddler"
     ],
     "explanation": "Describe Infant by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about the earliest stage of childhood."
   },
   {
     "id": "pdf-20-2-paris-france",
@@ -2615,7 +2768,8 @@
       "Seine"
     ],
     "explanation": "Describe Paris France by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about a European capital by a river."
   },
   {
     "id": "pdf-20-3-exchange-student",
@@ -2632,7 +2786,8 @@
       "Host"
     ],
     "explanation": "Describe Exchange Student by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about learning while living with another family."
   },
   {
     "id": "pdf-20-4-gold",
@@ -2649,7 +2804,8 @@
       "Jewelry"
     ],
     "explanation": "Describe Gold by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about an Olympic winner."
   },
   {
     "id": "pdf-20-5-london",
@@ -2666,7 +2822,8 @@
       "Thames"
     ],
     "explanation": "Describe London by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about the city with the Underground."
   },
   {
     "id": "pdf-20-6-camping",
@@ -2683,7 +2840,8 @@
       "Campfire"
     ],
     "explanation": "Describe Camping by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about spending a night outdoors."
   },
   {
     "id": "pdf-20-7-theater",
@@ -2700,7 +2858,8 @@
       "Stage"
     ],
     "explanation": "Describe Theater by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about an audience watching a performance."
   },
   {
     "id": "pdf-20-8-death",
@@ -2717,7 +2876,8 @@
       "Funeral"
     ],
     "explanation": "Describe Death by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about a final farewell."
   },
   {
     "id": "pdf-21-1-flag",
@@ -2734,7 +2894,8 @@
       "Country"
     ],
     "explanation": "Describe Flag by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a symbol raised at ceremonies."
   },
   {
     "id": "pdf-21-2-describe",
@@ -2751,7 +2912,8 @@
       "Explain"
     ],
     "explanation": "Describe Describe by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about giving someone a mental picture."
   },
   {
     "id": "pdf-21-3-nan-shan",
@@ -2768,7 +2930,8 @@
       "China"
     ],
     "explanation": "Describe Nan Shan by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a local landmark with a summit."
   },
   {
     "id": "pdf-21-4-fly",
@@ -2785,7 +2948,8 @@
       "Air"
     ],
     "explanation": "Describe Fly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about travelling above the ground."
   },
   {
     "id": "pdf-21-5-knee",
@@ -2802,7 +2966,8 @@
       "Kneecap"
     ],
     "explanation": "Describe Knee by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about the connection between hip and ankle."
   },
   {
     "id": "pdf-21-6-web",
@@ -2819,7 +2984,8 @@
       "Network"
     ],
     "explanation": "Describe Web by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a pattern of connected strands."
   },
   {
     "id": "pdf-21-7-toothbrush",
@@ -2836,7 +3002,8 @@
       "Dentist"
     ],
     "explanation": "Describe Toothbrush by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a morning dental routine."
   },
   {
     "id": "pdf-21-8-worm",
@@ -2853,7 +3020,8 @@
       "Soil"
     ],
     "explanation": "Describe Worm by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a long creature in the garden."
   },
   {
     "id": "pdf-22-1-machine",
@@ -2870,7 +3038,8 @@
       "Equipment"
     ],
     "explanation": "Describe Machine by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about mechanisms working together."
   },
   {
     "id": "pdf-22-2-spiderman",
@@ -2887,7 +3056,8 @@
       "Marvel"
     ],
     "explanation": "Describe Spiderman by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about a masked comic-book character."
   },
   {
     "id": "pdf-22-3-waitress",
@@ -2904,7 +3074,8 @@
       "Server"
     ],
     "explanation": "Describe Waitress by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about someone taking orders at a table."
   },
   {
     "id": "pdf-22-4-wash",
@@ -2921,7 +3092,8 @@
       "Soap"
     ],
     "explanation": "Describe Wash by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about removing dirt."
   },
   {
     "id": "pdf-22-5-biology",
@@ -2938,7 +3110,8 @@
       "Organism"
     ],
     "explanation": "Describe Biology by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about studying living things."
   },
   {
     "id": "pdf-22-6-chemistry",
@@ -2955,7 +3128,8 @@
       "Lab"
     ],
     "explanation": "Describe Chemistry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about reactions between substances."
   },
   {
     "id": "pdf-22-7-history",
@@ -2972,7 +3146,8 @@
       "Timeline"
     ],
     "explanation": "Describe History by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about how earlier times shaped today."
   },
   {
     "id": "pdf-22-8-magazine",
@@ -2989,7 +3164,8 @@
       "Article"
     ],
     "explanation": "Describe Magazine by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about a periodical on a coffee table."
   },
   {
     "id": "pdf-23-1-unfair",
@@ -3006,7 +3182,8 @@
       "Biased"
     ],
     "explanation": "Describe Unfair by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about rules applied differently to people."
   },
   {
     "id": "pdf-23-2-cd",
@@ -3023,7 +3200,8 @@
       "Album"
     ],
     "explanation": "Describe CD by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about an older way to store recordings."
   },
   {
     "id": "pdf-23-3-immediately",
@@ -3040,7 +3218,8 @@
       "Instantly"
     ],
     "explanation": "Describe Immediately by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about acting without waiting."
   },
   {
     "id": "pdf-23-4-danger",
@@ -3057,7 +3236,8 @@
       "Risk"
     ],
     "explanation": "Describe Danger by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about a situation requiring caution."
   },
   {
     "id": "pdf-23-5-bed-blanket",
@@ -3074,7 +3254,8 @@
       "Duvet"
     ],
     "explanation": "Describe Bed Blanket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about an extra layer at night."
   },
   {
     "id": "pdf-23-6-ice",
@@ -3091,7 +3272,8 @@
       "Frozen"
     ],
     "explanation": "Describe Ice by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about what forms when a drink chills."
   },
   {
     "id": "pdf-23-7-salt",
@@ -3108,7 +3290,8 @@
       "Sodium"
     ],
     "explanation": "Describe Salt by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about seasoning at the table."
   },
   {
     "id": "pdf-23-8-stand",
@@ -3125,7 +3308,8 @@
       "Upright"
     ],
     "explanation": "Describe Stand by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about a posture while waiting."
   },
   {
     "id": "pdf-24-1-bull",
@@ -3142,7 +3326,8 @@
       "Cattle"
     ],
     "explanation": "Describe Bull by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about a powerful farm animal."
   },
   {
     "id": "pdf-24-2-peaceful",
@@ -3159,7 +3344,8 @@
       "Serene"
     ],
     "explanation": "Describe Peaceful by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about a moment without conflict."
   },
   {
     "id": "pdf-24-3-normal",
@@ -3176,7 +3362,8 @@
       "Usual"
     ],
     "explanation": "Describe Normal by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about what happens most often."
   },
   {
     "id": "pdf-24-4-original",
@@ -3193,7 +3380,8 @@
       "Authentic"
     ],
     "explanation": "Describe Original by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about the source rather than a copy."
   },
   {
     "id": "pdf-24-5-magic",
@@ -3210,7 +3398,8 @@
       "Illusion"
     ],
     "explanation": "Describe Magic by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about an unexpected stage performance."
   },
   {
     "id": "pdf-24-6-naughty",
@@ -3227,7 +3416,8 @@
       "Mischief"
     ],
     "explanation": "Describe Naughty by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about breaking a household rule."
   },
   {
     "id": "pdf-24-7-rescue",
@@ -3244,7 +3434,8 @@
       "Emergency"
     ],
     "explanation": "Describe Rescue by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about getting someone out of trouble."
   },
   {
     "id": "pdf-24-8-match",
@@ -3261,7 +3452,8 @@
       "Game"
     ],
     "explanation": "Describe Match by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about finding two things that correspond."
   },
   {
     "id": "pdf-25-1-hippo",
@@ -3278,7 +3470,8 @@
       "Hippopotamus"
     ],
     "explanation": "Describe Hippo by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a heavy creature near water."
   },
   {
     "id": "pdf-25-2-fairy-tale",
@@ -3295,7 +3488,8 @@
       "Once Upon"
     ],
     "explanation": "Describe Fairy Tale by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a traditional bedtime adventure."
   },
   {
     "id": "pdf-25-3-literature",
@@ -3312,7 +3506,8 @@
       "Poetry"
     ],
     "explanation": "Describe Literature by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about creative writing across generations."
   },
   {
     "id": "pdf-25-4-globe",
@@ -3329,7 +3524,8 @@
       "Sphere"
     ],
     "explanation": "Describe Globe by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a round classroom representation of the planet."
   },
   {
     "id": "pdf-25-5-cookbook",
@@ -3346,7 +3542,8 @@
       "Recipe"
     ],
     "explanation": "Describe Cookbook by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a collection for planning meals."
   },
   {
     "id": "pdf-25-6-continent",
@@ -3363,7 +3560,8 @@
       "Map"
     ],
     "explanation": "Describe Continent by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a large region of the world."
   },
   {
     "id": "pdf-25-7-director",
@@ -3380,7 +3578,8 @@
       "Film"
     ],
     "explanation": "Describe Director by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about who guides a production."
   },
   {
     "id": "pdf-25-8-advice",
@@ -3397,7 +3596,8 @@
       "Suggestion"
     ],
     "explanation": "Describe Advice by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about what you offer someone facing a decision."
   },
   {
     "id": "esko-product-01-automation-engine",
@@ -3414,7 +3614,8 @@
       "Automation"
     ],
     "explanation": "Describe Automation Engine by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about orchestrating repeated production steps."
   },
   {
     "id": "esko-product-02-webcenter",
@@ -3431,7 +3632,8 @@
       "Collaboration"
     ],
     "explanation": "Describe WebCenter by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about coordinating packaging work across teams."
   },
   {
     "id": "esko-product-03-artpro",
@@ -3448,7 +3650,8 @@
       "Trapping"
     ],
     "explanation": "Describe ArtPro+ by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about refining print-ready artwork."
   },
   {
     "id": "esko-product-04-artioscad",
@@ -3465,7 +3668,8 @@
       "3D"
     ],
     "explanation": "Describe ArtiosCAD by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about creating the shape of a carton."
   },
   {
     "id": "esko-product-05-studio",
@@ -3482,7 +3686,8 @@
       "Visualize"
     ],
     "explanation": "Describe Studio by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about seeing a pack before production."
   },
   {
     "id": "esko-product-06-deskpack",
@@ -3499,7 +3704,8 @@
       "Tools"
     ],
     "explanation": "Describe DeskPack by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about extending a creative application."
   },
   {
     "id": "esko-product-07-cape-pack",
@@ -3516,7 +3722,8 @@
       "Shipping"
     ],
     "explanation": "Describe Cape Pack by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging boxes for distribution."
   },
   {
     "id": "esko-product-08-phoenix",
@@ -3533,7 +3740,8 @@
       "Production"
     ],
     "explanation": "Describe Phoenix by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging jobs before printing."
   },
   {
     "id": "esko-product-09-imaging-engine",
@@ -3550,7 +3758,8 @@
       "Separation"
     ],
     "explanation": "Describe Imaging Engine by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about preparing digital artwork for a press."
   },
   {
     "id": "esko-product-10-pack-proof",
@@ -3567,7 +3776,8 @@
       "Accurate"
     ],
     "explanation": "Describe Pack Proof by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about checking appearance before a press run."
   },
   {
     "id": "esko-product-11-equinox",
@@ -3584,7 +3794,8 @@
       "CMYK"
     ],
     "explanation": "Describe Equinox by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about reproducing more colours with a fixed palette."
   },
   {
     "id": "esko-product-12-share-approve",
@@ -3601,7 +3812,8 @@
       "Collaboration"
     ],
     "explanation": "Describe Share&Approve by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about getting feedback from stakeholders."
   },
   {
     "id": "esko-product-13-mediabeacon",
@@ -3618,7 +3830,8 @@
       "Brand"
     ],
     "explanation": "Describe MediaBeacon by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about organising a large creative collection."
   },
   {
     "id": "esko-product-14-color-pilot",
@@ -3635,7 +3848,8 @@
       "Accuracy"
     ],
     "explanation": "Describe Color Pilot by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about managing predictable print appearance."
   },
   {
     "id": "esko-product-15-curve-pilot",
@@ -3652,7 +3866,8 @@
       "Flexo"
     ],
     "explanation": "Describe Curve Pilot by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about adjusting how tones reproduce."
   },
   {
     "id": "esko-product-16-printcontrol-wizard",
@@ -3669,7 +3884,8 @@
       "Setup"
     ],
     "explanation": "Describe PrintControl Wizard by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about establishing consistent production settings."
   },
   {
     "id": "esko-product-17-print-clone",
@@ -3686,7 +3902,8 @@
       "Measurement"
     ],
     "explanation": "Describe Print Clone by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about consistent results across equipment."
   },
   {
     "id": "esko-product-18-inkwizard",
@@ -3703,7 +3920,8 @@
       "Coverage"
     ],
     "explanation": "Describe InkWizard by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about reducing resources used in reproduction."
   },
   {
     "id": "esko-product-19-flexo-tools",
@@ -3720,7 +3938,8 @@
       "Flexography"
     ],
     "explanation": "Describe Flexo Tools by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about preparing artwork for flexible printing."
   },
   {
     "id": "esko-product-20-plato",
@@ -3737,7 +3956,8 @@
       "CAD"
     ],
     "explanation": "Describe Plato by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging repeated designs for production."
   },
   {
     "id": "esko-product-21-packedge",
@@ -3754,7 +3974,8 @@
       "Production"
     ],
     "explanation": "Describe PackEdge by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about an earlier artwork preparation application."
   },
   {
     "id": "esko-product-22-powerlayout",
@@ -3771,7 +3992,8 @@
       "Labels"
     ],
     "explanation": "Describe PowerLayout by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging multiple designs efficiently."
   },
   {
     "id": "esko-product-23-flexrip",
@@ -3788,7 +4010,8 @@
       "Imaging"
     ],
     "explanation": "Describe FlexRip by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about converting artwork for a production device."
   },
   {
     "id": "esko-product-24-nexus",
@@ -3805,7 +4028,8 @@
       "Automation"
     ],
     "explanation": "Describe Nexus by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about an earlier way to coordinate production."
   },
   {
     "id": "esko-product-25-odystar",
@@ -3822,7 +4046,8 @@
       "Tasks"
     ],
     "explanation": "Describe Odystar by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about automated document processing on Apple computers."
   },
   {
     "id": "esko-product-26-cdi-crystal",
@@ -3839,7 +4064,8 @@
       "Exposure"
     ],
     "explanation": "Describe CDI Crystal by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about digital preparation before illumination."
   },
   {
     "id": "esko-product-27-xps-crystal",
@@ -3856,7 +4082,8 @@
       "Curing"
     ],
     "explanation": "Describe XPS Crystal by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about consistent light during platemaking."
   },
   {
     "id": "esko-product-28-cdi-spark",
@@ -3873,7 +4100,8 @@
       "Digital"
     ],
     "explanation": "Describe CDI Spark by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about a smaller imaging device."
   },
   {
     "id": "esko-product-29-cdi-quartz",
@@ -3890,7 +4118,8 @@
       "Laser"
     ],
     "explanation": "Describe CDI Quartz by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about detailed digital platemaking."
   },
   {
     "id": "esko-product-30-crystalclean",
@@ -3907,7 +4136,8 @@
       "Processing"
     ],
     "explanation": "Describe CrystalClean by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about removing residue during manufacturing."
   },
   {
     "id": "esko-product-31-pixel",
@@ -3924,7 +4154,8 @@
       "Ink"
     ],
     "explanation": "Describe Pixel+ by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about controlling tiny features in reproduction."
   },
   {
     "id": "esko-product-32-hd-flexo",
@@ -3941,7 +4172,8 @@
       "Flexography"
     ],
     "explanation": "Describe HD Flexo by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about fine detail in flexible printing."
   },
   {
     "id": "esko-product-33-crystal-screening",
@@ -3958,7 +4190,8 @@
       "Surface"
     ],
     "explanation": "Describe Crystal Screening by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about how tiny dots are arranged."
   },
   {
     "id": "esko-product-34-grapholas",
@@ -3975,7 +4208,8 @@
       "Flexo"
     ],
     "explanation": "Describe Grapholas by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about controlling a digital imaging device."
   },
   {
     "id": "esko-product-35-merge-graphics",
@@ -3992,7 +4226,8 @@
       "Variable"
     ],
     "explanation": "Describe Merge Graphics by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about combining variants into one job."
   },
   {
     "id": "esko-product-36-my-esko",
@@ -4009,7 +4244,8 @@
       "Customer"
     ],
     "explanation": "Describe My Esko by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about a personal place for product resources."
   },
   {
     "id": "esko-product-37-esko-cloud",
@@ -4026,7 +4262,8 @@
       "Platform"
     ],
     "explanation": "Describe Esko Cloud by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about accessing services over the internet."
   },
   {
     "id": "esko-product-38-webcenter-go",
@@ -4043,7 +4280,8 @@
       "Cloud"
     ],
     "explanation": "Describe WebCenter Go by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about checking designs remotely."
   },
   {
     "id": "esko-product-39-verify-comply",
@@ -4060,7 +4298,8 @@
       "Validation"
     ],
     "explanation": "Describe Verify Comply by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about checking requirements before release."
   },
   {
     "id": "esko-product-40-avt-helios",
@@ -4077,7 +4316,8 @@
       "Quality"
     ],
     "explanation": "Describe AVT Helios by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about finding flaws during label production."
   },
   {
     "id": "esko-product-41-avt-apollo",
@@ -4094,7 +4334,8 @@
       "Workflow"
     ],
     "explanation": "Describe AVT Apollo by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about monitoring consistency in real time."
   },
   {
     "id": "esko-product-42-avt-argus",
@@ -4111,7 +4352,8 @@
       "Quality"
     ],
     "explanation": "Describe AVT Argus by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about monitoring a moving material for flaws."
   },
   {
     "id": "esko-product-43-avt-spectralab",
@@ -4128,7 +4370,8 @@
       "Quality"
     ],
     "explanation": "Describe AVT SpectraLab by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about measuring appearance during production."
   },
   {
     "id": "esko-product-44-avt-icenter",
@@ -4145,7 +4388,8 @@
       "Production"
     ],
     "explanation": "Describe AVT iCenter by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about using results to spot trends."
   },
   {
     "id": "esko-product-45-automation-hub",
@@ -4162,7 +4406,8 @@
       "Insights"
     ],
     "explanation": "Describe Automation Hub by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about a central view of operational activity."
   },
   {
     "id": "esko-product-46-platepatcher",
@@ -4179,7 +4424,8 @@
       "Patch"
     ],
     "explanation": "Describe PlatePatcher by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about preparing material before it goes on press."
   },
   {
     "id": "esko-product-47-dynamic-content",
@@ -4196,7 +4442,8 @@
       "Artwork"
     ],
     "explanation": "Describe Dynamic Content by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about keeping information consistent across designs."
   },
   {
     "id": "esko-product-48-dynamic-barcodes",
@@ -4213,7 +4460,8 @@
       "Variable"
     ],
     "explanation": "Describe Dynamic Barcodes by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about generating scannable information in artwork."
   },
   {
     "id": "esko-product-49-dynamic-marks",
@@ -4230,7 +4478,8 @@
       "Variable"
     ],
     "explanation": "Describe Dynamic Marks by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about automatically adding guides for the press."
   },
   {
     "id": "esko-product-50-store-visualizer",
@@ -4247,7 +4496,8 @@
       "Display"
     ],
     "explanation": "Describe Store Visualizer by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about seeing a package in a shop context."
   },
   {
     "id": "technical-01-incident",
@@ -4264,7 +4514,8 @@
       "Report"
     ],
     "explanation": "Describe Incident in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an interruption to normal service."
   },
   {
     "id": "technical-02-service-request",
@@ -4281,7 +4532,8 @@
       "User"
     ],
     "explanation": "Describe Service Request in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a routine need rather than a fault."
   },
   {
     "id": "technical-03-troubleshooting",
@@ -4298,7 +4550,8 @@
       "Investigate"
     ],
     "explanation": "Describe Troubleshooting in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about narrowing down possible causes."
   },
   {
     "id": "technical-04-root-cause",
@@ -4315,7 +4568,8 @@
       "Why"
     ],
     "explanation": "Describe Root Cause in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what ultimately led to a fault."
   },
   {
     "id": "technical-05-workaround",
@@ -4332,7 +4586,8 @@
       "Method"
     ],
     "explanation": "Describe Workaround in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about continuing work despite a fault."
   },
   {
     "id": "technical-06-resolution",
@@ -4349,7 +4604,8 @@
       "Problem"
     ],
     "explanation": "Describe Resolution in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what brings an investigation to an end."
   },
   {
     "id": "technical-07-escalation",
@@ -4366,7 +4622,8 @@
       "Manager"
     ],
     "explanation": "Describe Escalation in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about involving someone with more expertise."
   },
   {
     "id": "technical-08-priority",
@@ -4383,7 +4640,8 @@
       "Impact"
     ],
     "explanation": "Describe Priority in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about which case needs attention first."
   },
   {
     "id": "technical-09-severity",
@@ -4400,7 +4658,8 @@
       "Minor"
     ],
     "explanation": "Describe Severity in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about how serious the effect is."
   },
   {
     "id": "technical-10-sla",
@@ -4417,7 +4676,8 @@
       "Commitment"
     ],
     "explanation": "Describe SLA in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an agreed support obligation."
   },
   {
     "id": "technical-11-reproduction",
@@ -4434,7 +4694,8 @@
       "Observe"
     ],
     "explanation": "Describe Reproduction in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about making the same behaviour happen again."
   },
   {
     "id": "technical-12-expected-result",
@@ -4451,7 +4712,8 @@
       "Result"
     ],
     "explanation": "Describe Expected Result in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about the intended behaviour."
   },
   {
     "id": "technical-13-actual-result",
@@ -4468,7 +4730,8 @@
       "Outcome"
     ],
     "explanation": "Describe Actual Result in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what the user saw instead."
   },
   {
     "id": "technical-14-error-message",
@@ -4485,7 +4748,8 @@
       "Screen"
     ],
     "explanation": "Describe Error Message in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what the application tells the user."
   },
   {
     "id": "technical-15-log-file",
@@ -4502,7 +4766,8 @@
       "Timestamp"
     ],
     "explanation": "Describe Log File in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a history of system activity."
   },
   {
     "id": "technical-16-diagnostics",
@@ -4519,7 +4784,8 @@
       "Troubleshoot"
     ],
     "explanation": "Describe Diagnostics in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about evidence used to understand a fault."
   },
   {
     "id": "technical-17-remote-session",
@@ -4536,7 +4802,8 @@
       "Online"
     ],
     "explanation": "Describe Remote Session in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about assisting someone from another location."
   },
   {
     "id": "technical-18-permissions",
@@ -4553,7 +4820,8 @@
       "Security"
     ],
     "explanation": "Describe Permissions in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what someone is authorised to do."
   },
   {
     "id": "technical-19-user-account",
@@ -4570,7 +4838,8 @@
       "Access"
     ],
     "explanation": "Describe User Account in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a person’s digital presence."
   },
   {
     "id": "technical-20-license-key",
@@ -4587,7 +4856,8 @@
       "Software"
     ],
     "explanation": "Describe License Key in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about proving a right to use an application."
   },
   {
     "id": "technical-21-product-version",
@@ -4604,7 +4874,8 @@
       "About"
     ],
     "explanation": "Describe Product Version in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Consider how to identify a particular software revision."
   },
   {
     "id": "technical-22-compatibility",
@@ -4621,7 +4892,8 @@
       "Requirement"
     ],
     "explanation": "Describe Compatibility in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about whether two components can work together."
   },
   {
     "id": "technical-23-configuration",
@@ -4638,7 +4910,8 @@
       "Environment"
     ],
     "explanation": "Describe Configuration in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about choices that shape how something works."
   },
   {
     "id": "technical-24-installation",
@@ -4655,7 +4928,8 @@
       "Deploy"
     ],
     "explanation": "Describe Installation in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about making an application ready to use."
   },
   {
     "id": "technical-25-uninstallation",
@@ -4672,7 +4946,8 @@
       "Cleanup"
     ],
     "explanation": "Describe Uninstallation in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about taking an application off a device."
   },
   {
     "id": "technical-26-restart",
@@ -4689,7 +4964,8 @@
       "Start"
     ],
     "explanation": "Describe Restart in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about turning something off and back on."
   },
   {
     "id": "technical-27-reset",
@@ -4706,7 +4982,8 @@
       "Start Over"
     ],
     "explanation": "Describe Reset in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about returning something to its starting state."
   },
   {
     "id": "technical-28-restore-point",
@@ -4723,7 +5000,8 @@
       "Windows"
     ],
     "explanation": "Describe Restore Point in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a checkpoint before a change."
   },
   {
     "id": "technical-29-network",
@@ -4740,7 +5018,8 @@
       "Communicate"
     ],
     "explanation": "Describe Network in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about devices exchanging information."
   },
   {
     "id": "technical-30-latency",
@@ -4757,7 +5036,8 @@
       "Lag"
     ],
     "explanation": "Describe Latency in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about the time between a request and reply."
   },
   {
     "id": "technical-31-timeout",
@@ -4774,7 +5054,8 @@
       "Delay"
     ],
     "explanation": "Describe Timeout in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an operation taking too long."
   },
   {
     "id": "technical-32-crash",
@@ -4791,7 +5072,8 @@
       "Fail"
     ],
     "explanation": "Describe Crash in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a program ending abruptly."
   },
   {
     "id": "technical-33-freeze",
@@ -4808,7 +5090,8 @@
       "Stop"
     ],
     "explanation": "Describe Freeze in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an application no longer reacting."
   },
   {
     "id": "technical-34-data-loss",
@@ -4825,7 +5108,8 @@
       "Gone"
     ],
     "explanation": "Describe Data Loss in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about something valuable no longer being available."
   },
   {
     "id": "technical-35-corrupt-file",
@@ -4842,7 +5126,8 @@
       "Broken"
     ],
     "explanation": "Describe Corrupt File in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about something unreadable despite being present."
   },
   {
     "id": "technical-36-duplicate-record",
@@ -4859,7 +5144,8 @@
       "Remove"
     ],
     "explanation": "Describe Duplicate Record in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about two entries representing one thing."
   },
   {
     "id": "technical-37-missing-feature",
@@ -4876,7 +5162,8 @@
       "Function"
     ],
     "explanation": "Describe Missing Feature in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a capability the user cannot find."
   },
   {
     "id": "technical-38-known-issue",
@@ -4893,7 +5180,8 @@
       "Recognised"
     ],
     "explanation": "Describe Known Issue in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a fault the team has already identified."
   },
   {
     "id": "technical-39-bug-report",
@@ -4910,7 +5198,8 @@
       "Submit"
     ],
     "explanation": "Describe Bug Report in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about giving developers evidence of a fault."
   },
   {
     "id": "technical-40-feature-request",
@@ -4927,7 +5216,8 @@
       "Submit"
     ],
     "explanation": "Describe Feature Request in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about proposing a useful improvement."
   },
   {
     "id": "technical-41-knowledge-base",
@@ -4944,7 +5234,8 @@
       "Information"
     ],
     "explanation": "Describe Knowledge Base in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a searchable support library."
   },
   {
     "id": "technical-42-ticket-queue",
@@ -4961,7 +5252,8 @@
       "Backlog"
     ],
     "explanation": "Describe Ticket Queue in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about work awaiting attention."
   },
   {
     "id": "technical-43-case-owner",
@@ -4978,7 +5270,8 @@
       "Person"
     ],
     "explanation": "Describe Case Owner in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about who is accountable for progress."
   },
   {
     "id": "technical-44-handover",
@@ -4995,7 +5288,8 @@
       "Colleague"
     ],
     "explanation": "Describe Handover in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about continuity between colleagues."
   },
   {
     "id": "technical-45-customer-impact",
@@ -5012,7 +5306,8 @@
       "Consequences"
     ],
     "explanation": "Describe Customer Impact in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what a person can no longer do."
   },
   {
     "id": "technical-46-business-impact",
@@ -5029,7 +5324,8 @@
       "Consequences"
     ],
     "explanation": "Describe Business Impact in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about the effect on daily work."
   },
   {
     "id": "technical-47-temporary-fix",
@@ -5046,7 +5342,8 @@
       "Permanent"
     ],
     "explanation": "Describe Temporary Fix in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about keeping work going for now."
   },
   {
     "id": "technical-48-permanent-fix",
@@ -5063,7 +5360,8 @@
       "Issue"
     ],
     "explanation": "Describe Permanent Fix in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about preventing the fault from returning."
   },
   {
     "id": "technical-49-follow-up",
@@ -5080,7 +5378,8 @@
       "Next"
     ],
     "explanation": "Describe Follow-up in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about reconnecting after an earlier conversation."
   },
   {
     "id": "technical-50-case-closure",
@@ -5097,7 +5396,8 @@
       "Close"
     ],
     "explanation": "Describe Case Closure in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about finishing the support process."
   },
   {
     "id": "customer-01-launch-failure",
@@ -5114,7 +5414,8 @@
       "Respond"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about what happens when opening an application."
   },
   {
     "id": "customer-02-slow-performance",
@@ -5131,7 +5432,8 @@
       "Respond"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about tasks taking longer than usual."
   },
   {
     "id": "customer-03-forgotten-password",
@@ -5148,7 +5450,8 @@
       "Sign In"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a secret someone cannot recall."
   },
   {
     "id": "customer-04-frozen-screen",
@@ -5165,7 +5468,8 @@
       "Hang"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an interface that no longer reacts."
   },
   {
     "id": "customer-05-save-failure",
@@ -5182,7 +5486,8 @@
       "Storage"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about edits not being kept."
   },
   {
     "id": "customer-06-login-failure",
@@ -5199,7 +5504,8 @@
       "Authentication"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about being unable to enter a service."
   },
   {
     "id": "customer-07-update-failure",
@@ -5216,7 +5522,8 @@
       "Retry"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an unsuccessful move to a newer release."
   },
   {
     "id": "customer-08-printer-offline",
@@ -5233,7 +5540,8 @@
       "Device"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about equipment that cannot be reached."
   },
   {
     "id": "customer-09-feature-loss",
@@ -5250,7 +5558,8 @@
       "Update"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about something that used to be available."
   },
   {
     "id": "customer-10-error-alert",
@@ -5267,7 +5576,8 @@
       "Problem"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a notification that needs attention."
   },
   {
     "id": "customer-11-unstable-internet",
@@ -5284,7 +5594,8 @@
       "Online"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a connection that keeps dropping."
   },
   {
     "id": "customer-12-deleted-file",
@@ -5301,7 +5612,8 @@
       "Document"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about something removed by accident."
   },
   {
     "id": "customer-13-recurring-issue",
@@ -5318,7 +5630,8 @@
       "Previous"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a fault that keeps returning."
   },
   {
     "id": "customer-14-customer-frustration",
@@ -5335,7 +5648,8 @@
       "Calm"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about the person’s emotional response."
   },
   {
     "id": "customer-15-urgent-request",
@@ -5352,7 +5666,8 @@
       "Priority"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a need requiring prompt attention."
   },
   {
     "id": "customer-16-immediate-fix",
@@ -5369,7 +5684,8 @@
       "Workaround"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about pressure for an answer right away."
   },
   {
     "id": "customer-17-escalation-need",
@@ -5386,7 +5702,8 @@
       "Team"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about when additional expertise is needed."
   },
   {
     "id": "customer-18-clarification",
@@ -5403,7 +5720,8 @@
       "Investigate"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about resolving uncertainty in a conversation."
   },
   {
     "id": "customer-19-screenshot",
@@ -5420,7 +5738,8 @@
       "Picture"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about preserving what appears visually."
   },
   {
     "id": "customer-20-logs",
@@ -5437,7 +5756,8 @@
       "Records"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about the trail left by system activity."
   },
   {
     "id": "customer-21-restart-advice",
@@ -5454,7 +5774,8 @@
       "Device"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about suggesting a fresh start."
   },
   {
     "id": "customer-22-temporary-workaround",
@@ -5471,7 +5792,8 @@
       "Steps"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about keeping work moving for now."
   },
   {
     "id": "customer-23-pending-fix",
@@ -5488,7 +5810,8 @@
       "Expectation"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about setting expectations while work continues."
   },
   {
     "id": "customer-24-reproduction-failure",
@@ -5505,7 +5828,8 @@
       "Evidence"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a fault that cannot be recreated."
   },
   {
     "id": "customer-25-expected-behaviour",
@@ -5522,7 +5846,8 @@
       "Documentation"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about how the product was intended to work."
   },
   {
     "id": "customer-26-scope-boundary",
@@ -5539,7 +5864,8 @@
       "Refer"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about where one group’s work ends."
   },
   {
     "id": "customer-27-legacy-version",
@@ -5556,7 +5882,8 @@
       "Current"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an older edition still in use."
   },
   {
     "id": "customer-28-unsupported-device",
@@ -5573,7 +5900,8 @@
       "Platform"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a machine outside the tested list."
   },
   {
     "id": "customer-29-expired-license",
@@ -5590,7 +5918,8 @@
       "Entitlement"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a right to use something ending."
   },
   {
     "id": "customer-30-locked-account",
@@ -5607,7 +5936,8 @@
       "Access"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about being prevented from entering."
   },
   {
     "id": "customer-31-admin-rights",
@@ -5624,7 +5954,8 @@
       "Privileges"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about elevated authority on a system."
   },
   {
     "id": "customer-32-wrong-file",
@@ -5641,7 +5972,8 @@
       "Send"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about receiving a different item than intended."
   },
   {
     "id": "customer-33-incomplete-download",
@@ -5658,7 +5990,8 @@
       "Internet"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about receiving only part of something."
   },
   {
     "id": "customer-34-missing-backup",
@@ -5675,7 +6008,8 @@
       "Unavailable"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about having no spare version available."
   },
   {
     "id": "customer-35-incorrect-data",
@@ -5692,7 +6026,8 @@
       "Expected"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about information that does not match reality."
   },
   {
     "id": "customer-36-blank-page",
@@ -5709,7 +6044,8 @@
       "White"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about opening something and seeing nothing."
   },
   {
     "id": "customer-37-unresponsive-button",
@@ -5726,7 +6062,8 @@
       "Browser"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a control that does nothing."
   },
   {
     "id": "customer-38-audio-failure",
@@ -5743,7 +6080,8 @@
       "Hear"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a meeting without sound."
   },
   {
     "id": "customer-39-camera-detection",
@@ -5760,7 +6098,8 @@
       "Meeting"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an input not appearing during a call."
   },
   {
     "id": "customer-40-expired-link",
@@ -5777,7 +6116,8 @@
       "Session"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a way in that no longer works."
   },
   {
     "id": "customer-41-missing-email",
@@ -5794,7 +6134,8 @@
       "Delivery"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about something sent that never arrives."
   },
   {
     "id": "customer-42-large-attachment",
@@ -5811,7 +6152,8 @@
       "Upload"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about sharing something too big."
   },
   {
     "id": "customer-43-wrong-password",
@@ -5828,7 +6170,8 @@
       "Attempt"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a secret that does not match."
   },
   {
     "id": "customer-44-time-zone",
@@ -5845,7 +6188,8 @@
       "Date"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about differences between locations."
   },
   {
     "id": "customer-45-date-format",
@@ -5862,7 +6206,8 @@
       "Display"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about different ways of writing a calendar entry."
   },
   {
     "id": "customer-46-session-timeout",
@@ -5879,7 +6224,8 @@
       "Limit"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a session ending after inactivity."
   },
   {
     "id": "customer-47-approval",
@@ -5896,7 +6242,8 @@
       "Process"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about needing someone’s decision to proceed."
   },
   {
     "id": "customer-48-fix-validation",
@@ -5913,7 +6260,8 @@
       "Check"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about checking whether a change worked."
   },
   {
     "id": "customer-49-closure-ready",
@@ -5930,7 +6278,8 @@
       "End"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about confirming that support can finish."
   },
   {
     "id": "customer-50-follow-up-call",
@@ -5947,6 +6296,7 @@
       "Customer"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a conversation after the first one."
   }
 ]

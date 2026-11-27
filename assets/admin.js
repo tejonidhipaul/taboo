@@ -1,18 +1,21 @@
-import { BUILT_IN_CARDS, THEME_LABELS, DIFFICULTY_LABELS, forbiddenCount, eligibleCards } from './cards.js';
-import { createSupabaseClient, randomToken, formatTimer, csvEscape, downloadText, parseCsv, safeFilePart } from './common.js';
+import { BUILT_IN_CARDS, THEME_LABELS, DIFFICULTY_LABELS, forbiddenCount, eligibleCards } from './cards.js?v=2026112705';
+import { createSupabaseClient, randomToken, formatTimer, csvEscape, downloadText, parseCsv, safeFilePart, setAnimatedVisibility, celebrate, updateTimerAlert } from './common.js?v=2026112710';
 
 const $ = (id) => document.getElementById(id);
 const CUSTOM_KEY = 'say-it-custom-cards-v2';
 let supabaseClient;
 let activeSession = null;
 let adminToken = '';
-let wordsRevealed = false;
+let mentorCardView = 'hidden';
 let timerHandle = null;
 let tickBusy = false;
 let usedCardIds = new Set();
 let refreshHandle = null;
 let refreshBusy = false;
 let updateQueue = Promise.resolve();
+let renderedSessionId = null;
+let renderedCardIndex = null;
+let renderedCorrectScore = null;
 
 function showOnly(panel) {
   ['loadingPanel', 'authPanel', 'setupPanel', 'livePanel'].forEach((id) => $(id).classList.toggle('is-hidden', id !== panel));
@@ -62,7 +65,8 @@ function cleanCard(card, difficulty) {
     category: card.category || 'Custom card',
     level: card.level || difficulty,
     forbidden: card.forbidden.slice(0, forbiddenCount(difficulty)),
-    explanation: card.explanation
+    explanation: card.explanation,
+    hint: card.hint || card.explanation
   };
 }
 
@@ -88,19 +92,23 @@ function queueUpdate(work) {
   return result;
 }
 
-async function patchSession(patch, { quiet = false, cardIndex = ('current_card' in patch || 'timer_remaining' in patch || ('timer_running' in patch && !('status' in patch))) ? activeSession?.card_index : null } = {}) {
+async function patchSession(patch, { quiet = false, cardIndex = typeof patch === 'function' || 'current_card' in patch || 'timer_remaining' in patch || ('timer_running' in patch && !('status' in patch)) ? activeSession?.card_index : null } = {}) {
   try {
-    await queueUpdate(async () => {
+    const updated = await queueUpdate(async () => {
       if (!activeSession || !adminToken) throw new Error('The session is no longer available.');
       if (cardIndex !== null && activeSession.card_index !== cardIndex) throw new Error('The card changed before this update was applied.');
+      const changes = typeof patch === 'function' ? patch(activeSession) : patch;
+      if (!changes) return null;
       activeSession = await rpc('admin_patch_game_session', {
         p_session_id: activeSession.id,
         p_admin_token: adminToken,
-        p_patch: patch
+        p_patch: changes
       });
       renderSession({ preserveEdits: true });
+      return activeSession;
     });
-    if (!quiet) $('connectionStatus').textContent = 'Saved · engineer screen updated';
+    if (!quiet && updated) $('connectionStatus').textContent = 'Saved · engineer screen updated';
+    return updated;
   } catch (error) {
     $('connectionStatus').textContent = 'Update failed';
     throw error;
@@ -115,7 +123,7 @@ async function loadSession(id) {
   activeSession = await rpc('admin_get_game_session', { p_session_id: id, p_admin_token: adminToken });
   const currentId = activeSession.current_card?.id;
   if (currentId) usedCardIds.add(currentId);
-  wordsRevealed = false;
+  mentorCardView = 'hidden';
   showOnly('livePanel');
   renderSession();
   if (activeSession.timer_running) startLocalTimer();
@@ -152,6 +160,13 @@ async function copyEngineerLink() {
 
 function renderSession({ preserveEdits = false } = {}) {
   if (!activeSession) return;
+  const sameSession = renderedSessionId === activeSession.id;
+  const sameCard = sameSession && renderedCardIndex === activeSession.card_index;
+  if (sameSession && activeSession.score_correct > renderedCorrectScore) celebrate($('mentorActions'));
+  if (!sameCard) mentorCardView = 'hidden';
+  renderedSessionId = activeSession.id;
+  renderedCardIndex = activeSession.card_index;
+  renderedCorrectScore = activeSession.score_correct;
   renderEngineerLink();
   $('liveTitle').textContent = `${activeSession.engineer_name || 'Engineer'} · ${THEME_LABELS[activeSession.mode] || activeSession.mode}`;
   if (!preserveEdits) {
@@ -159,6 +174,7 @@ function renderSession({ preserveEdits = false } = {}) {
     $('liveDifficulty').value = activeSession.difficulty;
   }
   $('timerDisplay').textContent = activeSession.timer_seconds === 0 ? '∞' : formatTimer(activeSession.timer_remaining);
+  updateTimerAlert($('timerDisplay'), activeSession.timer_seconds, Number(activeSession.timer_remaining), activeSession.timer_running && activeSession.phase === 'active' && activeSession.status === 'active');
   $('scoreCorrect').textContent = activeSession.score_correct;
   $('scoreSkip').textContent = activeSession.score_skip;
   $('scoreTaboo').textContent = activeSession.score_taboo;
@@ -179,20 +195,28 @@ function renderSession({ preserveEdits = false } = {}) {
   $('startSession').disabled = !waiting;
   $('launchStatus').textContent = ended ? 'Session ended' : waiting ? `Waiting for ${activeSession.engineer_name || 'the engineer'}` : 'Session in progress';
   $('toggleWords').disabled = !canPlay;
+  $('toggleForbidden').disabled = !canPlay;
   $('toggleClue').disabled = !canPlay;
   $('correctCard').disabled = !canPlay;
   $('skipCard').disabled = !canPlay;
   $('tabooCard').disabled = !canPlay;
   $('nextCard').disabled = !canPlay;
-  $('hiddenCard').classList.toggle('is-hidden', waiting || (wordsRevealed && hasCard));
-  $('revealedCard').classList.toggle('is-hidden', waiting || !wordsRevealed || !hasCard);
-  $('toggleWords').textContent = wordsRevealed ? 'Hide words' : 'View words';
-  $('toggleWords').setAttribute('aria-pressed', String(wordsRevealed));
+  const showingCard = mentorCardView !== 'hidden' && hasCard;
+  const showingFullCard = mentorCardView === 'full';
+  $('cardCategory').classList.toggle('is-hidden', !showingFullCard);
+  $('cardTarget').classList.toggle('is-hidden', !showingFullCard);
+  $('modelBox').classList.toggle('is-hidden', !showingFullCard);
+  setAnimatedVisibility($('hiddenCard'), !waiting && !showingCard, { immediate: !sameCard || waiting || ended });
+  setAnimatedVisibility($('revealedCard'), !waiting && showingCard, { immediate: !sameCard || waiting || ended });
+  $('toggleWords').textContent = showingFullCard ? 'Hide words' : 'View words';
+  $('toggleWords').setAttribute('aria-pressed', String(showingFullCard));
+  $('toggleForbidden').textContent = mentorCardView === 'forbidden' ? 'Hide forbidden words' : 'View forbidden words';
+  $('toggleForbidden').setAttribute('aria-pressed', String(mentorCardView === 'forbidden'));
   const clueShown = card.clue_shown === true;
   const engineerTimerVisible = card.timer_visible === true;
   $('toggleClue').textContent = clueShown ? 'Hide clue' : 'Show clue';
   $('toggleClue').setAttribute('aria-pressed', String(clueShown));
-  $('toggleClue').disabled = !canPlay || !card.explanation;
+  $('toggleClue').disabled = !canPlay || !(card.hint || card.explanation);
   $('toggleEngineerTimer').textContent = engineerTimerVisible ? 'Hide timer' : 'Show timer';
   $('toggleEngineerTimer').setAttribute('aria-pressed', String(engineerTimerVisible));
   $('toggleEngineerTimer').disabled = !canPlay;
@@ -208,6 +232,11 @@ function renderSession({ preserveEdits = false } = {}) {
   $('startTimer').disabled = !canPlay;
   $('pauseTimer').disabled = !canPlay;
   $('resetTimer').disabled = !canPlay;
+  $('customTimerSeconds').disabled = !canPlay;
+  $('useCustomTimer').disabled = !canPlay;
+  $('timer30').disabled = !canPlay;
+  $('timer20').disabled = !canPlay;
+  $('timer10').disabled = !canPlay;
 }
 
 async function drawCard(overrides = {}, outcome = null, expectedIndex = activeSession?.card_index) {
@@ -230,9 +259,10 @@ async function drawCard(overrides = {}, outcome = null, expectedIndex = activeSe
       p_mode: mode,
       p_difficulty: difficulty
     });
-    wordsRevealed = false;
+    mentorCardView = 'hidden';
     stopLocalTimer();
     renderSession({ preserveEdits: true });
+    if (activeSession.timer_running) startLocalTimer();
   });
 }
 
@@ -291,16 +321,42 @@ function startLocalTimer() {
   stopLocalTimer();
   timerHandle = setInterval(async () => {
     if (tickBusy || !activeSession?.timer_running) return;
-    const remaining = Math.max(0, Number(activeSession.timer_remaining) - 1);
-    activeSession.timer_remaining = remaining;
-    $('timerDisplay').textContent = formatTimer(remaining);
+    const cardIndex = activeSession.card_index;
+    const sessionId = activeSession.id;
     tickBusy = true;
     try {
-      await patchSession({ timer_remaining: remaining, timer_running: remaining > 0 }, { quiet: true });
-      if (remaining === 0) { stopLocalTimer(); toast('Time is up.'); }
-    } catch { stopLocalTimer(); }
+      const updated = await patchSession((session) => {
+        if (session.id !== sessionId || session.card_index !== cardIndex || !session.timer_running) return null;
+        const remaining = Math.max(0, Number(session.timer_remaining) - 1);
+        return { timer_remaining: remaining, timer_running: remaining > 0 };
+      }, { quiet: true, cardIndex: null });
+      if (updated && updated.timer_remaining === 0 && activeSession?.card_index === cardIndex && !activeSession.timer_running) {
+        stopLocalTimer();
+        toast('Time is up.');
+      }
+    } catch (error) {
+      stopLocalTimer();
+      toast(error.message || 'Timer update failed. Check your connection.');
+    }
     finally { tickBusy = false; }
   }, 1000);
+}
+
+async function useTimerSeconds(seconds) {
+  if (!Number.isInteger(seconds) || seconds < 1 || seconds > 2147483647) {
+    throw new Error('Enter a whole number of seconds between 1 and 2147483647.');
+  }
+  const updated = await patchSession((session) => {
+    const remaining = session.timer_running ? Number(session.timer_remaining) + seconds : seconds;
+    if (remaining > 2147483647) throw new Error('The total timer duration is too large.');
+    return {
+      timer_seconds: session.timer_running ? session.timer_seconds : seconds,
+      timer_remaining: remaining,
+      timer_running: true,
+      current_card: { ...session.current_card, timer_visible: true }
+    };
+  });
+  if (updated?.timer_running && !timerHandle) startLocalTimer();
 }
 
 async function createLiveSession(event) {
@@ -321,7 +377,7 @@ async function createLiveSession(event) {
     localStorage.setItem(sessionTokenKey(activeSession.id), adminToken);
     history.replaceState({}, '', `admin.html?s=${activeSession.id}`);
     showOnly('livePanel');
-    wordsRevealed = false;
+    mentorCardView = 'hidden';
     renderSession();
     startSessionRefresh();
     toast('Session created. Share the link, then start when the engineer is ready.');
@@ -358,6 +414,7 @@ function addCustomCard(event) {
   if (forbidden.length < 4 || forbidden.length > 6) { $('customStatus').textContent = 'Enter between 4 and 6 forbidden words.'; return; }
   if (!target || !isOneOrTwoWords(target) || forbidden.some((word) => !isOneOrTwoWords(word))) { $('customStatus').textContent = 'Enter a target and keep it and every forbidden entry to one or two words.'; return; }
   const explanation = $('customExplanation').value.trim();
+  const hint = $('customHint').value.trim();
   if (!explanation) { $('customStatus').textContent = 'Enter a model explanation.'; return; }
   const cards = customCards();
   cards.push({
@@ -367,7 +424,8 @@ function addCustomCard(event) {
     category: 'Custom card',
     level: 'intermediate',
     forbidden,
-    explanation
+    explanation,
+    hint
   });
   saveCustomCards(cards);
   $('customCardForm').reset();
@@ -375,7 +433,7 @@ function addCustomCard(event) {
 }
 
 function exportCustomCards() {
-  const rows = [['target', 'theme', 'forbidden_words', 'explanation'], ...customCards().map((card) => [card.target, card.theme, card.forbidden.join(';'), card.explanation])];
+  const rows = [['target', 'theme', 'forbidden_words', 'explanation', 'hint'], ...customCards().map((card) => [card.target, card.theme, card.forbidden.join(';'), card.explanation, card.hint || ''])];
   downloadText('say-it-custom-cards.csv', `\ufeff${escapeCsvRows(rows)}`, 'text/csv;charset=utf-8');
 }
 
@@ -388,7 +446,7 @@ async function importCustomCards(event) {
     const imported = body.map((row) => {
       const forbidden = String(row[2] || '').split(/[;|]/).map((word) => word.trim()).filter(Boolean).slice(0, 6);
       if (!row[0]?.trim() || !isOneOrTwoWords(row[0]) || forbidden.some((word) => !isOneOrTwoWords(word)) || !['everyday', 'technical', 'customer'].includes(row[1]?.trim()) || forbidden.length < 4 || !row[3]?.trim()) return null;
-      return { id: `custom-${crypto.randomUUID()}`, target: row[0].trim(), theme: row[1].trim(), category: 'Custom card', level: 'intermediate', forbidden, explanation: row[3].trim() };
+      return { id: `custom-${crypto.randomUUID()}`, target: row[0].trim(), theme: row[1].trim(), category: 'Custom card', level: 'intermediate', forbidden, explanation: row[3].trim(), hint: row[4]?.trim() || '' };
     }).filter(Boolean);
     saveCustomCards([...customCards(), ...imported]);
     $('customStatus').textContent = `${imported.length} card${imported.length === 1 ? '' : 's'} imported.`;
@@ -426,9 +484,10 @@ function wireEvents() {
   });
   $('signOut').addEventListener('click', async () => { await supabaseClient.auth.signOut(); history.replaceState({}, '', 'admin.html'); });
   $('sessionForm').addEventListener('submit', createLiveSession);
-  $('toggleWords').addEventListener('click', () => { wordsRevealed = !wordsRevealed; renderSession({ preserveEdits: true }); });
-  onUpdate('toggleClue', () => patchSession({ current_card: { ...activeSession.current_card, clue_shown: activeSession.current_card.clue_shown !== true } }));
-  onUpdate('toggleEngineerTimer', () => patchSession({ current_card: { ...activeSession.current_card, timer_visible: activeSession.current_card.timer_visible !== true } }));
+  $('toggleWords').addEventListener('click', () => { mentorCardView = mentorCardView === 'full' ? 'hidden' : 'full'; renderSession({ preserveEdits: true }); });
+  $('toggleForbidden').addEventListener('click', () => { mentorCardView = mentorCardView === 'forbidden' ? 'hidden' : 'forbidden'; renderSession({ preserveEdits: true }); });
+  onUpdate('toggleClue', () => patchSession((session) => ({ current_card: { ...session.current_card, clue_shown: session.current_card.clue_shown !== true } })));
+  onUpdate('toggleEngineerTimer', () => patchSession((session) => ({ current_card: { ...session.current_card, timer_visible: session.current_card.timer_visible !== true } })));
   onUpdate('nextCard', () => drawCard());
   onUpdate('correctCard', () => scoreAndAdvance('correct'));
   onUpdate('skipCard', () => scoreAndAdvance('skip'));
@@ -449,13 +508,18 @@ function wireEvents() {
     }
   });
   onUpdate('startTimer', async () => {
-    if (activeSession.timer_seconds === 0) { toast('This is an untimed coaching session.'); return; }
-    if (activeSession.timer_remaining <= 0) activeSession.timer_remaining = activeSession.timer_seconds;
-    await patchSession({ timer_running: true, timer_remaining: activeSession.timer_remaining });
-    startLocalTimer();
+    const updated = await patchSession((session) => {
+      if (session.timer_seconds === 0) throw new Error('Choose a timer duration first.');
+      return { timer_running: true, timer_remaining: session.timer_remaining > 0 ? session.timer_remaining : session.timer_seconds };
+    });
+    if (updated?.timer_running && !timerHandle) startLocalTimer();
   });
   onUpdate('pauseTimer', async () => { stopLocalTimer(); await patchSession({ timer_running: false }); });
-  onUpdate('resetTimer', async () => { stopLocalTimer(); await patchSession({ timer_running: false, timer_remaining: activeSession.timer_seconds }); });
+  onUpdate('resetTimer', async () => { stopLocalTimer(); await patchSession((session) => ({ timer_running: false, timer_remaining: session.timer_seconds })); });
+  onUpdate('useCustomTimer', () => useTimerSeconds(Number($('customTimerSeconds').value)));
+  onUpdate('timer30', () => useTimerSeconds(30));
+  onUpdate('timer20', () => useTimerSeconds(20));
+  onUpdate('timer10', () => useTimerSeconds(10));
   onUpdate('endSession', async () => {
     if (!confirm('End this live session? The engineer will see a completion screen.')) return;
     stopLocalTimer();

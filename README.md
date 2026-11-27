@@ -13,12 +13,15 @@ A real-time, Taboo-style communication game for one-to-one mentoring with suppor
 - Custom cards and CSV imports now follow the same one-or-two-word rule.
 - The engineer waiting screen explains the rules; live cards use a vertical Taboo-card layout with forbidden words stacked beneath the target and a flip animation. Card entries can wrap between words, while long individual words resize to fit on phones.
 - Mentors can reveal a clue and show or hide the timer on the engineer’s screen; the timer starts hidden there.
+- Each built-in card has a short, tailored clue, separate from the mentor’s model explanation.
+- The timer appears beside the theme, without revealing the difficulty. Mentors can enter a duration or use 30-, 20-, and 10-second shortcuts.
+- Running timers pulse during the last five seconds and signal when time is up; reduced-motion preferences are respected.
 - Engineers can select **Guessed** or **Taboo** to score the current card and move on while the mentor console is open.
 - The live mentor console uses a tighter layout to reduce scrolling.
 
 ## What changed in v2.0
 
-- The mentor’s target and forbidden words are **hidden by default** on every new card. Use **View words** only when needed.
+- The mentor’s target and forbidden words are **hidden by default** on every new card. **View forbidden words** shows only those words; **View words** reveals the full card when needed.
 - The mentor console now requires a **Supabase Auth email/password account**.
 - Change among **Everyday English, Technical Talk, Customer Challenge and Mixed Challenge** during a live session.
 - Change **Beginner, Intermediate or Advanced** during a live session. The same engineer link continues to work.
@@ -44,7 +47,7 @@ The package also retains custom cards and CSV import/export, live timer and scor
 
 ## Update an existing v2.1 project
 
-In Supabase SQL Editor, run the complete `supabase/upgrade-mentee-controls.sql`. It preserves existing sessions and includes the clue and timer update; you do not need to run `upgrade-live-controls.sql` separately. Then deploy the updated files and hard-refresh both game screens. Do **not** rerun the full `schema.sql` on an existing installation, and do not run `upgrade-live-controls.sql` after the mentee-controls migration, because it replaces the public-state function.
+In Supabase SQL Editor, run the complete `supabase/upgrade-mentee-controls.sql`. It preserves existing sessions, enables the tailored clues and timer update, and removes the difficulty label from public session state; you do not need to run `upgrade-live-controls.sql` separately. Run it again if you applied an earlier version. Then deploy the updated files and hard-refresh both game screens. Do **not** rerun the full `schema.sql` on an existing installation, and do not run `upgrade-live-controls.sql` after the mentee-controls migration, because it replaces the public-state function.
 
 For a fresh install, run `supabase/schema.sql` followed by `supabase/upgrade-mentee-controls.sql`. When upgrading from v1, run `supabase/upgrade-v2.sql` followed by `supabase/upgrade-mentee-controls.sql`.
 
@@ -98,13 +101,17 @@ This project includes a Netlify Function, so use a Git-connected Netlify site (r
 4. Open the engineer link in another incognito window or on a phone.
 5. Confirm the engineer sees a personalised waiting screen and no card.
 6. Select **Start session** in the mentor console and confirm the first card appears automatically.
-7. Confirm the mentor console says **Words are hidden**, then click **View words** and **Hide words**.
+7. Confirm the mentor console says **Words are hidden**, then check that **View forbidden words** shows no target or model explanation. Try **View words** and **Hide words**.
 8. Change the live theme and difficulty, then click **Apply & show next card**. The engineer view should update without a new link.
 9. Test timer, Correct/Skip/Taboo, notes and CSV export.
 10. Confirm the mentor can show/hide a clue and the engineer timer; draw another card and confirm the clue resets while timer visibility persists.
 11. With the mentor console open, select **Guessed** and then **Taboo** on the engineer screen. Confirm each result updates the corresponding mentor score and advances the card.
+12. Confirm the timer starts hidden and the difficulty is not shown to the engineer. Select **30s**, then **20s** while it is running; the timer should appear and gain 20 seconds. Test a custom duration, and hide and show the timer again.
 
 The mentor console must remain open and connected to process engineer results and choose the next card, including custom cards stored in that browser. Until it does, the engineer screen displays a waiting message and disables both result buttons.
+
+Timer shortcuts and **Use time** start a countdown and show it to the engineer. If the countdown is already running, they add that many seconds instead. Reset and the next card use the most recent duration selected while stopped; added time applies only to the current countdown. When either player advances to a new card, a visible timer automatically resets and starts; a hidden or untimed timer resets and remains stopped.
+The engineer timer updates locally between session refreshes and resynchronizes with the mentor’s countdown. If the connection fails, it displays the last received time while reconnecting.
 
 ## How live theme and difficulty changes work
 
@@ -121,11 +128,11 @@ The words are hidden again automatically whenever a new card is drawn.
 Use these columns:
 
 ```csv
-target,theme,forbidden_words,explanation
-Cache,technical,"memory;temporary;browser;fast;store;clear","Explain temporary saved information in plain language."
+target,theme,forbidden_words,explanation,hint
+Cache,technical,"memory;temporary;browser;fast;store;clear","Explain temporary saved information in plain language.","Think about keeping something handy for later."
 ```
 
-Allowed themes are `everyday`, `technical`, and `customer`. Separate 4–6 forbidden entries with semicolons. The target and each forbidden entry must be one or two words. Custom cards are stored in that mentor browser’s local storage; export them before clearing browser data or moving devices.
+Allowed themes are `everyday`, `technical`, and `customer`. Separate 4–6 forbidden entries with semicolons. The target and each forbidden entry must be one or two words. The `hint` column is optional; when absent, the model explanation is used as the clue, including for previously saved custom cards. Write a short hint without the target or forbidden words. Custom cards are stored in that mentor browser’s local storage; export them before clearing browser data or moving devices.
 
 ## Security design
 
@@ -133,7 +140,7 @@ Allowed themes are `everyday`, `technical`, and `customer`. Separate 4–6 forbi
 - Sessions are owned by the authenticated mentor’s user ID.
 - A separate 256-bit per-session control token is generated in the browser; only its SHA-256 hash is stored in Supabase.
 - Row Level Security is enabled and clients receive no direct table privileges.
-- Anyone with an engineer link can read public session state and submit one Guessed or Taboo result for the current active card. The public state omits mentor identity, control-token hash, hidden model explanations, observations and private notes. A model explanation is included only after the mentor selects **Show clue**.
+- Anyone with an engineer link can read public session state and submit one Guessed or Taboo result for the current active card. The public state omits the difficulty label, mentor identity, control-token hash, hidden clues, observations and private notes. The number of forbidden words can still reveal the difficulty. A hint (or the model explanation when no hint is provided) is included only after the mentor selects **Show clue**.
 - Realtime broadcasts contain only a session ID and act as a refresh signal; polling is the fallback.
 - The publishable key is intentionally public. Never add the secret/service-role key.
 
@@ -156,4 +163,5 @@ No `npm install` is needed because the test suite uses only Node’s standard li
 - **Engineer page does not update immediately** — it polls every three seconds even if Realtime is unavailable. Check the engineer link and Supabase status.
 - **Engineer remains on the waiting screen** — select **Start session** in the mentor console. Creating a session intentionally does not send a card.
 - **Engineer result remains pending** — reopen the mentor console in the browser that created the session, keep it connected, and check its connection status.
+- **The card or rules look out of date, or buttons do nothing** — hard-refresh both screens after deploying. The site revalidates its scripts and styles so browsers pick up later updates.
 - **Old session cannot be resumed after upgrade** — v1 rows have no authenticated mentor owner; create a new v2 session.

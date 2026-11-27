@@ -24,6 +24,53 @@ export function formatTimer(totalSeconds) {
   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
+export function updateTimerAlert(element, totalSeconds, remaining, running) {
+  const timed = Number(totalSeconds) > 0;
+  element.classList.toggle('timer-warning', timed && running && remaining > 0 && remaining <= 5);
+  element.classList.toggle('timer-ended', timed && remaining <= 0);
+}
+
+const visibilityTransitions = new WeakMap();
+
+export function setAnimatedVisibility(element, visible, { immediate = false, onHidden, expand = false } = {}) {
+  const previous = visibilityTransitions.get(element);
+  const wasVisible = previous ? previous.visible : !element.classList.contains('is-hidden');
+  if (!immediate && wasVisible === visible) return;
+  const currentStyle = expand && previous && !immediate ? window.getComputedStyle(element) : null;
+  const interrupted = currentStyle ? { height: currentStyle.height, opacity: currentStyle.opacity } : null;
+  previous?.animation?.cancel();
+  visibilityTransitions.delete(element);
+  element.setAttribute('aria-hidden', String(!visible));
+  if (visible) element.classList.remove('is-hidden');
+  let animation;
+  const finish = () => {
+    if (!visible) {
+      element.classList.add('is-hidden');
+      if (onHidden) onHidden();
+    }
+    animation?.cancel();
+    visibilityTransitions.delete(element);
+  };
+  if (immediate || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !element.animate) {
+    finish();
+    return;
+  }
+  const collapsed = expand ? { height: '0px', opacity: 0 } : { opacity: 0 };
+  const expanded = expand ? { height: `${element.scrollHeight}px`, opacity: 1 } : { opacity: 1 };
+  animation = element.animate(
+    [interrupted || (visible ? collapsed : expanded), visible ? expanded : collapsed],
+    { duration: expand ? 320 : 180, easing: 'ease-out', fill: 'both' }
+  );
+  visibilityTransitions.set(element, { visible, animation });
+  animation.onfinish = finish;
+}
+
+export function celebrate(element) {
+  element.classList.remove('celebrate');
+  void element.offsetWidth;
+  element.classList.add('celebrate');
+}
+
 export function fitTextToWidth(element) {
   element.style.fontSize = '';
   const width = element.clientWidth;

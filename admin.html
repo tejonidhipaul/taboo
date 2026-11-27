@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Mentor console for Say It!">
   <title>Say It! · Mentor console</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=2026112710">
 </head>
 <body class="app-body">
   <header class="topbar">
@@ -93,18 +93,29 @@
 
       <div class="control-grid">
         <section class="panel live-card-panel">
-          <div class="panel-title-row"><div><p class="kicker">Mentor preview</p><h2>Current card</h2></div><div class="card-mentor-actions"><button id="toggleWords" class="btn btn-secondary" type="button" aria-pressed="false">View words</button><button id="toggleClue" class="btn btn-secondary" type="button" aria-pressed="false">Show clue</button></div></div>
-          <div id="mentorWaitingCard" class="hidden-card"><span class="hidden-icon waiting-icon" aria-hidden="true">▶</span><strong>The engineer is on the waiting screen</strong><p>Share the link, wait for them to join, then select Start session above.</p></div>
+          <div class="panel-title-row"><div><p class="kicker">Mentor preview</p><h2>Current card</h2></div><div class="card-mentor-actions"><button id="toggleForbidden" class="btn btn-secondary" type="button" aria-pressed="false">View forbidden words</button><button id="toggleWords" class="btn btn-secondary" type="button" aria-pressed="false">View words</button><button id="toggleClue" class="btn btn-secondary" type="button" aria-pressed="false">Show clue</button></div></div>
+          <div class="mentor-card-area"><div id="mentorWaitingCard" class="hidden-card"><span class="hidden-icon waiting-icon" aria-hidden="true">▶</span><strong>The engineer is on the waiting screen</strong><p>Share the link, wait for them to join, then select Start session above.</p></div>
           <div id="hiddenCard" class="hidden-card is-hidden"><span class="hidden-icon" aria-hidden="true">•••</span><strong>Words are hidden</strong><p>The engineer can see the card. Reveal it only when you need to check or coach.</p></div>
           <div id="revealedCard" class="revealed-card is-hidden">
             <p id="cardCategory" class="pill"></p><h3 id="cardTarget">Ready?</h3><p class="forbidden-label">Do not say</p><div id="forbiddenWords" class="forbidden-list"></div>
-            <div class="model-box"><strong>Model explanation</strong><p id="modelExplanation"></p></div>
-          </div>
-          <div class="card-actions"><button id="correctCard" class="btn btn-success" type="button">Correct</button><button id="skipCard" class="btn btn-secondary" type="button">Skip</button><button id="tabooCard" class="btn btn-danger" type="button">Taboo</button><button id="nextCard" class="btn btn-primary" type="button">Next card</button></div>
+            <div id="modelBox" class="model-box"><strong>Model explanation</strong><p id="modelExplanation"></p></div>
+          </div></div>
+          <div id="mentorActions" class="card-actions celebration-anchor"><button id="correctCard" class="btn btn-success" type="button">Correct</button><button id="skipCard" class="btn btn-secondary" type="button">Skip</button><button id="tabooCard" class="btn btn-danger" type="button">Taboo</button><button id="nextCard" class="btn btn-primary" type="button">Next card</button></div>
         </section>
 
         <aside class="panel live-controls">
-          <div class="timer-wrap"><span class="kicker">Round timer</span><div id="timerDisplay" class="timer">01:30</div><div class="button-row"><button id="startTimer" class="btn btn-primary btn-small" type="button">Start</button><button id="pauseTimer" class="btn btn-secondary btn-small" type="button">Pause</button><button id="resetTimer" class="btn btn-ghost btn-small" type="button">Reset</button></div><button id="toggleEngineerTimer" class="btn btn-secondary btn-small engineer-timer-toggle" type="button" aria-pressed="false">Show timer</button><p class="microcopy">Controls timer visibility on the engineer’s screen.</p></div>
+          <div class="timer-wrap">
+            <span class="kicker">Round timer</span>
+            <div id="timerDisplay" class="timer">01:30</div>
+            <div class="timer-options">
+              <label for="customTimerSeconds">Custom time in seconds</label>
+              <div class="timer-custom-row"><input id="customTimerSeconds" type="number" inputmode="numeric" min="1" max="2147483647" step="1" placeholder="Seconds"><button id="useCustomTimer" class="btn btn-secondary btn-small" type="button">Use time</button></div>
+              <div class="timer-presets" aria-label="Timer shortcuts"><button id="timer30" class="btn btn-secondary btn-small" type="button">30s</button><button id="timer20" class="btn btn-secondary btn-small" type="button">20s</button><button id="timer10" class="btn btn-secondary btn-small" type="button">10s</button></div>
+              <p class="microcopy">Starts the timer and shows it to the engineer. While running, adds time.</p>
+            </div>
+            <div class="button-row"><button id="startTimer" class="btn btn-primary btn-small" type="button">Start</button><button id="pauseTimer" class="btn btn-secondary btn-small" type="button">Pause</button><button id="resetTimer" class="btn btn-ghost btn-small" type="button">Reset</button></div>
+            <button id="toggleEngineerTimer" class="btn btn-secondary btn-small engineer-timer-toggle" type="button" aria-pressed="false">Show timer</button><p class="microcopy">Controls timer visibility on the engineer’s screen.</p>
+          </div>
           <div class="challenge-controls"><h2>Change this session</h2>
             <label>Theme<select id="liveMode"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option><option value="mixed">Mixed Challenge</option></select></label>
             <label>Difficulty<select id="liveDifficulty"><option value="beginner">Beginner · 4 words</option><option value="intermediate">Intermediate · 5 words</option><option value="advanced">Advanced · 6 words</option></select></label>
@@ -120,12 +131,12 @@
         <section class="panel notes-panel"><div class="panel-title-row"><div><p class="kicker">Mentoring review</p><h2>Notes &amp; export</h2></div><button id="exportSummary" class="btn btn-secondary" type="button">Export CSV</button></div><textarea id="mentorNotes" rows="3" placeholder="Capture strengths, examples, and one practical action for the next session…"></textarea><div class="button-row end"><button id="saveNotes" class="btn btn-primary" type="button">Save notes</button><span id="saveStatus" class="microcopy" aria-live="polite"></span></div></section>
       </div>
 
-      <details class="panel library-panel"><summary><strong>Custom card library</strong><span>Add, import or export your own coaching cards</span></summary><div class="custom-grid"><form id="customCardForm" class="stack-form"><label>Target word (one or two words)<input id="customTarget" required></label><label>Theme<select id="customTheme"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option></select></label><label>Forbidden words (4–6, each one or two words)<input id="customForbidden" required placeholder="word one, word two, word three, word four"></label><label>Model explanation<textarea id="customExplanation" rows="3" required></textarea></label><button class="btn btn-primary" type="submit">Add custom card</button><p id="customStatus" class="microcopy"></p></form><div class="import-box"><h3>CSV tools</h3><p class="muted">Columns: target, theme, forbidden words, explanation. Targets and forbidden entries must be one or two words.</p><label class="btn btn-secondary file-button">Import CSV<input id="importCsv" type="file" accept=".csv,text/csv"></label><button id="exportCards" class="btn btn-ghost" type="button">Export custom cards</button><button id="clearCards" class="btn btn-danger-outline" type="button">Clear custom cards</button><p id="customCount" class="microcopy">0 custom cards</p></div></div></details>
+      <details class="panel library-panel"><summary><strong>Custom card library</strong><span>Add, import or export your own coaching cards</span></summary><div class="custom-grid"><form id="customCardForm" class="stack-form"><label>Target word (one or two words)<input id="customTarget" required></label><label>Theme<select id="customTheme"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option></select></label><label>Forbidden words (4–6, each one or two words)<input id="customForbidden" required placeholder="word one, word two, word three, word four"></label><label>Model explanation<textarea id="customExplanation" rows="3" required></textarea></label><label>Short clue for the engineer (optional)<input id="customHint" placeholder="A subtle prompt without forbidden words"></label><button class="btn btn-primary" type="submit">Add custom card</button><p id="customStatus" class="microcopy"></p></form><div class="import-box"><h3>CSV tools</h3><p class="muted">Columns: target, theme, forbidden words, explanation, optional hint. Targets and forbidden entries must be one or two words.</p><label class="btn btn-secondary file-button">Import CSV<input id="importCsv" type="file" accept=".csv,text/csv"></label><button id="exportCards" class="btn btn-ghost" type="button">Export custom cards</button><button id="clearCards" class="btn btn-danger-outline" type="button">Clear custom cards</button><p id="customCount" class="microcopy">0 custom cards</p></div></div></details>
     </section>
   </main>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script type="module" src="assets/admin.js"></script>
+  <script type="module" src="assets/admin.js?v=2026112710"></script>
 </body>
 </html>

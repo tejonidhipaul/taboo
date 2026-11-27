@@ -21,7 +21,7 @@ begin
       'forbidden', coalesce(v_session.current_card->'forbidden', '[]'::jsonb),
       'category', v_session.current_card->'category',
       'clue', case
-        when coalesce((v_session.current_card->>'clue_shown')::boolean, false) then v_session.current_card->'explanation'
+        when coalesce((v_session.current_card->>'clue_shown')::boolean, false) then coalesce(nullif(v_session.current_card->'hint', 'null'::jsonb), v_session.current_card->'explanation')
         else 'null'::jsonb
       end,
       'timer_visible', coalesce((v_session.current_card->>'timer_visible')::boolean, false)
@@ -33,7 +33,6 @@ begin
     'id', v_session.id,
     'engineer_name', v_session.engineer_name,
     'mode', v_session.mode,
-    'difficulty', v_session.difficulty,
     'timer_seconds', v_session.timer_seconds,
     'timer_remaining', v_session.timer_remaining,
     'timer_running', v_session.timer_running,

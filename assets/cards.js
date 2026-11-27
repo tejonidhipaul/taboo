@@ -18,7 +18,8 @@ const CARD_DATA = [
       "Vehicle"
     ],
     "explanation": "Describe Car by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about a daily commute."
   },
   {
     "id": "pdf-01-2-dragonfly",
@@ -35,7 +36,8 @@ const CARD_DATA = [
       "Pond"
     ],
     "explanation": "Describe Dragonfly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Picture a slender creature near water."
   },
   {
     "id": "pdf-01-3-snowflake",
@@ -52,7 +54,8 @@ const CARD_DATA = [
       "Unique"
     ],
     "explanation": "Describe Snowflake by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Picture a tiny crystal from the sky."
   },
   {
     "id": "pdf-01-4-hungry",
@@ -69,7 +72,8 @@ const CARD_DATA = [
       "Appetite"
     ],
     "explanation": "Describe Hungry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about the time before lunch."
   },
   {
     "id": "pdf-01-5-duck",
@@ -86,7 +90,8 @@ const CARD_DATA = [
       "Pond"
     ],
     "explanation": "Describe Duck by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Picture a creature with a bill."
   },
   {
     "id": "pdf-01-6-pillow",
@@ -103,7 +108,8 @@ const CARD_DATA = [
       "Cushion"
     ],
     "explanation": "Describe Pillow by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about settling in for the night."
   },
   {
     "id": "pdf-01-7-dance",
@@ -120,7 +126,8 @@ const CARD_DATA = [
       "Rhythm"
     ],
     "explanation": "Describe Dance by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about moving to a beat."
   },
   {
     "id": "pdf-01-8-proud",
@@ -137,7 +144,8 @@ const CARD_DATA = [
       "Confidence"
     ],
     "explanation": "Describe Proud by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 1"
+    "source": "Attached Taboo PDF, page 1",
+    "hint": "Think about a personal achievement."
   },
   {
     "id": "pdf-02-1-blanket",
@@ -154,7 +162,8 @@ const CARD_DATA = [
       "Cover"
     ],
     "explanation": "Describe Blanket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about getting cosy on a sofa."
   },
   {
     "id": "pdf-02-2-shanghai",
@@ -171,7 +180,8 @@ const CARD_DATA = [
       "City"
     ],
     "explanation": "Describe Shanghai by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about a major port on the Huangpu."
   },
   {
     "id": "pdf-02-3-soccer",
@@ -188,7 +198,8 @@ const CARD_DATA = [
       "Goal"
     ],
     "explanation": "Describe Soccer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Picture players trying to score with their feet."
   },
   {
     "id": "pdf-02-4-cheese",
@@ -205,7 +216,8 @@ const CARD_DATA = [
       "Dairy"
     ],
     "explanation": "Describe Cheese by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about something aged or grated."
   },
   {
     "id": "pdf-02-5-snail",
@@ -222,7 +234,8 @@ const CARD_DATA = [
       "Shell"
     ],
     "explanation": "Describe Snail by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Picture a tiny garden visitor."
   },
   {
     "id": "pdf-02-6-dinosaur",
@@ -239,7 +252,8 @@ const CARD_DATA = [
       "Fossil"
     ],
     "explanation": "Describe Dinosaur by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about prehistoric giants."
   },
   {
     "id": "pdf-02-7-japan",
@@ -256,7 +270,8 @@ const CARD_DATA = [
       "Island"
     ],
     "explanation": "Describe Japan by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Think about the land of Mount Fuji."
   },
   {
     "id": "pdf-02-8-new-york",
@@ -273,7 +288,8 @@ const CARD_DATA = [
       "Manhattan"
     ],
     "explanation": "Describe New York by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 2"
+    "source": "Attached Taboo PDF, page 2",
+    "hint": "Picture skyscrapers and Broadway."
   },
   {
     "id": "pdf-03-1-husband",
@@ -290,7 +306,8 @@ const CARD_DATA = [
       "Spouse"
     ],
     "explanation": "Describe Husband by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about a family relationship."
   },
   {
     "id": "pdf-03-2-michael-jackson",
@@ -307,7 +324,8 @@ const CARD_DATA = [
       "Pop"
     ],
     "explanation": "Describe Michael Jackson by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about the moonwalk."
   },
   {
     "id": "pdf-03-3-underwear",
@@ -324,7 +342,8 @@ const CARD_DATA = [
       "Garment"
     ],
     "explanation": "Describe Underwear by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about the first layer you put on."
   },
   {
     "id": "pdf-03-4-girlfriend",
@@ -341,7 +360,8 @@ const CARD_DATA = [
       "Partner"
     ],
     "explanation": "Describe Girlfriend by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about a romantic relationship."
   },
   {
     "id": "pdf-03-5-giraffe",
@@ -358,7 +378,8 @@ const CARD_DATA = [
       "Spots"
     ],
     "explanation": "Describe Giraffe by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Picture an animal reaching high branches."
   },
   {
     "id": "pdf-03-6-wok",
@@ -375,7 +396,8 @@ const CARD_DATA = [
       "Pan"
     ],
     "explanation": "Describe Wok by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about stir-frying ingredients."
   },
   {
     "id": "pdf-03-7-camera",
@@ -392,7 +414,8 @@ const CARD_DATA = [
       "Lens"
     ],
     "explanation": "Describe Camera by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about capturing a moment."
   },
   {
     "id": "pdf-03-8-slippers",
@@ -409,7 +432,8 @@ const CARD_DATA = [
       "Indoor"
     ],
     "explanation": "Describe Slippers by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 3"
+    "source": "Attached Taboo PDF, page 3",
+    "hint": "Think about relaxing after taking off shoes."
   },
   {
     "id": "pdf-04-1-comb",
@@ -426,7 +450,8 @@ const CARD_DATA = [
       "Teeth"
     ],
     "explanation": "Describe Comb by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about untangling strands."
   },
   {
     "id": "pdf-04-2-hamburger",
@@ -443,7 +468,8 @@ const CARD_DATA = [
       "Bun"
     ],
     "explanation": "Describe Hamburger by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Picture a patty between two halves."
   },
   {
     "id": "pdf-04-3-polar-bear",
@@ -460,7 +486,8 @@ const CARD_DATA = [
       "Arctic"
     ],
     "explanation": "Describe Polar Bear by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about a powerful northern hunter."
   },
   {
     "id": "pdf-04-4-penguin",
@@ -477,7 +504,8 @@ const CARD_DATA = [
       "Antarctica"
     ],
     "explanation": "Describe Penguin by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Picture a creature waddling on ice."
   },
   {
     "id": "pdf-04-5-glasses",
@@ -494,7 +522,8 @@ const CARD_DATA = [
       "Vision"
     ],
     "explanation": "Describe Glasses by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about reading something far away."
   },
   {
     "id": "pdf-04-6-popcorn",
@@ -511,7 +540,8 @@ const CARD_DATA = [
       "Movie"
     ],
     "explanation": "Describe Popcorn by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about what happens to heated corn."
   },
   {
     "id": "pdf-04-7-speech",
@@ -528,7 +558,8 @@ const CARD_DATA = [
       "Orator"
     ],
     "explanation": "Describe Speech by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about addressing a group formally."
   },
   {
     "id": "pdf-04-8-furious",
@@ -545,7 +576,8 @@ const CARD_DATA = [
       "Temper"
     ],
     "explanation": "Describe Furious by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 4"
+    "source": "Attached Taboo PDF, page 4",
+    "hint": "Think about an intense reaction to injustice."
   },
   {
     "id": "pdf-05-1-jealousy",
@@ -562,7 +594,8 @@ const CARD_DATA = [
       "Possessive"
     ],
     "explanation": "Describe Jealousy by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about wanting what someone else has."
   },
   {
     "id": "pdf-05-2-chicken-leg",
@@ -579,7 +612,8 @@ const CARD_DATA = [
       "Drumstick"
     ],
     "explanation": "Describe Chicken Leg by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a part served at dinner."
   },
   {
     "id": "pdf-05-3-toilet",
@@ -596,7 +630,8 @@ const CARD_DATA = [
       "Flush"
     ],
     "explanation": "Describe Toilet by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a household fixture."
   },
   {
     "id": "pdf-05-4-wish",
@@ -613,7 +648,8 @@ const CARD_DATA = [
       "Star"
     ],
     "explanation": "Describe Wish by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about blowing out birthday candles."
   },
   {
     "id": "pdf-05-5-bench",
@@ -630,7 +666,8 @@ const CARD_DATA = [
       "Seat"
     ],
     "explanation": "Describe Bench by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about resting beside a path."
   },
   {
     "id": "pdf-05-6-exercise",
@@ -647,7 +684,8 @@ const CARD_DATA = [
       "Fitness"
     ],
     "explanation": "Describe Exercise by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about moving your body regularly."
   },
   {
     "id": "pdf-05-7-crown",
@@ -664,7 +702,8 @@ const CARD_DATA = [
       "Royalty"
     ],
     "explanation": "Describe Crown by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a ceremonial object."
   },
   {
     "id": "pdf-05-8-princess",
@@ -681,7 +720,8 @@ const CARD_DATA = [
       "Fairy Tale"
     ],
     "explanation": "Describe Princess by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 5"
+    "source": "Attached Taboo PDF, page 5",
+    "hint": "Think about a character in a palace."
   },
   {
     "id": "pdf-06-1-internet",
@@ -698,7 +738,8 @@ const CARD_DATA = [
       "Online"
     ],
     "explanation": "Describe Internet by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about connecting people worldwide."
   },
   {
     "id": "pdf-06-2-jacket",
@@ -715,7 +756,8 @@ const CARD_DATA = [
       "Outerwear"
     ],
     "explanation": "Describe Jacket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about an extra layer outdoors."
   },
   {
     "id": "pdf-06-3-shower",
@@ -732,7 +774,8 @@ const CARD_DATA = [
       "Soap"
     ],
     "explanation": "Describe Shower by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about a daily hygiene routine."
   },
   {
     "id": "pdf-06-4-wind",
@@ -749,7 +792,8 @@ const CARD_DATA = [
       "Breeze"
     ],
     "explanation": "Describe Wind by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about leaves moving outdoors."
   },
   {
     "id": "pdf-06-5-ice-cream",
@@ -766,7 +810,8 @@ const CARD_DATA = [
       "Frozen"
     ],
     "explanation": "Describe Ice Cream by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about a treat in a bowl."
   },
   {
     "id": "pdf-06-6-foreigner",
@@ -783,7 +828,8 @@ const CARD_DATA = [
       "Abroad"
     ],
     "explanation": "Describe Foreigner by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about someone visiting from elsewhere."
   },
   {
     "id": "pdf-06-7-church",
@@ -800,7 +846,8 @@ const CARD_DATA = [
       "Worship"
     ],
     "explanation": "Describe Church by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about a place for a congregation."
   },
   {
     "id": "pdf-06-8-police",
@@ -817,7 +864,8 @@ const CARD_DATA = [
       "Officer"
     ],
     "explanation": "Describe Police by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 6"
+    "source": "Attached Taboo PDF, page 6",
+    "hint": "Think about responding to emergencies."
   },
   {
     "id": "pdf-07-1-boots",
@@ -834,7 +882,8 @@ const CARD_DATA = [
       "Footwear"
     ],
     "explanation": "Describe Boots by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about protection for muddy ground."
   },
   {
     "id": "pdf-07-2-plane-ticket",
@@ -851,7 +900,8 @@ const CARD_DATA = [
       "Boarding"
     ],
     "explanation": "Describe Plane Ticket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about proof of a booked journey."
   },
   {
     "id": "pdf-07-3-turkey",
@@ -868,7 +918,8 @@ const CARD_DATA = [
       "Gobble"
     ],
     "explanation": "Describe Turkey by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about a traditional festive dinner."
   },
   {
     "id": "pdf-07-4-freezer",
@@ -885,7 +936,8 @@ const CARD_DATA = [
       "Appliance"
     ],
     "explanation": "Describe Freezer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about storing things for months."
   },
   {
     "id": "pdf-07-5-soy-sauce",
@@ -902,7 +954,8 @@ const CARD_DATA = [
       "Condiment"
     ],
     "explanation": "Describe Soy Sauce by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about seasoning a stir-fry."
   },
   {
     "id": "pdf-07-6-yoga-teacher",
@@ -919,7 +972,8 @@ const CARD_DATA = [
       "Pose"
     ],
     "explanation": "Describe Yoga Teacher by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about guidance during stretching."
   },
   {
     "id": "pdf-07-7-straw",
@@ -936,7 +990,8 @@ const CARD_DATA = [
       "Tube"
     ],
     "explanation": "Describe Straw by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about sipping through something narrow."
   },
   {
     "id": "pdf-07-8-leaf",
@@ -953,7 +1008,8 @@ const CARD_DATA = [
       "Branch"
     ],
     "explanation": "Describe Leaf by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 7"
+    "source": "Attached Taboo PDF, page 7",
+    "hint": "Think about what changes colour in autumn."
   },
   {
     "id": "pdf-08-1-noun",
@@ -970,7 +1026,8 @@ const CARD_DATA = [
       "Grammar"
     ],
     "explanation": "Describe Noun by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a category of naming words."
   },
   {
     "id": "pdf-08-2-carry",
@@ -987,7 +1044,8 @@ const CARD_DATA = [
       "Lift"
     ],
     "explanation": "Describe Carry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about taking something with you."
   },
   {
     "id": "pdf-08-3-taxi",
@@ -1004,7 +1062,8 @@ const CARD_DATA = [
       "Cab"
     ],
     "explanation": "Describe Taxi by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about hiring a trip across town."
   },
   {
     "id": "pdf-08-4-blossom",
@@ -1021,7 +1080,8 @@ const CARD_DATA = [
       "Petal"
     ],
     "explanation": "Describe Blossom by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a garden coming to life."
   },
   {
     "id": "pdf-08-5-broom",
@@ -1038,7 +1098,8 @@ const CARD_DATA = [
       "Handle"
     ],
     "explanation": "Describe Broom by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about tidying a dusty room."
   },
   {
     "id": "pdf-08-6-witch",
@@ -1055,7 +1116,8 @@ const CARD_DATA = [
       "Spell"
     ],
     "explanation": "Describe Witch by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a figure in folklore."
   },
   {
     "id": "pdf-08-7-fork",
@@ -1072,7 +1134,8 @@ const CARD_DATA = [
       "Utensil"
     ],
     "explanation": "Describe Fork by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a tool at the dinner table."
   },
   {
     "id": "pdf-08-8-parade",
@@ -1089,7 +1152,8 @@ const CARD_DATA = [
       "March"
     ],
     "explanation": "Describe Parade by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 8"
+    "source": "Attached Taboo PDF, page 8",
+    "hint": "Think about a procession through town."
   },
   {
     "id": "pdf-09-1-fashion",
@@ -1106,7 +1170,8 @@ const CARD_DATA = [
       "Style"
     ],
     "explanation": "Describe Fashion by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about trends on a runway."
   },
   {
     "id": "pdf-09-2-wedding-dress",
@@ -1123,7 +1188,8 @@ const CARD_DATA = [
       "Bride"
     ],
     "explanation": "Describe Wedding Dress by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about an outfit for a ceremony."
   },
   {
     "id": "pdf-09-3-kungfu-panda",
@@ -1140,7 +1206,8 @@ const CARD_DATA = [
       "Animation"
     ],
     "explanation": "Describe Kungfu Panda by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about an unlikely martial-arts hero."
   },
   {
     "id": "pdf-09-4-marker",
@@ -1157,7 +1224,8 @@ const CARD_DATA = [
       "Pen"
     ],
     "explanation": "Describe Marker by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about making bold strokes on paper."
   },
   {
     "id": "pdf-09-5-trash-can",
@@ -1174,7 +1242,8 @@ const CARD_DATA = [
       "Garbage"
     ],
     "explanation": "Describe Trash Can by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about where unwanted things go."
   },
   {
     "id": "pdf-09-6-snowman",
@@ -1191,7 +1260,8 @@ const CARD_DATA = [
       "Carrot"
     ],
     "explanation": "Describe Snowman by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about a figure built outdoors."
   },
   {
     "id": "pdf-09-7-wings",
@@ -1208,7 +1278,8 @@ const CARD_DATA = [
       "Flight"
     ],
     "explanation": "Describe Wings by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about what helps a creature take off."
   },
   {
     "id": "pdf-09-8-pilot",
@@ -1225,7 +1296,8 @@ const CARD_DATA = [
       "Cockpit"
     ],
     "explanation": "Describe Pilot by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 9"
+    "source": "Attached Taboo PDF, page 9",
+    "hint": "Think about who controls an aircraft."
   },
   {
     "id": "pdf-10-1-lawyer",
@@ -1242,7 +1314,8 @@ const CARD_DATA = [
       "Court"
     ],
     "explanation": "Describe Lawyer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about representation in a dispute."
   },
   {
     "id": "pdf-10-2-hair-salon",
@@ -1259,7 +1332,8 @@ const CARD_DATA = [
       "Stylist"
     ],
     "explanation": "Describe Hair Salon by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about an appointment to change your look."
   },
   {
     "id": "pdf-10-3-picture-frame",
@@ -1276,7 +1350,8 @@ const CARD_DATA = [
       "Display"
     ],
     "explanation": "Describe Picture Frame by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a border around a keepsake."
   },
   {
     "id": "pdf-10-4-purse",
@@ -1293,7 +1368,8 @@ const CARD_DATA = [
       "Handbag"
     ],
     "explanation": "Describe Purse by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a small personal accessory."
   },
   {
     "id": "pdf-10-5-alligator",
@@ -1310,7 +1386,8 @@ const CARD_DATA = [
       "Swamp"
     ],
     "explanation": "Describe Alligator by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a large creature near wetlands."
   },
   {
     "id": "pdf-10-6-orange",
@@ -1327,7 +1404,8 @@ const CARD_DATA = [
       "Peel"
     ],
     "explanation": "Describe Orange by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about a breakfast juice."
   },
   {
     "id": "pdf-10-7-makeup",
@@ -1344,7 +1422,8 @@ const CARD_DATA = [
       "Cosmetics"
     ],
     "explanation": "Describe Makeup by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about getting ready for an event."
   },
   {
     "id": "pdf-10-8-tutor",
@@ -1361,7 +1440,8 @@ const CARD_DATA = [
       "Lesson"
     ],
     "explanation": "Describe Tutor by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 10"
+    "source": "Attached Taboo PDF, page 10",
+    "hint": "Think about one-to-one academic support."
   },
   {
     "id": "pdf-11-1-worry",
@@ -1378,7 +1458,8 @@ const CARD_DATA = [
       "Concern"
     ],
     "explanation": "Describe Worry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about imagining what might go wrong."
   },
   {
     "id": "pdf-11-2-moose",
@@ -1395,7 +1476,8 @@ const CARD_DATA = [
       "Canada"
     ],
     "explanation": "Describe Moose by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a very large woodland grazer."
   },
   {
     "id": "pdf-11-3-shampoo",
@@ -1412,7 +1494,8 @@ const CARD_DATA = [
       "Bottle"
     ],
     "explanation": "Describe Shampoo by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a routine before rinsing."
   },
   {
     "id": "pdf-11-4-bridge",
@@ -1429,7 +1512,8 @@ const CARD_DATA = [
       "Span"
     ],
     "explanation": "Describe Bridge by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about getting across an obstacle."
   },
   {
     "id": "pdf-11-5-nervous",
@@ -1446,7 +1530,8 @@ const CARD_DATA = [
       "Uneasy"
     ],
     "explanation": "Describe Nervous by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about waiting for an interview."
   },
   {
     "id": "pdf-11-6-camel",
@@ -1463,7 +1548,8 @@ const CARD_DATA = [
       "Caravan"
     ],
     "explanation": "Describe Camel by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a journey across sand."
   },
   {
     "id": "pdf-11-7-watch",
@@ -1480,7 +1566,8 @@ const CARD_DATA = [
       "Clock"
     ],
     "explanation": "Describe Watch by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about something worn on your arm."
   },
   {
     "id": "pdf-11-8-brush",
@@ -1497,7 +1584,8 @@ const CARD_DATA = [
       "Paint"
     ],
     "explanation": "Describe Brush by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 11"
+    "source": "Attached Taboo PDF, page 11",
+    "hint": "Think about a tool with many fine strands."
   },
   {
     "id": "pdf-12-1-license",
@@ -1514,7 +1602,8 @@ const CARD_DATA = [
       "Identification"
     ],
     "explanation": "Describe License by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about official permission."
   },
   {
     "id": "pdf-12-2-librarian",
@@ -1531,7 +1620,8 @@ const CARD_DATA = [
       "Shelves"
     ],
     "explanation": "Describe Librarian by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about someone organising a collection."
   },
   {
     "id": "pdf-12-3-liberty",
@@ -1548,7 +1638,8 @@ const CARD_DATA = [
       "Rights"
     ],
     "explanation": "Describe Liberty by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about being able to make choices."
   },
   {
     "id": "pdf-12-4-radio",
@@ -1565,7 +1656,8 @@ const CARD_DATA = [
       "Broadcast"
     ],
     "explanation": "Describe Radio by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about tuning in while driving."
   },
   {
     "id": "pdf-12-5-shout",
@@ -1582,7 +1674,8 @@ const CARD_DATA = [
       "Scream"
     ],
     "explanation": "Describe Shout by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about raising your voice."
   },
   {
     "id": "pdf-12-6-unlock",
@@ -1599,7 +1692,8 @@ const CARD_DATA = [
       "Open"
     ],
     "explanation": "Describe Unlock by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about gaining access to something secured."
   },
   {
     "id": "pdf-12-7-pear",
@@ -1616,7 +1710,8 @@ const CARD_DATA = [
       "Green"
     ],
     "explanation": "Describe Pear by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Picture something rounded that narrows upward."
   },
   {
     "id": "pdf-12-8-jumping",
@@ -1633,7 +1728,8 @@ const CARD_DATA = [
       "Bounce"
     ],
     "explanation": "Describe Jumping by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 12"
+    "source": "Attached Taboo PDF, page 12",
+    "hint": "Think about both feet leaving the ground."
   },
   {
     "id": "pdf-13-1-glove",
@@ -1650,7 +1746,8 @@ const CARD_DATA = [
       "Fingers"
     ],
     "explanation": "Describe Glove by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about protection for each digit."
   },
   {
     "id": "pdf-13-2-tornado",
@@ -1667,7 +1764,8 @@ const CARD_DATA = [
       "Funnel"
     ],
     "explanation": "Describe Tornado by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about a rotating column of air."
   },
   {
     "id": "pdf-13-3-wheelchair",
@@ -1684,7 +1782,8 @@ const CARD_DATA = [
       "Ramp"
     ],
     "explanation": "Describe Wheelchair by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about independent movement and access."
   },
   {
     "id": "pdf-13-4-monster",
@@ -1701,7 +1800,8 @@ const CARD_DATA = [
       "Creature"
     ],
     "explanation": "Describe Monster by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about an imaginary bedtime fright."
   },
   {
     "id": "pdf-13-5-midterm",
@@ -1718,7 +1818,8 @@ const CARD_DATA = [
       "Semester"
     ],
     "explanation": "Describe Midterm by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about an assessment partway through a course."
   },
   {
     "id": "pdf-13-6-melt",
@@ -1735,7 +1836,8 @@ const CARD_DATA = [
       "Thaw"
     ],
     "explanation": "Describe Melt by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about a solid changing state."
   },
   {
     "id": "pdf-13-7-mature",
@@ -1752,7 +1854,8 @@ const CARD_DATA = [
       "Adult"
     ],
     "explanation": "Describe Mature by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Think about growing in judgement."
   },
   {
     "id": "pdf-13-8-daisy",
@@ -1769,7 +1872,8 @@ const CARD_DATA = [
       "Petals"
     ],
     "explanation": "Describe Daisy by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 13"
+    "source": "Attached Taboo PDF, page 13",
+    "hint": "Picture a simple meadow bloom."
   },
   {
     "id": "pdf-14-1-custom",
@@ -1786,7 +1890,8 @@ const CARD_DATA = [
       "Habit"
     ],
     "explanation": "Describe Custom by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about practices passed between generations."
   },
   {
     "id": "pdf-14-2-curtain",
@@ -1803,7 +1908,8 @@ const CARD_DATA = [
       "Drapes"
     ],
     "explanation": "Describe Curtain by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about controlling privacy in a room."
   },
   {
     "id": "pdf-14-3-cruel",
@@ -1820,7 +1926,8 @@ const CARD_DATA = [
       "Harsh"
     ],
     "explanation": "Describe Cruel by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about deliberately causing distress."
   },
   {
     "id": "pdf-14-4-milk",
@@ -1837,7 +1944,8 @@ const CARD_DATA = [
       "Dairy"
     ],
     "explanation": "Describe Milk by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about what often goes on cereal."
   },
   {
     "id": "pdf-14-5-politics",
@@ -1854,7 +1962,8 @@ const CARD_DATA = [
       "Government"
     ],
     "explanation": "Describe Politics by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about how public decisions are made."
   },
   {
     "id": "pdf-14-6-guitar",
@@ -1871,7 +1980,8 @@ const CARD_DATA = [
       "Chords"
     ],
     "explanation": "Describe Guitar by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about something held against the body at a concert."
   },
   {
     "id": "pdf-14-7-chalk",
@@ -1888,7 +1998,8 @@ const CARD_DATA = [
       "Board"
     ],
     "explanation": "Describe Chalk by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about a classroom before markers."
   },
   {
     "id": "pdf-14-8-bottle",
@@ -1905,7 +2016,8 @@ const CARD_DATA = [
       "Container"
     ],
     "explanation": "Describe Bottle by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 14"
+    "source": "Attached Taboo PDF, page 14",
+    "hint": "Think about packaging for a beverage."
   },
   {
     "id": "pdf-15-1-table",
@@ -1922,7 +2034,8 @@ const CARD_DATA = [
       "Furniture"
     ],
     "explanation": "Describe Table by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about a surface shared at dinner."
   },
   {
     "id": "pdf-15-2-distance",
@@ -1939,7 +2052,8 @@ const CARD_DATA = [
       "Measure"
     ],
     "explanation": "Describe Distance by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about how far apart two points are."
   },
   {
     "id": "pdf-15-3-elderly",
@@ -1956,7 +2070,8 @@ const CARD_DATA = [
       "Senior"
     ],
     "explanation": "Describe Elderly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about people in later life."
   },
   {
     "id": "pdf-15-4-fish",
@@ -1973,7 +2088,8 @@ const CARD_DATA = [
       "Fins"
     ],
     "explanation": "Describe Fish by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about life beneath the surface."
   },
   {
     "id": "pdf-15-5-famous",
@@ -1990,7 +2106,8 @@ const CARD_DATA = [
       "Celebrity"
     ],
     "explanation": "Describe Famous by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about being recognised by many people."
   },
   {
     "id": "pdf-15-6-nyc",
@@ -2007,7 +2124,8 @@ const CARD_DATA = [
       "Manhattan"
     ],
     "explanation": "Describe NYC by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about Broadway and five boroughs."
   },
   {
     "id": "pdf-15-7-train",
@@ -2024,7 +2142,8 @@ const CARD_DATA = [
       "Station"
     ],
     "explanation": "Describe Train by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about a journey along tracks."
   },
   {
     "id": "pdf-15-8-needle",
@@ -2041,7 +2160,8 @@ const CARD_DATA = [
       "Thread"
     ],
     "explanation": "Describe Needle by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 15"
+    "source": "Attached Taboo PDF, page 15",
+    "hint": "Think about a tool for mending fabric."
   },
   {
     "id": "pdf-16-1-joy",
@@ -2058,7 +2178,8 @@ const CARD_DATA = [
       "Delight"
     ],
     "explanation": "Describe Joy by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a wonderful surprise."
   },
   {
     "id": "pdf-16-2-firecracker",
@@ -2075,7 +2196,8 @@ const CARD_DATA = [
       "Fireworks"
     ],
     "explanation": "Describe Firecracker by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a festive sudden bang."
   },
   {
     "id": "pdf-16-3-superman",
@@ -2092,7 +2214,8 @@ const CARD_DATA = [
       "Kryptonite"
     ],
     "explanation": "Describe Superman by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a cape and a hidden identity."
   },
   {
     "id": "pdf-16-4-sun",
@@ -2109,7 +2232,8 @@ const CARD_DATA = [
       "Star"
     ],
     "explanation": "Describe Sun by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about what rises each morning."
   },
   {
     "id": "pdf-16-5-monkey",
@@ -2126,7 +2250,8 @@ const CARD_DATA = [
       "Ape"
     ],
     "explanation": "Describe Monkey by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a playful tree-dweller."
   },
   {
     "id": "pdf-16-6-shark",
@@ -2143,7 +2268,8 @@ const CARD_DATA = [
       "Fin"
     ],
     "explanation": "Describe Shark by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a predator beneath the waves."
   },
   {
     "id": "pdf-16-7-window",
@@ -2160,7 +2286,8 @@ const CARD_DATA = [
       "View"
     ],
     "explanation": "Describe Window by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about letting daylight into a room."
   },
   {
     "id": "pdf-16-8-desk",
@@ -2177,7 +2304,8 @@ const CARD_DATA = [
       "Office"
     ],
     "explanation": "Describe Desk by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 16"
+    "source": "Attached Taboo PDF, page 16",
+    "hint": "Think about a dedicated workspace."
   },
   {
     "id": "pdf-17-1-coffee",
@@ -2194,7 +2322,8 @@ const CARD_DATA = [
       "Mug"
     ],
     "explanation": "Describe Coffee by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a roasted morning favourite."
   },
   {
     "id": "pdf-17-2-candle",
@@ -2211,7 +2340,8 @@ const CARD_DATA = [
       "Scent"
     ],
     "explanation": "Describe Candle by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a small flame at dinner."
   },
   {
     "id": "pdf-17-3-egg-roll",
@@ -2228,7 +2358,8 @@ const CARD_DATA = [
       "Appetizer"
     ],
     "explanation": "Describe Egg Roll by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a crispy filled starter."
   },
   {
     "id": "pdf-17-4-santa",
@@ -2245,7 +2376,8 @@ const CARD_DATA = [
       "Reindeer"
     ],
     "explanation": "Describe Santa by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a visitor on a December night."
   },
   {
     "id": "pdf-17-5-bells",
@@ -2262,7 +2394,8 @@ const CARD_DATA = [
       "Chime"
     ],
     "explanation": "Describe Bells by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about a sound from a tower."
   },
   {
     "id": "pdf-17-6-heart",
@@ -2279,7 +2412,8 @@ const CARD_DATA = [
       "Organ"
     ],
     "explanation": "Describe Heart by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about what keeps blood moving."
   },
   {
     "id": "pdf-17-7-headache",
@@ -2296,7 +2430,8 @@ const CARD_DATA = [
       "Pain"
     ],
     "explanation": "Describe Headache by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about discomfort after a long day."
   },
   {
     "id": "pdf-17-8-discuss",
@@ -2313,7 +2448,8 @@ const CARD_DATA = [
       "Conversation"
     ],
     "explanation": "Describe Discuss by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 17"
+    "source": "Attached Taboo PDF, page 17",
+    "hint": "Think about exploring a topic together."
   },
   {
     "id": "pdf-18-1-debate",
@@ -2330,7 +2466,8 @@ const CARD_DATA = [
       "Argument"
     ],
     "explanation": "Describe Debate by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about presenting competing viewpoints."
   },
   {
     "id": "pdf-18-2-eraser",
@@ -2347,7 +2484,8 @@ const CARD_DATA = [
       "Rubber"
     ],
     "explanation": "Describe Eraser by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about correcting something on paper."
   },
   {
     "id": "pdf-18-3-prisoner",
@@ -2364,7 +2502,8 @@ const CARD_DATA = [
       "Inmate"
     ],
     "explanation": "Describe Prisoner by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about someone held in custody."
   },
   {
     "id": "pdf-18-4-murder",
@@ -2381,7 +2520,8 @@ const CARD_DATA = [
       "Homicide"
     ],
     "explanation": "Describe Murder by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about an unlawful intentional act."
   },
   {
     "id": "pdf-18-5-defend",
@@ -2398,7 +2538,8 @@ const CARD_DATA = [
       "Protect"
     ],
     "explanation": "Describe Defend by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about standing up for someone."
   },
   {
     "id": "pdf-18-6-deer",
@@ -2415,7 +2556,8 @@ const CARD_DATA = [
       "Buck"
     ],
     "explanation": "Describe Deer by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about a shy woodland grazer."
   },
   {
     "id": "pdf-18-7-zoo",
@@ -2432,7 +2574,8 @@ const CARD_DATA = [
       "Safari"
     ],
     "explanation": "Describe Zoo by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about seeing wildlife in a public attraction."
   },
   {
     "id": "pdf-18-8-crawl",
@@ -2449,7 +2592,8 @@ const CARD_DATA = [
       "Floor"
     ],
     "explanation": "Describe Crawl by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 18"
+    "source": "Attached Taboo PDF, page 18",
+    "hint": "Think about movement before walking."
   },
   {
     "id": "pdf-19-1-bank",
@@ -2466,7 +2610,8 @@ const CARD_DATA = [
       "Teller"
     ],
     "explanation": "Describe Bank by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about where savings are kept."
   },
   {
     "id": "pdf-19-2-caterpillar",
@@ -2483,7 +2628,8 @@ const CARD_DATA = [
       "Cocoon"
     ],
     "explanation": "Describe Caterpillar by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about an early stage of metamorphosis."
   },
   {
     "id": "pdf-19-3-pregnant",
@@ -2500,7 +2646,8 @@ const CARD_DATA = [
       "Expecting"
     ],
     "explanation": "Describe Pregnant by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about a family preparing for arrival."
   },
   {
     "id": "pdf-19-4-towel",
@@ -2517,7 +2664,8 @@ const CARD_DATA = [
       "Cloth"
     ],
     "explanation": "Describe Towel by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about what you reach for after bathing."
   },
   {
     "id": "pdf-19-5-promise",
@@ -2534,7 +2682,8 @@ const CARD_DATA = [
       "Commitment"
     ],
     "explanation": "Describe Promise by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about giving your word."
   },
   {
     "id": "pdf-19-6-ugly",
@@ -2551,7 +2700,8 @@ const CARD_DATA = [
       "Unattractive"
     ],
     "explanation": "Describe Ugly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about an unflattering appearance."
   },
   {
     "id": "pdf-19-7-stupid",
@@ -2568,7 +2718,8 @@ const CARD_DATA = [
       "Ignorant"
     ],
     "explanation": "Describe Stupid by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about a harsh judgement of thinking."
   },
   {
     "id": "pdf-19-8-spoon",
@@ -2585,7 +2736,8 @@ const CARD_DATA = [
       "Scoop"
     ],
     "explanation": "Describe Spoon by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 19"
+    "source": "Attached Taboo PDF, page 19",
+    "hint": "Think about a tool used with a bowl."
   },
   {
     "id": "pdf-20-1-infant",
@@ -2602,7 +2754,8 @@ const CARD_DATA = [
       "Toddler"
     ],
     "explanation": "Describe Infant by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about the earliest stage of childhood."
   },
   {
     "id": "pdf-20-2-paris-france",
@@ -2619,7 +2772,8 @@ const CARD_DATA = [
       "Seine"
     ],
     "explanation": "Describe Paris France by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about a European capital by a river."
   },
   {
     "id": "pdf-20-3-exchange-student",
@@ -2636,7 +2790,8 @@ const CARD_DATA = [
       "Host"
     ],
     "explanation": "Describe Exchange Student by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about learning while living with another family."
   },
   {
     "id": "pdf-20-4-gold",
@@ -2653,7 +2808,8 @@ const CARD_DATA = [
       "Jewelry"
     ],
     "explanation": "Describe Gold by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about an Olympic winner."
   },
   {
     "id": "pdf-20-5-london",
@@ -2670,7 +2826,8 @@ const CARD_DATA = [
       "Thames"
     ],
     "explanation": "Describe London by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about the city with the Underground."
   },
   {
     "id": "pdf-20-6-camping",
@@ -2687,7 +2844,8 @@ const CARD_DATA = [
       "Campfire"
     ],
     "explanation": "Describe Camping by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about spending a night outdoors."
   },
   {
     "id": "pdf-20-7-theater",
@@ -2704,7 +2862,8 @@ const CARD_DATA = [
       "Stage"
     ],
     "explanation": "Describe Theater by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about an audience watching a performance."
   },
   {
     "id": "pdf-20-8-death",
@@ -2721,7 +2880,8 @@ const CARD_DATA = [
       "Funeral"
     ],
     "explanation": "Describe Death by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 20"
+    "source": "Attached Taboo PDF, page 20",
+    "hint": "Think about a final farewell."
   },
   {
     "id": "pdf-21-1-flag",
@@ -2738,7 +2898,8 @@ const CARD_DATA = [
       "Country"
     ],
     "explanation": "Describe Flag by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a symbol raised at ceremonies."
   },
   {
     "id": "pdf-21-2-describe",
@@ -2755,7 +2916,8 @@ const CARD_DATA = [
       "Explain"
     ],
     "explanation": "Describe Describe by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about giving someone a mental picture."
   },
   {
     "id": "pdf-21-3-nan-shan",
@@ -2772,7 +2934,8 @@ const CARD_DATA = [
       "China"
     ],
     "explanation": "Describe Nan Shan by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a local landmark with a summit."
   },
   {
     "id": "pdf-21-4-fly",
@@ -2789,7 +2952,8 @@ const CARD_DATA = [
       "Air"
     ],
     "explanation": "Describe Fly by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about travelling above the ground."
   },
   {
     "id": "pdf-21-5-knee",
@@ -2806,7 +2970,8 @@ const CARD_DATA = [
       "Kneecap"
     ],
     "explanation": "Describe Knee by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about the connection between hip and ankle."
   },
   {
     "id": "pdf-21-6-web",
@@ -2823,7 +2988,8 @@ const CARD_DATA = [
       "Network"
     ],
     "explanation": "Describe Web by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a pattern of connected strands."
   },
   {
     "id": "pdf-21-7-toothbrush",
@@ -2840,7 +3006,8 @@ const CARD_DATA = [
       "Dentist"
     ],
     "explanation": "Describe Toothbrush by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a morning dental routine."
   },
   {
     "id": "pdf-21-8-worm",
@@ -2857,7 +3024,8 @@ const CARD_DATA = [
       "Soil"
     ],
     "explanation": "Describe Worm by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 21"
+    "source": "Attached Taboo PDF, page 21",
+    "hint": "Think about a long creature in the garden."
   },
   {
     "id": "pdf-22-1-machine",
@@ -2874,7 +3042,8 @@ const CARD_DATA = [
       "Equipment"
     ],
     "explanation": "Describe Machine by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about mechanisms working together."
   },
   {
     "id": "pdf-22-2-spiderman",
@@ -2891,7 +3060,8 @@ const CARD_DATA = [
       "Marvel"
     ],
     "explanation": "Describe Spiderman by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about a masked comic-book character."
   },
   {
     "id": "pdf-22-3-waitress",
@@ -2908,7 +3078,8 @@ const CARD_DATA = [
       "Server"
     ],
     "explanation": "Describe Waitress by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about someone taking orders at a table."
   },
   {
     "id": "pdf-22-4-wash",
@@ -2925,7 +3096,8 @@ const CARD_DATA = [
       "Soap"
     ],
     "explanation": "Describe Wash by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about removing dirt."
   },
   {
     "id": "pdf-22-5-biology",
@@ -2942,7 +3114,8 @@ const CARD_DATA = [
       "Organism"
     ],
     "explanation": "Describe Biology by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about studying living things."
   },
   {
     "id": "pdf-22-6-chemistry",
@@ -2959,7 +3132,8 @@ const CARD_DATA = [
       "Lab"
     ],
     "explanation": "Describe Chemistry by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about reactions between substances."
   },
   {
     "id": "pdf-22-7-history",
@@ -2976,7 +3150,8 @@ const CARD_DATA = [
       "Timeline"
     ],
     "explanation": "Describe History by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about how earlier times shaped today."
   },
   {
     "id": "pdf-22-8-magazine",
@@ -2993,7 +3168,8 @@ const CARD_DATA = [
       "Article"
     ],
     "explanation": "Describe Magazine by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 22"
+    "source": "Attached Taboo PDF, page 22",
+    "hint": "Think about a periodical on a coffee table."
   },
   {
     "id": "pdf-23-1-unfair",
@@ -3010,7 +3186,8 @@ const CARD_DATA = [
       "Biased"
     ],
     "explanation": "Describe Unfair by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about rules applied differently to people."
   },
   {
     "id": "pdf-23-2-cd",
@@ -3027,7 +3204,8 @@ const CARD_DATA = [
       "Album"
     ],
     "explanation": "Describe CD by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about an older way to store recordings."
   },
   {
     "id": "pdf-23-3-immediately",
@@ -3044,7 +3222,8 @@ const CARD_DATA = [
       "Instantly"
     ],
     "explanation": "Describe Immediately by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about acting without waiting."
   },
   {
     "id": "pdf-23-4-danger",
@@ -3061,7 +3240,8 @@ const CARD_DATA = [
       "Risk"
     ],
     "explanation": "Describe Danger by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about a situation requiring caution."
   },
   {
     "id": "pdf-23-5-bed-blanket",
@@ -3078,7 +3258,8 @@ const CARD_DATA = [
       "Duvet"
     ],
     "explanation": "Describe Bed Blanket by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about an extra layer at night."
   },
   {
     "id": "pdf-23-6-ice",
@@ -3095,7 +3276,8 @@ const CARD_DATA = [
       "Frozen"
     ],
     "explanation": "Describe Ice by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about what forms when a drink chills."
   },
   {
     "id": "pdf-23-7-salt",
@@ -3112,7 +3294,8 @@ const CARD_DATA = [
       "Sodium"
     ],
     "explanation": "Describe Salt by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about seasoning at the table."
   },
   {
     "id": "pdf-23-8-stand",
@@ -3129,7 +3312,8 @@ const CARD_DATA = [
       "Upright"
     ],
     "explanation": "Describe Stand by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 23"
+    "source": "Attached Taboo PDF, page 23",
+    "hint": "Think about a posture while waiting."
   },
   {
     "id": "pdf-24-1-bull",
@@ -3146,7 +3330,8 @@ const CARD_DATA = [
       "Cattle"
     ],
     "explanation": "Describe Bull by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about a powerful farm animal."
   },
   {
     "id": "pdf-24-2-peaceful",
@@ -3163,7 +3348,8 @@ const CARD_DATA = [
       "Serene"
     ],
     "explanation": "Describe Peaceful by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about a moment without conflict."
   },
   {
     "id": "pdf-24-3-normal",
@@ -3180,7 +3366,8 @@ const CARD_DATA = [
       "Usual"
     ],
     "explanation": "Describe Normal by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about what happens most often."
   },
   {
     "id": "pdf-24-4-original",
@@ -3197,7 +3384,8 @@ const CARD_DATA = [
       "Authentic"
     ],
     "explanation": "Describe Original by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about the source rather than a copy."
   },
   {
     "id": "pdf-24-5-magic",
@@ -3214,7 +3402,8 @@ const CARD_DATA = [
       "Illusion"
     ],
     "explanation": "Describe Magic by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about an unexpected stage performance."
   },
   {
     "id": "pdf-24-6-naughty",
@@ -3231,7 +3420,8 @@ const CARD_DATA = [
       "Mischief"
     ],
     "explanation": "Describe Naughty by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about breaking a household rule."
   },
   {
     "id": "pdf-24-7-rescue",
@@ -3248,7 +3438,8 @@ const CARD_DATA = [
       "Emergency"
     ],
     "explanation": "Describe Rescue by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about getting someone out of trouble."
   },
   {
     "id": "pdf-24-8-match",
@@ -3265,7 +3456,8 @@ const CARD_DATA = [
       "Game"
     ],
     "explanation": "Describe Match by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 24"
+    "source": "Attached Taboo PDF, page 24",
+    "hint": "Think about finding two things that correspond."
   },
   {
     "id": "pdf-25-1-hippo",
@@ -3282,7 +3474,8 @@ const CARD_DATA = [
       "Hippopotamus"
     ],
     "explanation": "Describe Hippo by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a heavy creature near water."
   },
   {
     "id": "pdf-25-2-fairy-tale",
@@ -3299,7 +3492,8 @@ const CARD_DATA = [
       "Once Upon"
     ],
     "explanation": "Describe Fairy Tale by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a traditional bedtime adventure."
   },
   {
     "id": "pdf-25-3-literature",
@@ -3316,7 +3510,8 @@ const CARD_DATA = [
       "Poetry"
     ],
     "explanation": "Describe Literature by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about creative writing across generations."
   },
   {
     "id": "pdf-25-4-globe",
@@ -3333,7 +3528,8 @@ const CARD_DATA = [
       "Sphere"
     ],
     "explanation": "Describe Globe by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a round classroom representation of the planet."
   },
   {
     "id": "pdf-25-5-cookbook",
@@ -3350,7 +3546,8 @@ const CARD_DATA = [
       "Recipe"
     ],
     "explanation": "Describe Cookbook by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a collection for planning meals."
   },
   {
     "id": "pdf-25-6-continent",
@@ -3367,7 +3564,8 @@ const CARD_DATA = [
       "Map"
     ],
     "explanation": "Describe Continent by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about a large region of the world."
   },
   {
     "id": "pdf-25-7-director",
@@ -3384,7 +3582,8 @@ const CARD_DATA = [
       "Film"
     ],
     "explanation": "Describe Director by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about who guides a production."
   },
   {
     "id": "pdf-25-8-advice",
@@ -3401,7 +3600,8 @@ const CARD_DATA = [
       "Suggestion"
     ],
     "explanation": "Describe Advice by explaining what it is, where it appears, what it does, or how it is used without saying the forbidden words.",
-    "source": "Attached Taboo PDF, page 25"
+    "source": "Attached Taboo PDF, page 25",
+    "hint": "Think about what you offer someone facing a decision."
   },
   {
     "id": "esko-product-01-automation-engine",
@@ -3418,7 +3618,8 @@ const CARD_DATA = [
       "Automation"
     ],
     "explanation": "Describe Automation Engine by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about orchestrating repeated production steps."
   },
   {
     "id": "esko-product-02-webcenter",
@@ -3435,7 +3636,8 @@ const CARD_DATA = [
       "Collaboration"
     ],
     "explanation": "Describe WebCenter by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about coordinating packaging work across teams."
   },
   {
     "id": "esko-product-03-artpro",
@@ -3452,7 +3654,8 @@ const CARD_DATA = [
       "Trapping"
     ],
     "explanation": "Describe ArtPro+ by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about refining print-ready artwork."
   },
   {
     "id": "esko-product-04-artioscad",
@@ -3469,7 +3672,8 @@ const CARD_DATA = [
       "3D"
     ],
     "explanation": "Describe ArtiosCAD by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about creating the shape of a carton."
   },
   {
     "id": "esko-product-05-studio",
@@ -3486,7 +3690,8 @@ const CARD_DATA = [
       "Visualize"
     ],
     "explanation": "Describe Studio by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about seeing a pack before production."
   },
   {
     "id": "esko-product-06-deskpack",
@@ -3503,7 +3708,8 @@ const CARD_DATA = [
       "Tools"
     ],
     "explanation": "Describe DeskPack by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about extending a creative application."
   },
   {
     "id": "esko-product-07-cape-pack",
@@ -3520,7 +3726,8 @@ const CARD_DATA = [
       "Shipping"
     ],
     "explanation": "Describe Cape Pack by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging boxes for distribution."
   },
   {
     "id": "esko-product-08-phoenix",
@@ -3537,7 +3744,8 @@ const CARD_DATA = [
       "Production"
     ],
     "explanation": "Describe Phoenix by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging jobs before printing."
   },
   {
     "id": "esko-product-09-imaging-engine",
@@ -3554,7 +3762,8 @@ const CARD_DATA = [
       "Separation"
     ],
     "explanation": "Describe Imaging Engine by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about preparing digital artwork for a press."
   },
   {
     "id": "esko-product-10-pack-proof",
@@ -3571,7 +3780,8 @@ const CARD_DATA = [
       "Accurate"
     ],
     "explanation": "Describe Pack Proof by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about checking appearance before a press run."
   },
   {
     "id": "esko-product-11-equinox",
@@ -3588,7 +3798,8 @@ const CARD_DATA = [
       "CMYK"
     ],
     "explanation": "Describe Equinox by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about reproducing more colours with a fixed palette."
   },
   {
     "id": "esko-product-12-share-approve",
@@ -3605,7 +3816,8 @@ const CARD_DATA = [
       "Collaboration"
     ],
     "explanation": "Describe Share&Approve by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about getting feedback from stakeholders."
   },
   {
     "id": "esko-product-13-mediabeacon",
@@ -3622,7 +3834,8 @@ const CARD_DATA = [
       "Brand"
     ],
     "explanation": "Describe MediaBeacon by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about organising a large creative collection."
   },
   {
     "id": "esko-product-14-color-pilot",
@@ -3639,7 +3852,8 @@ const CARD_DATA = [
       "Accuracy"
     ],
     "explanation": "Describe Color Pilot by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about managing predictable print appearance."
   },
   {
     "id": "esko-product-15-curve-pilot",
@@ -3656,7 +3870,8 @@ const CARD_DATA = [
       "Flexo"
     ],
     "explanation": "Describe Curve Pilot by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about adjusting how tones reproduce."
   },
   {
     "id": "esko-product-16-printcontrol-wizard",
@@ -3673,7 +3888,8 @@ const CARD_DATA = [
       "Setup"
     ],
     "explanation": "Describe PrintControl Wizard by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about establishing consistent production settings."
   },
   {
     "id": "esko-product-17-print-clone",
@@ -3690,7 +3906,8 @@ const CARD_DATA = [
       "Measurement"
     ],
     "explanation": "Describe Print Clone by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about consistent results across equipment."
   },
   {
     "id": "esko-product-18-inkwizard",
@@ -3707,7 +3924,8 @@ const CARD_DATA = [
       "Coverage"
     ],
     "explanation": "Describe InkWizard by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about reducing resources used in reproduction."
   },
   {
     "id": "esko-product-19-flexo-tools",
@@ -3724,7 +3942,8 @@ const CARD_DATA = [
       "Flexography"
     ],
     "explanation": "Describe Flexo Tools by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about preparing artwork for flexible printing."
   },
   {
     "id": "esko-product-20-plato",
@@ -3741,7 +3960,8 @@ const CARD_DATA = [
       "CAD"
     ],
     "explanation": "Describe Plato by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging repeated designs for production."
   },
   {
     "id": "esko-product-21-packedge",
@@ -3758,7 +3978,8 @@ const CARD_DATA = [
       "Production"
     ],
     "explanation": "Describe PackEdge by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about an earlier artwork preparation application."
   },
   {
     "id": "esko-product-22-powerlayout",
@@ -3775,7 +3996,8 @@ const CARD_DATA = [
       "Labels"
     ],
     "explanation": "Describe PowerLayout by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about arranging multiple designs efficiently."
   },
   {
     "id": "esko-product-23-flexrip",
@@ -3792,7 +4014,8 @@ const CARD_DATA = [
       "Imaging"
     ],
     "explanation": "Describe FlexRip by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about converting artwork for a production device."
   },
   {
     "id": "esko-product-24-nexus",
@@ -3809,7 +4032,8 @@ const CARD_DATA = [
       "Automation"
     ],
     "explanation": "Describe Nexus by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about an earlier way to coordinate production."
   },
   {
     "id": "esko-product-25-odystar",
@@ -3826,7 +4050,8 @@ const CARD_DATA = [
       "Tasks"
     ],
     "explanation": "Describe Odystar by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about automated document processing on Apple computers."
   },
   {
     "id": "esko-product-26-cdi-crystal",
@@ -3843,7 +4068,8 @@ const CARD_DATA = [
       "Exposure"
     ],
     "explanation": "Describe CDI Crystal by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about digital preparation before illumination."
   },
   {
     "id": "esko-product-27-xps-crystal",
@@ -3860,7 +4086,8 @@ const CARD_DATA = [
       "Curing"
     ],
     "explanation": "Describe XPS Crystal by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about consistent light during platemaking."
   },
   {
     "id": "esko-product-28-cdi-spark",
@@ -3877,7 +4104,8 @@ const CARD_DATA = [
       "Digital"
     ],
     "explanation": "Describe CDI Spark by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about a smaller imaging device."
   },
   {
     "id": "esko-product-29-cdi-quartz",
@@ -3894,7 +4122,8 @@ const CARD_DATA = [
       "Laser"
     ],
     "explanation": "Describe CDI Quartz by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about detailed digital platemaking."
   },
   {
     "id": "esko-product-30-crystalclean",
@@ -3911,7 +4140,8 @@ const CARD_DATA = [
       "Processing"
     ],
     "explanation": "Describe CrystalClean by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about removing residue during manufacturing."
   },
   {
     "id": "esko-product-31-pixel",
@@ -3928,7 +4158,8 @@ const CARD_DATA = [
       "Ink"
     ],
     "explanation": "Describe Pixel+ by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about controlling tiny features in reproduction."
   },
   {
     "id": "esko-product-32-hd-flexo",
@@ -3945,7 +4176,8 @@ const CARD_DATA = [
       "Flexography"
     ],
     "explanation": "Describe HD Flexo by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about fine detail in flexible printing."
   },
   {
     "id": "esko-product-33-crystal-screening",
@@ -3962,7 +4194,8 @@ const CARD_DATA = [
       "Surface"
     ],
     "explanation": "Describe Crystal Screening by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about how tiny dots are arranged."
   },
   {
     "id": "esko-product-34-grapholas",
@@ -3979,7 +4212,8 @@ const CARD_DATA = [
       "Flexo"
     ],
     "explanation": "Describe Grapholas by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about controlling a digital imaging device."
   },
   {
     "id": "esko-product-35-merge-graphics",
@@ -3996,7 +4230,8 @@ const CARD_DATA = [
       "Variable"
     ],
     "explanation": "Describe Merge Graphics by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about combining variants into one job."
   },
   {
     "id": "esko-product-36-my-esko",
@@ -4013,7 +4248,8 @@ const CARD_DATA = [
       "Customer"
     ],
     "explanation": "Describe My Esko by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about a personal place for product resources."
   },
   {
     "id": "esko-product-37-esko-cloud",
@@ -4030,7 +4266,8 @@ const CARD_DATA = [
       "Platform"
     ],
     "explanation": "Describe Esko Cloud by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about accessing services over the internet."
   },
   {
     "id": "esko-product-38-webcenter-go",
@@ -4047,7 +4284,8 @@ const CARD_DATA = [
       "Cloud"
     ],
     "explanation": "Describe WebCenter Go by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about checking designs remotely."
   },
   {
     "id": "esko-product-39-verify-comply",
@@ -4064,7 +4302,8 @@ const CARD_DATA = [
       "Validation"
     ],
     "explanation": "Describe Verify Comply by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about checking requirements before release."
   },
   {
     "id": "esko-product-40-avt-helios",
@@ -4081,7 +4320,8 @@ const CARD_DATA = [
       "Quality"
     ],
     "explanation": "Describe AVT Helios by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about finding flaws during label production."
   },
   {
     "id": "esko-product-41-avt-apollo",
@@ -4098,7 +4338,8 @@ const CARD_DATA = [
       "Workflow"
     ],
     "explanation": "Describe AVT Apollo by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about monitoring consistency in real time."
   },
   {
     "id": "esko-product-42-avt-argus",
@@ -4115,7 +4356,8 @@ const CARD_DATA = [
       "Quality"
     ],
     "explanation": "Describe AVT Argus by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about monitoring a moving material for flaws."
   },
   {
     "id": "esko-product-43-avt-spectralab",
@@ -4132,7 +4374,8 @@ const CARD_DATA = [
       "Quality"
     ],
     "explanation": "Describe AVT SpectraLab by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about measuring appearance during production."
   },
   {
     "id": "esko-product-44-avt-icenter",
@@ -4149,7 +4392,8 @@ const CARD_DATA = [
       "Production"
     ],
     "explanation": "Describe AVT iCenter by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about using results to spot trends."
   },
   {
     "id": "esko-product-45-automation-hub",
@@ -4166,7 +4410,8 @@ const CARD_DATA = [
       "Insights"
     ],
     "explanation": "Describe Automation Hub by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about a central view of operational activity."
   },
   {
     "id": "esko-product-46-platepatcher",
@@ -4183,7 +4428,8 @@ const CARD_DATA = [
       "Patch"
     ],
     "explanation": "Describe PlatePatcher by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about preparing material before it goes on press."
   },
   {
     "id": "esko-product-47-dynamic-content",
@@ -4200,7 +4446,8 @@ const CARD_DATA = [
       "Artwork"
     ],
     "explanation": "Describe Dynamic Content by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about keeping information consistent across designs."
   },
   {
     "id": "esko-product-48-dynamic-barcodes",
@@ -4217,7 +4464,8 @@ const CARD_DATA = [
       "Variable"
     ],
     "explanation": "Describe Dynamic Barcodes by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about generating scannable information in artwork."
   },
   {
     "id": "esko-product-49-dynamic-marks",
@@ -4234,7 +4482,8 @@ const CARD_DATA = [
       "Variable"
     ],
     "explanation": "Describe Dynamic Marks by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about automatically adding guides for the press."
   },
   {
     "id": "esko-product-50-store-visualizer",
@@ -4251,7 +4500,8 @@ const CARD_DATA = [
       "Display"
     ],
     "explanation": "Describe Store Visualizer by explaining its role in an Esko workflow, the users it helps, and the outcome it supports without saying the forbidden words.",
-    "source": "Esko product terminology"
+    "source": "Esko product terminology",
+    "hint": "Think about seeing a package in a shop context."
   },
   {
     "id": "technical-01-incident",
@@ -4268,7 +4518,8 @@ const CARD_DATA = [
       "Report"
     ],
     "explanation": "Describe Incident in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an interruption to normal service."
   },
   {
     "id": "technical-02-service-request",
@@ -4285,7 +4536,8 @@ const CARD_DATA = [
       "User"
     ],
     "explanation": "Describe Service Request in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a routine need rather than a fault."
   },
   {
     "id": "technical-03-troubleshooting",
@@ -4302,7 +4554,8 @@ const CARD_DATA = [
       "Investigate"
     ],
     "explanation": "Describe Troubleshooting in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about narrowing down possible causes."
   },
   {
     "id": "technical-04-root-cause",
@@ -4319,7 +4572,8 @@ const CARD_DATA = [
       "Why"
     ],
     "explanation": "Describe Root Cause in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what ultimately led to a fault."
   },
   {
     "id": "technical-05-workaround",
@@ -4336,7 +4590,8 @@ const CARD_DATA = [
       "Method"
     ],
     "explanation": "Describe Workaround in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about continuing work despite a fault."
   },
   {
     "id": "technical-06-resolution",
@@ -4353,7 +4608,8 @@ const CARD_DATA = [
       "Problem"
     ],
     "explanation": "Describe Resolution in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what brings an investigation to an end."
   },
   {
     "id": "technical-07-escalation",
@@ -4370,7 +4626,8 @@ const CARD_DATA = [
       "Manager"
     ],
     "explanation": "Describe Escalation in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about involving someone with more expertise."
   },
   {
     "id": "technical-08-priority",
@@ -4387,7 +4644,8 @@ const CARD_DATA = [
       "Impact"
     ],
     "explanation": "Describe Priority in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about which case needs attention first."
   },
   {
     "id": "technical-09-severity",
@@ -4404,7 +4662,8 @@ const CARD_DATA = [
       "Minor"
     ],
     "explanation": "Describe Severity in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about how serious the effect is."
   },
   {
     "id": "technical-10-sla",
@@ -4421,7 +4680,8 @@ const CARD_DATA = [
       "Commitment"
     ],
     "explanation": "Describe SLA in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an agreed support obligation."
   },
   {
     "id": "technical-11-reproduction",
@@ -4438,7 +4698,8 @@ const CARD_DATA = [
       "Observe"
     ],
     "explanation": "Describe Reproduction in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about making the same behaviour happen again."
   },
   {
     "id": "technical-12-expected-result",
@@ -4455,7 +4716,8 @@ const CARD_DATA = [
       "Result"
     ],
     "explanation": "Describe Expected Result in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about the intended behaviour."
   },
   {
     "id": "technical-13-actual-result",
@@ -4472,7 +4734,8 @@ const CARD_DATA = [
       "Outcome"
     ],
     "explanation": "Describe Actual Result in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what the user saw instead."
   },
   {
     "id": "technical-14-error-message",
@@ -4489,7 +4752,8 @@ const CARD_DATA = [
       "Screen"
     ],
     "explanation": "Describe Error Message in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what the application tells the user."
   },
   {
     "id": "technical-15-log-file",
@@ -4506,7 +4770,8 @@ const CARD_DATA = [
       "Timestamp"
     ],
     "explanation": "Describe Log File in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a history of system activity."
   },
   {
     "id": "technical-16-diagnostics",
@@ -4523,7 +4788,8 @@ const CARD_DATA = [
       "Troubleshoot"
     ],
     "explanation": "Describe Diagnostics in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about evidence used to understand a fault."
   },
   {
     "id": "technical-17-remote-session",
@@ -4540,7 +4806,8 @@ const CARD_DATA = [
       "Online"
     ],
     "explanation": "Describe Remote Session in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about assisting someone from another location."
   },
   {
     "id": "technical-18-permissions",
@@ -4557,7 +4824,8 @@ const CARD_DATA = [
       "Security"
     ],
     "explanation": "Describe Permissions in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what someone is authorised to do."
   },
   {
     "id": "technical-19-user-account",
@@ -4574,7 +4842,8 @@ const CARD_DATA = [
       "Access"
     ],
     "explanation": "Describe User Account in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a person’s digital presence."
   },
   {
     "id": "technical-20-license-key",
@@ -4591,7 +4860,8 @@ const CARD_DATA = [
       "Software"
     ],
     "explanation": "Describe License Key in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about proving a right to use an application."
   },
   {
     "id": "technical-21-product-version",
@@ -4608,7 +4878,8 @@ const CARD_DATA = [
       "About"
     ],
     "explanation": "Describe Product Version in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Consider how to identify a particular software revision."
   },
   {
     "id": "technical-22-compatibility",
@@ -4625,7 +4896,8 @@ const CARD_DATA = [
       "Requirement"
     ],
     "explanation": "Describe Compatibility in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about whether two components can work together."
   },
   {
     "id": "technical-23-configuration",
@@ -4642,7 +4914,8 @@ const CARD_DATA = [
       "Environment"
     ],
     "explanation": "Describe Configuration in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about choices that shape how something works."
   },
   {
     "id": "technical-24-installation",
@@ -4659,7 +4932,8 @@ const CARD_DATA = [
       "Deploy"
     ],
     "explanation": "Describe Installation in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about making an application ready to use."
   },
   {
     "id": "technical-25-uninstallation",
@@ -4676,7 +4950,8 @@ const CARD_DATA = [
       "Cleanup"
     ],
     "explanation": "Describe Uninstallation in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about taking an application off a device."
   },
   {
     "id": "technical-26-restart",
@@ -4693,7 +4968,8 @@ const CARD_DATA = [
       "Start"
     ],
     "explanation": "Describe Restart in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about turning something off and back on."
   },
   {
     "id": "technical-27-reset",
@@ -4710,7 +4986,8 @@ const CARD_DATA = [
       "Start Over"
     ],
     "explanation": "Describe Reset in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about returning something to its starting state."
   },
   {
     "id": "technical-28-restore-point",
@@ -4727,7 +5004,8 @@ const CARD_DATA = [
       "Windows"
     ],
     "explanation": "Describe Restore Point in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a checkpoint before a change."
   },
   {
     "id": "technical-29-network",
@@ -4744,7 +5022,8 @@ const CARD_DATA = [
       "Communicate"
     ],
     "explanation": "Describe Network in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about devices exchanging information."
   },
   {
     "id": "technical-30-latency",
@@ -4761,7 +5040,8 @@ const CARD_DATA = [
       "Lag"
     ],
     "explanation": "Describe Latency in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about the time between a request and reply."
   },
   {
     "id": "technical-31-timeout",
@@ -4778,7 +5058,8 @@ const CARD_DATA = [
       "Delay"
     ],
     "explanation": "Describe Timeout in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an operation taking too long."
   },
   {
     "id": "technical-32-crash",
@@ -4795,7 +5076,8 @@ const CARD_DATA = [
       "Fail"
     ],
     "explanation": "Describe Crash in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a program ending abruptly."
   },
   {
     "id": "technical-33-freeze",
@@ -4812,7 +5094,8 @@ const CARD_DATA = [
       "Stop"
     ],
     "explanation": "Describe Freeze in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about an application no longer reacting."
   },
   {
     "id": "technical-34-data-loss",
@@ -4829,7 +5112,8 @@ const CARD_DATA = [
       "Gone"
     ],
     "explanation": "Describe Data Loss in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about something valuable no longer being available."
   },
   {
     "id": "technical-35-corrupt-file",
@@ -4846,7 +5130,8 @@ const CARD_DATA = [
       "Broken"
     ],
     "explanation": "Describe Corrupt File in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about something unreadable despite being present."
   },
   {
     "id": "technical-36-duplicate-record",
@@ -4863,7 +5148,8 @@ const CARD_DATA = [
       "Remove"
     ],
     "explanation": "Describe Duplicate Record in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about two entries representing one thing."
   },
   {
     "id": "technical-37-missing-feature",
@@ -4880,7 +5166,8 @@ const CARD_DATA = [
       "Function"
     ],
     "explanation": "Describe Missing Feature in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a capability the user cannot find."
   },
   {
     "id": "technical-38-known-issue",
@@ -4897,7 +5184,8 @@ const CARD_DATA = [
       "Recognised"
     ],
     "explanation": "Describe Known Issue in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a fault the team has already identified."
   },
   {
     "id": "technical-39-bug-report",
@@ -4914,7 +5202,8 @@ const CARD_DATA = [
       "Submit"
     ],
     "explanation": "Describe Bug Report in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about giving developers evidence of a fault."
   },
   {
     "id": "technical-40-feature-request",
@@ -4931,7 +5220,8 @@ const CARD_DATA = [
       "Submit"
     ],
     "explanation": "Describe Feature Request in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about proposing a useful improvement."
   },
   {
     "id": "technical-41-knowledge-base",
@@ -4948,7 +5238,8 @@ const CARD_DATA = [
       "Information"
     ],
     "explanation": "Describe Knowledge Base in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about a searchable support library."
   },
   {
     "id": "technical-42-ticket-queue",
@@ -4965,7 +5256,8 @@ const CARD_DATA = [
       "Backlog"
     ],
     "explanation": "Describe Ticket Queue in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about work awaiting attention."
   },
   {
     "id": "technical-43-case-owner",
@@ -4982,7 +5274,8 @@ const CARD_DATA = [
       "Person"
     ],
     "explanation": "Describe Case Owner in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about who is accountable for progress."
   },
   {
     "id": "technical-44-handover",
@@ -4999,7 +5292,8 @@ const CARD_DATA = [
       "Colleague"
     ],
     "explanation": "Describe Handover in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about continuity between colleagues."
   },
   {
     "id": "technical-45-customer-impact",
@@ -5016,7 +5310,8 @@ const CARD_DATA = [
       "Consequences"
     ],
     "explanation": "Describe Customer Impact in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about what a person can no longer do."
   },
   {
     "id": "technical-46-business-impact",
@@ -5033,7 +5328,8 @@ const CARD_DATA = [
       "Consequences"
     ],
     "explanation": "Describe Business Impact in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about the effect on daily work."
   },
   {
     "id": "technical-47-temporary-fix",
@@ -5050,7 +5346,8 @@ const CARD_DATA = [
       "Permanent"
     ],
     "explanation": "Describe Temporary Fix in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about keeping work going for now."
   },
   {
     "id": "technical-48-permanent-fix",
@@ -5067,7 +5364,8 @@ const CARD_DATA = [
       "Issue"
     ],
     "explanation": "Describe Permanent Fix in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about preventing the fault from returning."
   },
   {
     "id": "technical-49-follow-up",
@@ -5084,7 +5382,8 @@ const CARD_DATA = [
       "Next"
     ],
     "explanation": "Describe Follow-up in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about reconnecting after an earlier conversation."
   },
   {
     "id": "technical-50-case-closure",
@@ -5101,7 +5400,8 @@ const CARD_DATA = [
       "Close"
     ],
     "explanation": "Describe Case Closure in clear support language, including its impact and the next useful action, without saying the forbidden words.",
-    "source": "Technical support terminology"
+    "source": "Technical support terminology",
+    "hint": "Think about finishing the support process."
   },
   {
     "id": "customer-01-launch-failure",
@@ -5118,7 +5418,8 @@ const CARD_DATA = [
       "Respond"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about what happens when opening an application."
   },
   {
     "id": "customer-02-slow-performance",
@@ -5135,7 +5436,8 @@ const CARD_DATA = [
       "Respond"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about tasks taking longer than usual."
   },
   {
     "id": "customer-03-forgotten-password",
@@ -5152,7 +5454,8 @@ const CARD_DATA = [
       "Sign In"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a secret someone cannot recall."
   },
   {
     "id": "customer-04-frozen-screen",
@@ -5169,7 +5472,8 @@ const CARD_DATA = [
       "Hang"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an interface that no longer reacts."
   },
   {
     "id": "customer-05-save-failure",
@@ -5186,7 +5490,8 @@ const CARD_DATA = [
       "Storage"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about edits not being kept."
   },
   {
     "id": "customer-06-login-failure",
@@ -5203,7 +5508,8 @@ const CARD_DATA = [
       "Authentication"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about being unable to enter a service."
   },
   {
     "id": "customer-07-update-failure",
@@ -5220,7 +5526,8 @@ const CARD_DATA = [
       "Retry"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an unsuccessful move to a newer release."
   },
   {
     "id": "customer-08-printer-offline",
@@ -5237,7 +5544,8 @@ const CARD_DATA = [
       "Device"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about equipment that cannot be reached."
   },
   {
     "id": "customer-09-feature-loss",
@@ -5254,7 +5562,8 @@ const CARD_DATA = [
       "Update"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about something that used to be available."
   },
   {
     "id": "customer-10-error-alert",
@@ -5271,7 +5580,8 @@ const CARD_DATA = [
       "Problem"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a notification that needs attention."
   },
   {
     "id": "customer-11-unstable-internet",
@@ -5288,7 +5598,8 @@ const CARD_DATA = [
       "Online"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a connection that keeps dropping."
   },
   {
     "id": "customer-12-deleted-file",
@@ -5305,7 +5616,8 @@ const CARD_DATA = [
       "Document"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about something removed by accident."
   },
   {
     "id": "customer-13-recurring-issue",
@@ -5322,7 +5634,8 @@ const CARD_DATA = [
       "Previous"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a fault that keeps returning."
   },
   {
     "id": "customer-14-customer-frustration",
@@ -5339,7 +5652,8 @@ const CARD_DATA = [
       "Calm"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about the person’s emotional response."
   },
   {
     "id": "customer-15-urgent-request",
@@ -5356,7 +5670,8 @@ const CARD_DATA = [
       "Priority"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a need requiring prompt attention."
   },
   {
     "id": "customer-16-immediate-fix",
@@ -5373,7 +5688,8 @@ const CARD_DATA = [
       "Workaround"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about pressure for an answer right away."
   },
   {
     "id": "customer-17-escalation-need",
@@ -5390,7 +5706,8 @@ const CARD_DATA = [
       "Team"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about when additional expertise is needed."
   },
   {
     "id": "customer-18-clarification",
@@ -5407,7 +5724,8 @@ const CARD_DATA = [
       "Investigate"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about resolving uncertainty in a conversation."
   },
   {
     "id": "customer-19-screenshot",
@@ -5424,7 +5742,8 @@ const CARD_DATA = [
       "Picture"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about preserving what appears visually."
   },
   {
     "id": "customer-20-logs",
@@ -5441,7 +5760,8 @@ const CARD_DATA = [
       "Records"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about the trail left by system activity."
   },
   {
     "id": "customer-21-restart-advice",
@@ -5458,7 +5778,8 @@ const CARD_DATA = [
       "Device"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about suggesting a fresh start."
   },
   {
     "id": "customer-22-temporary-workaround",
@@ -5475,7 +5796,8 @@ const CARD_DATA = [
       "Steps"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about keeping work moving for now."
   },
   {
     "id": "customer-23-pending-fix",
@@ -5492,7 +5814,8 @@ const CARD_DATA = [
       "Expectation"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about setting expectations while work continues."
   },
   {
     "id": "customer-24-reproduction-failure",
@@ -5509,7 +5832,8 @@ const CARD_DATA = [
       "Evidence"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a fault that cannot be recreated."
   },
   {
     "id": "customer-25-expected-behaviour",
@@ -5526,7 +5850,8 @@ const CARD_DATA = [
       "Documentation"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about how the product was intended to work."
   },
   {
     "id": "customer-26-scope-boundary",
@@ -5543,7 +5868,8 @@ const CARD_DATA = [
       "Refer"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about where one group’s work ends."
   },
   {
     "id": "customer-27-legacy-version",
@@ -5560,7 +5886,8 @@ const CARD_DATA = [
       "Current"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an older edition still in use."
   },
   {
     "id": "customer-28-unsupported-device",
@@ -5577,7 +5904,8 @@ const CARD_DATA = [
       "Platform"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a machine outside the tested list."
   },
   {
     "id": "customer-29-expired-license",
@@ -5594,7 +5922,8 @@ const CARD_DATA = [
       "Entitlement"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a right to use something ending."
   },
   {
     "id": "customer-30-locked-account",
@@ -5611,7 +5940,8 @@ const CARD_DATA = [
       "Access"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about being prevented from entering."
   },
   {
     "id": "customer-31-admin-rights",
@@ -5628,7 +5958,8 @@ const CARD_DATA = [
       "Privileges"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about elevated authority on a system."
   },
   {
     "id": "customer-32-wrong-file",
@@ -5645,7 +5976,8 @@ const CARD_DATA = [
       "Send"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about receiving a different item than intended."
   },
   {
     "id": "customer-33-incomplete-download",
@@ -5662,7 +5994,8 @@ const CARD_DATA = [
       "Internet"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about receiving only part of something."
   },
   {
     "id": "customer-34-missing-backup",
@@ -5679,7 +6012,8 @@ const CARD_DATA = [
       "Unavailable"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about having no spare version available."
   },
   {
     "id": "customer-35-incorrect-data",
@@ -5696,7 +6030,8 @@ const CARD_DATA = [
       "Expected"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about information that does not match reality."
   },
   {
     "id": "customer-36-blank-page",
@@ -5713,7 +6048,8 @@ const CARD_DATA = [
       "White"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about opening something and seeing nothing."
   },
   {
     "id": "customer-37-unresponsive-button",
@@ -5730,7 +6066,8 @@ const CARD_DATA = [
       "Browser"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a control that does nothing."
   },
   {
     "id": "customer-38-audio-failure",
@@ -5747,7 +6084,8 @@ const CARD_DATA = [
       "Hear"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a meeting without sound."
   },
   {
     "id": "customer-39-camera-detection",
@@ -5764,7 +6102,8 @@ const CARD_DATA = [
       "Meeting"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about an input not appearing during a call."
   },
   {
     "id": "customer-40-expired-link",
@@ -5781,7 +6120,8 @@ const CARD_DATA = [
       "Session"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a way in that no longer works."
   },
   {
     "id": "customer-41-missing-email",
@@ -5798,7 +6138,8 @@ const CARD_DATA = [
       "Delivery"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about something sent that never arrives."
   },
   {
     "id": "customer-42-large-attachment",
@@ -5815,7 +6156,8 @@ const CARD_DATA = [
       "Upload"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about sharing something too big."
   },
   {
     "id": "customer-43-wrong-password",
@@ -5832,7 +6174,8 @@ const CARD_DATA = [
       "Attempt"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a secret that does not match."
   },
   {
     "id": "customer-44-time-zone",
@@ -5849,7 +6192,8 @@ const CARD_DATA = [
       "Date"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about differences between locations."
   },
   {
     "id": "customer-45-date-format",
@@ -5866,7 +6210,8 @@ const CARD_DATA = [
       "Display"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about different ways of writing a calendar entry."
   },
   {
     "id": "customer-46-session-timeout",
@@ -5883,7 +6228,8 @@ const CARD_DATA = [
       "Limit"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a session ending after inactivity."
   },
   {
     "id": "customer-47-approval",
@@ -5900,7 +6246,8 @@ const CARD_DATA = [
       "Process"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about needing someone’s decision to proceed."
   },
   {
     "id": "customer-48-fix-validation",
@@ -5917,7 +6264,8 @@ const CARD_DATA = [
       "Check"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about checking whether a change worked."
   },
   {
     "id": "customer-49-closure-ready",
@@ -5934,7 +6282,8 @@ const CARD_DATA = [
       "End"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about confirming that support can finish."
   },
   {
     "id": "customer-50-follow-up-call",
@@ -5951,7 +6300,8 @@ const CARD_DATA = [
       "Customer"
     ],
     "explanation": "Describe this customer situation calmly, acknowledge the impact, explain the next step, and set a clear expectation without saying the forbidden words.",
-    "source": "Customer support communication scenario"
+    "source": "Customer support communication scenario",
+    "hint": "Think about a conversation after the first one."
   }
 ];
 

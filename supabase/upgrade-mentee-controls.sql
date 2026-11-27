@@ -61,7 +61,8 @@ begin
   update public.game_sessions set
     mode = p_mode, difficulty = p_difficulty, current_card = p_next_card,
     card_index = card_index + 1, phase = 'active',
-    timer_remaining = timer_seconds, timer_running = false,
+    timer_remaining = timer_seconds,
+    timer_running = timer_seconds > 0 and coalesce((p_next_card->>'timer_visible')::boolean, false),
     score_correct = coalesce(score_correct, 0) + case when v_outcome = 'correct' then 1 else 0 end,
     score_skip = coalesce(score_skip, 0) + case when v_outcome = 'skip' then 1 else 0 end,
     score_taboo = coalesce(score_taboo, 0) + case when v_outcome = 'taboo' then 1 else 0 end,
@@ -90,7 +91,7 @@ begin
       'forbidden', coalesce(v_session.current_card->'forbidden', '[]'::jsonb),
       'category', v_session.current_card->'category',
       'clue', case
-        when coalesce((v_session.current_card->>'clue_shown')::boolean, false) then v_session.current_card->'explanation'
+        when coalesce((v_session.current_card->>'clue_shown')::boolean, false) then coalesce(nullif(v_session.current_card->'hint', 'null'::jsonb), v_session.current_card->'explanation')
         else 'null'::jsonb
       end,
       'timer_visible', coalesce((v_session.current_card->>'timer_visible')::boolean, false)
@@ -99,7 +100,7 @@ begin
   end;
   return jsonb_build_object(
     'id', v_session.id, 'engineer_name', v_session.engineer_name,
-    'mode', v_session.mode, 'difficulty', v_session.difficulty,
+    'mode', v_session.mode,
     'timer_seconds', v_session.timer_seconds, 'timer_remaining', v_session.timer_remaining,
     'timer_running', v_session.timer_running, 'phase', v_session.phase,
     'status', v_session.status, 'current_card', v_public_card,
