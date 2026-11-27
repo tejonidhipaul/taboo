@@ -109,9 +109,40 @@ async function loadSession(id) {
 function engineerLink() {
   return `${location.origin}${location.pathname.replace(/admin\.html$/, '')}engineer.html?s=${encodeURIComponent(activeSession.id)}`;
 }
+function renderLinkBox() {
+  let box = document.getElementById('engineerLinkBox');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'engineerLinkBox';
+    box.className = 'panel';
+    box.style.cssText = 'margin:0 0 20px;padding:16px 20px;';
+    box.innerHTML =
+      '<label for="engineerLinkInput">Engineer link: send this to the engineer</label>' +
+      '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px">' +
+      '<input id="engineerLinkInput" readonly style="flex:1;min-width:240px;margin-top:0">' +
+      '<button id="engineerLinkCopy" type="button" class="btn btn-primary">Copy link</button>' +
+      '</div>';
+    const head = document.querySelector('#livePanel .session-head');
+    if (head) head.after(box); else document.getElementById('livePanel').prepend(box);
+    document.getElementById('engineerLinkInput').addEventListener('click', (e) => e.target.select());
+    document.getElementById('engineerLinkCopy').addEventListener('click', copyEngineerLink);
+  }
+  document.getElementById('engineerLinkInput').value = engineerLink();
+}
 
+async function copyEngineerLink() {
+  renderLinkBox();
+  const input = document.getElementById('engineerLinkInput');
+  const link = engineerLink();
+  input.focus();
+  input.select();
+  try { await navigator.clipboard.writeText(link); toast('Engineer link copied.'); return; } catch {}
+  try { if (document.execCommand('copy')) { toast('Engineer link copied.'); return; } } catch {}
+  toast('Link selected. Press Ctrl+C to copy it.');
+}
 function renderSession() {
   if (!activeSession) return;
+  renderLinkBox();
   $('liveTitle').textContent = `${activeSession.engineer_name || 'Engineer'} · ${THEME_LABELS[activeSession.mode] || activeSession.mode}`;
   $('liveMode').value = activeSession.mode;
   $('liveDifficulty').value = activeSession.difficulty;
@@ -316,10 +347,7 @@ function wireEvents() {
   $('skipCard').addEventListener('click', () => scoreAndAdvance('skip'));
   $('tabooCard').addEventListener('click', () => scoreAndAdvance('taboo'));
   $('applyChallenge').addEventListener('click', () => drawCard({ mode: $('liveMode').value, difficulty: $('liveDifficulty').value }));
-  $('copyLink').addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText(engineerLink()); toast('Engineer link copied.'); }
-    catch { prompt('Copy this engineer link:', engineerLink()); }
-  });
+  $('copyLink').addEventListener('click', copyEngineerLink);
   $('startTimer').addEventListener('click', async () => {
     if (activeSession.timer_seconds === 0) { toast('This is an untimed coaching session.'); return; }
     if (activeSession.timer_remaining <= 0) activeSession.timer_remaining = activeSession.timer_seconds;
