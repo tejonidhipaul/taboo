@@ -12,13 +12,19 @@
   <main class="engineer-shell">
     <section id="engineerLoading" class="engineer-message"><div class="spinner light"></div><h1>Joining your session…</h1><p>Keep this tab open. Your mentor controls the challenge.</p></section>
     <section id="engineerError" class="engineer-message is-hidden"><p class="eyebrow">Unable to join</p><h1 id="engineerErrorTitle">Session not found</h1><p id="engineerErrorText">Check the link with your mentor.</p></section>
-    <section id="engineerWaiting" class="engineer-message engineer-waiting is-hidden"><div class="waiting-pulse" aria-hidden="true"><span></span></div><p class="eyebrow">You’re connected</p><h1 id="waitingGreeting">Welcome!</h1><p id="waitingName">Your mentor will start the first card when ready.</p><p class="waiting-tip">Keep this screen open. Your first word will appear automatically.</p></section>
+    <section id="engineerWaiting" class="engineer-message engineer-waiting is-hidden"><div class="waiting-pulse" aria-hidden="true"><span></span></div><p class="eyebrow">You’re connected</p><h1 id="waitingGreeting">Welcome!</h1><p id="waitingName">Your mentor will start the first card when ready.</p><p class="waiting-tip">Keep this screen open. Your first word will appear automatically.</p><div class="waiting-rules"><h2 id="waitingRulesTitle">Quick rules</h2><ul><li>Describe the large word on your card without saying it.</li><li>Do not use any of the forbidden words shown below it.</li><li>Do not spell or translate the word; explain it in your own words.</li><li>When your mentor guesses, select Guessed. If you say a forbidden word, select Taboo.</li></ul></div></section>
     <section id="engineerGame" class="engineer-game is-hidden">
       <div class="engineer-meta"><span id="engineerTheme" class="pill light-pill">Everyday English</span><span id="engineerDifficulty">Intermediate</span></div>
-      <p class="engineer-prompt">Describe this without saying the forbidden words</p>
-      <h1 id="engineerTarget">Umbrella</h1>
-      <div id="engineerForbidden" class="engineer-forbidden"></div>
-      <div class="engineer-footer"><div><small>Round</small><strong id="engineerRound">1</strong></div><div><small>Time</small><strong id="engineerTimer">01:30</strong></div><div><small>Correct</small><strong id="engineerScore">0</strong></div></div>
+      <article id="engineerCard" class="engineer-taboo-card">
+        <div class="taboo-card-heading"><strong>SAY IT!</strong><span>DESCRIBE THE WORD</span></div>
+        <h1 id="engineerTarget">Umbrella</h1>
+        <p class="taboo-words-label">Forbidden words</p>
+        <div id="engineerForbidden" class="engineer-forbidden"></div>
+        <section id="engineerClue" class="engineer-clue is-hidden" aria-live="polite"><strong>A clue from your mentor</strong><p id="engineerClueText"></p></section>
+      </article>
+      <div class="engineer-actions"><button id="engineerGuessed" class="btn btn-accent" type="button">Guessed</button><button id="engineerTaboo" class="btn btn-danger" type="button">Taboo</button></div>
+      <p id="engineerActionStatus" class="engineer-action-status" role="status" aria-live="polite"></p>
+      <div id="engineerFooter" class="engineer-footer"><div><small>Round</small><strong id="engineerRound">1</strong></div><div id="engineerTimerCell"><small>Time</small><strong id="engineerTimer">01:30</strong></div><div><small>Correct</small><strong id="engineerScore">0</strong></div></div>
     </section>
     <section id="engineerEnded" class="engineer-message is-hidden"><p class="eyebrow">Session complete</p><h1>Well done!</h1><p>Your mentor has ended this challenge.</p></section>
   </main>

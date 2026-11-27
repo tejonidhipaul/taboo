@@ -11,6 +11,10 @@ A real-time, Taboo-style communication game for one-to-one mentoring with suppor
 - The library now contains 350 cards: 200 from the supplied Taboo PDF, 50 Esko products, 50 technical terms, and 50 customer challenges.
 - Every target and forbidden entry is limited to one or two words.
 - Custom cards and CSV imports now follow the same one-or-two-word rule.
+- The engineer waiting screen explains the rules; live cards use a vertical Taboo-card layout with forbidden words stacked beneath the target and a flip animation. Card entries can wrap between words, while long individual words resize to fit on phones.
+- Mentors can reveal a clue and show or hide the timer on the engineer’s screen; the timer starts hidden there.
+- Engineers can select **Guessed** or **Taboo** to score the current card and move on while the mentor console is open.
+- The live mentor console uses a tighter layout to reduce scrolling.
 
 ## What changed in v2.0
 
@@ -34,11 +38,15 @@ The package also retains custom cards and CSV import/export, live timer and scor
 - `netlify/functions/config.mjs` — exposes only the browser-safe Supabase URL and publishable key
 - `supabase/schema.sql` — fresh install or in-place v2 upgrade
 - `supabase/upgrade-v2.sql` — duplicate convenience copy for an existing v1 project
+- `supabase/upgrade-live-controls.sql` — targeted RPC update for existing v2.1 projects
+- `supabase/upgrade-mentee-controls.sql` — adds engineer scoring and includes the live clue/timer public-state update
 - `tests/` — local validation tests
 
-## Quick update from v2.0.x
+## Update an existing v2.1 project
 
-This release does not change the database schema. If v2 is already working, replace the repository files with this package and commit once. Do **not** rerun Supabase SQL just for v2.1.0. Then hard-refresh the mentor console.
+In Supabase SQL Editor, run the complete `supabase/upgrade-mentee-controls.sql`. It preserves existing sessions and includes the clue and timer update; you do not need to run `upgrade-live-controls.sql` separately. Then deploy the updated files and hard-refresh both game screens. Do **not** rerun the full `schema.sql` on an existing installation, and do not run `upgrade-live-controls.sql` after the mentee-controls migration, because it replaces the public-state function.
+
+For a fresh install, run `supabase/schema.sql` followed by `supabase/upgrade-mentee-controls.sql`. When upgrading from v1, run `supabase/upgrade-v2.sql` followed by `supabase/upgrade-mentee-controls.sql`.
 
 ## A. Upgrade an older v1 Say It! site
 
@@ -46,7 +54,7 @@ Do these steps in order so the new authenticated code and database functions swi
 
 1. **Back up if desired.** In Supabase, use Table Editor to export `game_sessions`. The upgrade does not drop that table or delete rows.
 2. Open **Supabase → SQL Editor → New query**.
-3. Copy the entire contents of `supabase/upgrade-v2.sql`, paste it into the editor and click **Run**. A successful run normally ends with “Success. No rows returned.”
+3. Run the entire contents of `supabase/upgrade-v2.sql`, then run `supabase/upgrade-mentee-controls.sql`. A successful run normally ends with “Success. No rows returned.”
 4. Open **Supabase → Authentication → Users → Add user**.
 5. Enter the mentor email and a strong password. Select **Auto Confirm User** (wording can vary) so the account can sign in immediately.
 6. For a single-mentor site, disable public registration under **Authentication → Providers → Email** by turning off **Allow new users to sign up**. The game has no sign-up screen, but disabling registration is the stronger setting.
@@ -62,7 +70,7 @@ Existing v1 sessions have no mentor owner. They remain in the table for history,
 ### 1. Create and configure Supabase
 
 1. Create a project at Supabase.
-2. In **SQL Editor**, run all of `supabase/schema.sql`.
+2. In **SQL Editor**, run all of `supabase/schema.sql`, then run all of `supabase/upgrade-mentee-controls.sql`.
 3. In **Authentication → Users**, add the mentor’s email/password account and auto-confirm it.
 4. Under **Authentication → Providers → Email**, disable **Allow new users to sign up** when only invited mentors should have access.
 5. In **Project Settings → Data API**, copy the Project URL. It must look like `https://xxxx.supabase.co` with nothing after `.co`.
@@ -93,6 +101,10 @@ This project includes a Netlify Function, so use a Git-connected Netlify site (r
 7. Confirm the mentor console says **Words are hidden**, then click **View words** and **Hide words**.
 8. Change the live theme and difficulty, then click **Apply & show next card**. The engineer view should update without a new link.
 9. Test timer, Correct/Skip/Taboo, notes and CSV export.
+10. Confirm the mentor can show/hide a clue and the engineer timer; draw another card and confirm the clue resets while timer visibility persists.
+11. With the mentor console open, select **Guessed** and then **Taboo** on the engineer screen. Confirm each result updates the corresponding mentor score and advances the card.
+
+The mentor console must remain open and connected to process engineer results and choose the next card, including custom cards stored in that browser. Until it does, the engineer screen displays a waiting message and disables both result buttons.
 
 ## How live theme and difficulty changes work
 
@@ -121,7 +133,7 @@ Allowed themes are `everyday`, `technical`, and `customer`. Separate 4–6 forbi
 - Sessions are owned by the authenticated mentor’s user ID.
 - A separate 256-bit per-session control token is generated in the browser; only its SHA-256 hash is stored in Supabase.
 - Row Level Security is enabled and clients receive no direct table privileges.
-- Engineers can call only the public-state function, which omits mentor identity, control-token hash, model explanations, observations and private notes.
+- Anyone with an engineer link can read public session state and submit one Guessed or Taboo result for the current active card. The public state omits mentor identity, control-token hash, hidden model explanations, observations and private notes. A model explanation is included only after the mentor selects **Show clue**.
 - Realtime broadcasts contain only a session ID and act as a refresh signal; polling is the fallback.
 - The publishable key is intentionally public. Never add the secret/service-role key.
 
@@ -143,4 +155,5 @@ No `npm install` is needed because the test suite uses only Node’s standard li
 - **“Invalid login credentials”** — confirm the mentor user exists, is confirmed, and the email/password are exact.
 - **Engineer page does not update immediately** — it polls every three seconds even if Realtime is unavailable. Check the engineer link and Supabase status.
 - **Engineer remains on the waiting screen** — select **Start session** in the mentor console. Creating a session intentionally does not send a card.
+- **Engineer result remains pending** — reopen the mentor console in the browser that created the session, keep it connected, and check its connection status.
 - **Old session cannot be resumed after upgrade** — v1 rows have no authenticated mentor owner; create a new v2 session.

@@ -24,6 +24,16 @@ export function formatTimer(totalSeconds) {
   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
+export function fitTextToWidth(element) {
+  element.style.fontSize = '';
+  const width = element.clientWidth;
+  const textWidth = element.scrollWidth;
+  if (width > 0 && textWidth > width) {
+    const fontSize = parseFloat(getComputedStyle(element).fontSize);
+    element.style.fontSize = `${fontSize * width / textWidth * 0.99}px`;
+  }
+}
+
 export function csvEscape(value) {
   const text = String(value ?? '');
   return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;

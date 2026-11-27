@@ -10,6 +10,9 @@ let wordsRevealed = false;
 let timerHandle = null;
 let tickBusy = false;
 let usedCardIds = new Set();
+let refreshHandle = null;
+let refreshBusy = false;
+let updateQueue = Promise.resolve();
 
 function showOnly(panel) {
   ['loadingPanel', 'authPanel', 'setupPanel', 'livePanel'].forEach((id) => $(id).classList.toggle('is-hidden', id !== panel));
@@ -79,20 +82,27 @@ async function rpc(name, parameters) {
   return data;
 }
 
-async function patchSession(patch, { quiet = false } = {}) {
-  if (!activeSession || !adminToken) return;
+function queueUpdate(work) {
+  const result = updateQueue.then(work);
+  updateQueue = result.catch(() => {});
+  return result;
+}
+
+async function patchSession(patch, { quiet = false, cardIndex = ('current_card' in patch || 'timer_remaining' in patch || ('timer_running' in patch && !('status' in patch))) ? activeSession?.card_index : null } = {}) {
   try {
-    const data = await rpc('admin_patch_game_session', {
-      p_session_id: activeSession.id,
-      p_admin_token: adminToken,
-      p_patch: patch
+    await queueUpdate(async () => {
+      if (!activeSession || !adminToken) throw new Error('The session is no longer available.');
+      if (cardIndex !== null && activeSession.card_index !== cardIndex) throw new Error('The card changed before this update was applied.');
+      activeSession = await rpc('admin_patch_game_session', {
+        p_session_id: activeSession.id,
+        p_admin_token: adminToken,
+        p_patch: patch
+      });
+      renderSession({ preserveEdits: true });
     });
-    activeSession = data;
-    renderSession();
     if (!quiet) $('connectionStatus').textContent = 'Saved · engineer screen updated';
   } catch (error) {
     $('connectionStatus').textContent = 'Update failed';
-    if (!quiet) toast(error.message || 'The session could not be updated.');
     throw error;
   }
 }
@@ -109,6 +119,7 @@ async function loadSession(id) {
   showOnly('livePanel');
   renderSession();
   if (activeSession.timer_running) startLocalTimer();
+  startSessionRefresh();
 }
 
 function engineerLink() {
@@ -139,19 +150,21 @@ async function copyEngineerLink() {
   toast('Link selected. Press Ctrl+C to copy it.');
 }
 
-function renderSession() {
+function renderSession({ preserveEdits = false } = {}) {
   if (!activeSession) return;
   renderEngineerLink();
   $('liveTitle').textContent = `${activeSession.engineer_name || 'Engineer'} · ${THEME_LABELS[activeSession.mode] || activeSession.mode}`;
-  $('liveMode').value = activeSession.mode;
-  $('liveDifficulty').value = activeSession.difficulty;
+  if (!preserveEdits) {
+    $('liveMode').value = activeSession.mode;
+    $('liveDifficulty').value = activeSession.difficulty;
+  }
   $('timerDisplay').textContent = activeSession.timer_seconds === 0 ? '∞' : formatTimer(activeSession.timer_remaining);
   $('scoreCorrect').textContent = activeSession.score_correct;
   $('scoreSkip').textContent = activeSession.score_skip;
   $('scoreTaboo').textContent = activeSession.score_taboo;
   const attempts = activeSession.score_correct + activeSession.score_skip + activeSession.score_taboo;
   $('successRate').textContent = `${attempts ? Math.round((activeSession.score_correct / attempts) * 100) : 0}%`;
-  $('mentorNotes').value = activeSession.review?.notes || '';
+  if (!preserveEdits) $('mentorNotes').value = activeSession.review?.notes || '';
 
   const selectedNotes = new Set(activeSession.observations || []);
   document.querySelectorAll('#observationChips button').forEach((button) => button.classList.toggle('active', selectedNotes.has(button.dataset.note)));
@@ -160,18 +173,29 @@ function renderSession() {
   const hasCard = Boolean(card.target);
   const waiting = activeSession.phase === 'waiting' && activeSession.status !== 'ended';
   const ended = activeSession.status === 'ended';
+  const canPlay = hasCard && !waiting && !ended;
   $('mentorWaitingCard').classList.toggle('is-hidden', !waiting);
   $('startSession').classList.toggle('is-hidden', !waiting);
   $('startSession').disabled = !waiting;
   $('launchStatus').textContent = ended ? 'Session ended' : waiting ? `Waiting for ${activeSession.engineer_name || 'the engineer'}` : 'Session in progress';
-  $('toggleWords').disabled = !hasCard;
-  $('correctCard').disabled = !hasCard;
-  $('skipCard').disabled = !hasCard;
-  $('tabooCard').disabled = !hasCard;
+  $('toggleWords').disabled = !canPlay;
+  $('toggleClue').disabled = !canPlay;
+  $('correctCard').disabled = !canPlay;
+  $('skipCard').disabled = !canPlay;
+  $('tabooCard').disabled = !canPlay;
+  $('nextCard').disabled = !canPlay;
   $('hiddenCard').classList.toggle('is-hidden', waiting || (wordsRevealed && hasCard));
   $('revealedCard').classList.toggle('is-hidden', waiting || !wordsRevealed || !hasCard);
   $('toggleWords').textContent = wordsRevealed ? 'Hide words' : 'View words';
   $('toggleWords').setAttribute('aria-pressed', String(wordsRevealed));
+  const clueShown = card.clue_shown === true;
+  const engineerTimerVisible = card.timer_visible === true;
+  $('toggleClue').textContent = clueShown ? 'Hide clue' : 'Show clue';
+  $('toggleClue').setAttribute('aria-pressed', String(clueShown));
+  $('toggleClue').disabled = !canPlay || !card.explanation;
+  $('toggleEngineerTimer').textContent = engineerTimerVisible ? 'Hide timer' : 'Show timer';
+  $('toggleEngineerTimer').setAttribute('aria-pressed', String(engineerTimerVisible));
+  $('toggleEngineerTimer').disabled = !canPlay;
   if (hasCard) {
     $('cardCategory').textContent = `${card.category} · ${DIFFICULTY_LABELS[activeSession.difficulty]}`;
     $('cardTarget').textContent = card.target;
@@ -179,37 +203,82 @@ function renderSession() {
     $('modelExplanation').textContent = card.explanation || 'Ask the engineer to explain the purpose, context and next step clearly.';
   }
   $('connectionStatus').textContent = activeSession.status === 'ended' ? 'Session ended' : 'Connected · changes sync live';
-  document.querySelectorAll('#livePanel button').forEach((button) => {
-    if (!['exportSummary', 'copyLink', 'signOut'].includes(button.id)) button.disabled = ended || button.disabled;
-  });
+  $('endSession').disabled = ended;
   $('applyChallenge').disabled = ended || waiting;
-  $('startTimer').disabled = ended || waiting || !hasCard;
-  $('pauseTimer').disabled = ended || waiting || !hasCard;
-  $('resetTimer').disabled = ended || waiting || !hasCard;
+  $('startTimer').disabled = !canPlay;
+  $('pauseTimer').disabled = !canPlay;
+  $('resetTimer').disabled = !canPlay;
 }
 
-async function drawCard(overrides = {}) {
-  const mode = overrides.mode || activeSession.mode;
-  const difficulty = overrides.difficulty || activeSession.difficulty;
-  const card = chooseCard(mode, difficulty);
-  wordsRevealed = false;
-  await patchSession({
-    mode,
-    difficulty,
-    current_card: card,
-    card_index: Number(activeSession.card_index || 0) + 1,
-    phase: 'active',
-    timer_remaining: activeSession.timer_seconds,
-    timer_running: false
+async function drawCard(overrides = {}, outcome = null, expectedIndex = activeSession?.card_index) {
+  await queueUpdate(async () => {
+    if (!activeSession || !adminToken) throw new Error('The session is no longer available.');
+    if (activeSession.card_index !== expectedIndex) throw new Error('The card has already changed.');
+    const mode = overrides.mode || activeSession.mode;
+    const difficulty = overrides.difficulty || activeSession.difficulty;
+    const card = {
+      ...chooseCard(mode, difficulty),
+      clue_shown: false,
+      timer_visible: activeSession.current_card?.timer_visible === true
+    };
+    activeSession = await rpc('admin_advance_game_session', {
+      p_session_id: activeSession.id,
+      p_admin_token: adminToken,
+      p_card_index: expectedIndex,
+      p_next_card: card,
+      p_outcome: outcome,
+      p_mode: mode,
+      p_difficulty: difficulty
+    });
+    wordsRevealed = false;
+    stopLocalTimer();
+    renderSession({ preserveEdits: true });
   });
-  stopLocalTimer();
 }
 
 async function scoreAndAdvance(kind) {
-  const key = `score_${kind}`;
-  const nextScore = Number(activeSession[key] || 0) + 1;
-  await patchSession({ [key]: nextScore });
-  await drawCard();
+  await drawCard({}, kind);
+}
+
+function onUpdate(id, handler) {
+  $(id).addEventListener('click', (event) => {
+    handler(event).catch((error) => {
+      $('connectionStatus').textContent = 'Update failed';
+      toast(error.message || 'The session could not be updated.');
+    });
+  });
+}
+
+function stopSessionRefresh() {
+  if (refreshHandle) clearInterval(refreshHandle);
+  refreshHandle = null;
+}
+
+function startSessionRefresh() {
+  stopSessionRefresh();
+  const sessionId = activeSession.id;
+  async function refresh() {
+    if (refreshBusy || !activeSession || activeSession.id !== sessionId) return;
+    refreshBusy = true;
+    try {
+      await queueUpdate(async () => {
+        if (!activeSession || activeSession.id !== sessionId) return;
+        const data = await rpc('admin_get_game_session', { p_session_id: sessionId, p_admin_token: adminToken });
+        if (!activeSession || activeSession.id !== sessionId) return;
+        if (data.updated_at !== activeSession.updated_at) {
+          activeSession = data;
+          renderSession({ preserveEdits: true });
+        }
+      });
+      if (activeSession?.id === sessionId && activeSession.pending_mentee_action) {
+        await drawCard({}, null, activeSession.card_index);
+      }
+    } catch (error) {
+      $('connectionStatus').textContent = `Session update failed: ${error.message || 'Check your connection.'}`;
+    } finally { refreshBusy = false; }
+  }
+  refreshHandle = setInterval(refresh, 2000);
+  refresh();
 }
 
 function stopLocalTimer() {
@@ -254,6 +323,7 @@ async function createLiveSession(event) {
     showOnly('livePanel');
     wordsRevealed = false;
     renderSession();
+    startSessionRefresh();
     toast('Session created. Share the link, then start when the engineer is ready.');
   } catch (error) {
     $('setupError').textContent = error.message || 'Could not create the session.';
@@ -338,6 +408,7 @@ async function handleSignedIn(user) {
 
 function handleSignedOut() {
   stopLocalTimer();
+  stopSessionRefresh();
   activeSession = null;
   adminToken = '';
   $('accountBar').classList.add('is-hidden');
@@ -355,12 +426,14 @@ function wireEvents() {
   });
   $('signOut').addEventListener('click', async () => { await supabaseClient.auth.signOut(); history.replaceState({}, '', 'admin.html'); });
   $('sessionForm').addEventListener('submit', createLiveSession);
-  $('toggleWords').addEventListener('click', () => { wordsRevealed = !wordsRevealed; renderSession(); });
-  $('nextCard').addEventListener('click', () => drawCard());
-  $('correctCard').addEventListener('click', () => scoreAndAdvance('correct'));
-  $('skipCard').addEventListener('click', () => scoreAndAdvance('skip'));
-  $('tabooCard').addEventListener('click', () => scoreAndAdvance('taboo'));
-  $('applyChallenge').addEventListener('click', () => drawCard({ mode: $('liveMode').value, difficulty: $('liveDifficulty').value }));
+  $('toggleWords').addEventListener('click', () => { wordsRevealed = !wordsRevealed; renderSession({ preserveEdits: true }); });
+  onUpdate('toggleClue', () => patchSession({ current_card: { ...activeSession.current_card, clue_shown: activeSession.current_card.clue_shown !== true } }));
+  onUpdate('toggleEngineerTimer', () => patchSession({ current_card: { ...activeSession.current_card, timer_visible: activeSession.current_card.timer_visible !== true } }));
+  onUpdate('nextCard', () => drawCard());
+  onUpdate('correctCard', () => scoreAndAdvance('correct'));
+  onUpdate('skipCard', () => scoreAndAdvance('skip'));
+  onUpdate('tabooCard', () => scoreAndAdvance('taboo'));
+  onUpdate('applyChallenge', () => drawCard({ mode: $('liveMode').value, difficulty: $('liveDifficulty').value }));
   $('engineerLinkInput').addEventListener('click', (event) => event.target.select());
   $('copyLink').addEventListener('click', copyEngineerLink);
   $('startSession').addEventListener('click', async () => {
@@ -375,28 +448,29 @@ function wireEvents() {
       setBusy(button, false, 'Starting…');
     }
   });
-  $('startTimer').addEventListener('click', async () => {
+  onUpdate('startTimer', async () => {
     if (activeSession.timer_seconds === 0) { toast('This is an untimed coaching session.'); return; }
     if (activeSession.timer_remaining <= 0) activeSession.timer_remaining = activeSession.timer_seconds;
     await patchSession({ timer_running: true, timer_remaining: activeSession.timer_remaining });
     startLocalTimer();
   });
-  $('pauseTimer').addEventListener('click', async () => { stopLocalTimer(); await patchSession({ timer_running: false }); });
-  $('resetTimer').addEventListener('click', async () => { stopLocalTimer(); await patchSession({ timer_running: false, timer_remaining: activeSession.timer_seconds }); });
-  $('endSession').addEventListener('click', async () => {
+  onUpdate('pauseTimer', async () => { stopLocalTimer(); await patchSession({ timer_running: false }); });
+  onUpdate('resetTimer', async () => { stopLocalTimer(); await patchSession({ timer_running: false, timer_remaining: activeSession.timer_seconds }); });
+  onUpdate('endSession', async () => {
     if (!confirm('End this live session? The engineer will see a completion screen.')) return;
     stopLocalTimer();
     await patchSession({ status: 'ended', phase: 'ended', timer_running: false });
+    stopSessionRefresh();
     toast('Session ended. You can still export the summary.');
   });
-  $('observationChips').addEventListener('click', async (event) => {
+  onUpdate('observationChips', async (event) => {
     const button = event.target.closest('button[data-note]');
     if (!button) return;
     const notes = new Set(activeSession.observations || []);
     notes.has(button.dataset.note) ? notes.delete(button.dataset.note) : notes.add(button.dataset.note);
     await patchSession({ observations: [...notes] }, { quiet: true });
   });
-  $('saveNotes').addEventListener('click', async () => {
+  onUpdate('saveNotes', async () => {
     await patchSession({ review: { ...(activeSession.review || {}), notes: $('mentorNotes').value.trim() } }, { quiet: true });
     $('saveStatus').textContent = 'Saved';
     setTimeout(() => { $('saveStatus').textContent = ''; }, 1800);

@@ -2,11 +2,32 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { BUILT_IN_CARDS, forbiddenCount, eligibleCards } from '../assets/cards.js';
+import { fitTextToWidth } from '../assets/common.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (name) => fs.readFileSync(path.join(root, name), 'utf8');
+
+test('card text shrinks only when needed and restores its size when space increases', () => {
+  const previous = globalThis.getComputedStyle;
+  globalThis.getComputedStyle = () => ({ fontSize: '40px' });
+  try {
+    const element = { style: { fontSize: '' }, clientWidth: 100, scrollWidth: 200 };
+    fitTextToWidth(element);
+    assert.ok(parseFloat(element.style.fontSize) < 20);
+    element.clientWidth = 250;
+    fitTextToWidth(element);
+    assert.equal(element.style.fontSize, '');
+    element.clientWidth = 0;
+    fitTextToWidth(element);
+    assert.equal(element.style.fontSize, '');
+  } finally {
+    if (previous === undefined) delete globalThis.getComputedStyle;
+    else globalThis.getComputedStyle = previous;
+  }
+});
 
 test('card library contains 350 unique, complete cards with concise entries', () => {
   assert.equal(BUILT_IN_CARDS.length, 350);
@@ -89,6 +110,107 @@ test('new sessions wait for the mentor and show a personalised engineer greeting
   assert.match(engineerScript, /state\.phase !== 'active'/);
 });
 
+test('engineer rules, card, clue, timer visibility and flip animation are wired', () => {
+  const adminHtml = read('admin.html');
+  const adminScript = read('assets/admin.js');
+  const engineerHtml = read('engineer.html');
+  const engineerScript = read('assets/engineer.js');
+  const styles = read('assets/styles.css');
+  const schema = read('supabase/schema.sql');
+  const v1Upgrade = read('supabase/upgrade-v2.sql');
+  const migration = read('supabase/upgrade-live-controls.sql');
+
+  assert.match(engineerHtml, /class="waiting-rules"/);
+  assert.match(engineerHtml, /id="engineerCard" class="engineer-taboo-card"/);
+  assert.match(engineerHtml, /id="engineerClue"/);
+  assert.match(adminHtml, /id="toggleClue"/);
+  assert.match(adminHtml, /id="toggleEngineerTimer"[^>]*aria-pressed="false">Show timer/);
+  assert.match(adminScript, /clue_shown: false/);
+  assert.match(adminScript, /timer_visible: activeSession\.current_card\?\.timer_visible === true/);
+  assert.match(engineerScript, /card\.timer_visible !== true/);
+  assert.match(engineerScript, /card\.clue \|\| ''/);
+  assert.match(engineerScript, /card-flip/);
+  assert.match(styles, /@keyframes taboo-card-flip/);
+  assert.match(styles, /prefers-reduced-motion: reduce/);
+  assert.match(migration, /create or replace function public\.get_public_session_state/);
+  for (const sql of [schema, v1Upgrade, migration]) {
+    const publicFunction = sql.slice(sql.indexOf('create function public.get_public_session_state') >= 0
+      ? sql.indexOf('create function public.get_public_session_state')
+      : sql.indexOf('create or replace function public.get_public_session_state'));
+    assert.match(publicFunction, /when coalesce\(\(v_session\.current_card->>'clue_shown'\)::boolean, false\) then/);
+    assert.match(publicFunction, /else 'null'::jsonb/);
+    assert.match(publicFunction, /timer_visible.*false/);
+  }
+});
+
+test('engineer result submission waits for the mentor and prevents duplicate clicks', async () => {
+  const elements = new Map();
+  const element = (id) => {
+    if (!elements.has(id)) elements.set(id, {
+      textContent: '', disabled: false, style: {},
+      classList: { toggle() {}, add() {}, remove() {}, contains() { return false; } },
+      addEventListener() {}, replaceChildren() {}, setAttribute() {}
+    });
+    return elements.get(id);
+  };
+  let state = {
+    status: 'active', phase: 'active', card_index: 1, mode: 'everyday', difficulty: 'beginner',
+    timer_seconds: 90, current_card: { target: 'Word', forbidden: [] }
+  };
+  let submissions = 0;
+  let submitError = null;
+  let release;
+  const client = {
+    async rpc(name, parameters) {
+      if (name === 'get_public_session_state') return { data: state, error: null };
+      submissions += 1;
+      assert.equal(parameters.p_action, 'correct');
+      if (submitError) return { error: { message: submitError } };
+      await new Promise((resolve) => { release = resolve; });
+      state = { ...state, pending_mentee_action: 'correct' };
+      return { error: null };
+    }
+  };
+  const context = vm.createContext({
+    document: {
+      getElementById: element, createElement: () => element(Symbol()), createTextNode: (text) => text,
+      querySelectorAll: () => [], fonts: { ready: Promise.resolve() }
+    },
+    window: { addEventListener() {} }, location: { search: '?s=11111111-1111-4111-8111-111111111111' },
+    URLSearchParams, THEME_LABELS: {}, DIFFICULTY_LABELS: {}, fitTextToWidth() {}, formatTimer: () => '01:30',
+    client
+  });
+  const script = read('assets/engineer.js').replace(/^import .*;\r?\n/gm, '').replace(/\ninit\(\);\s*$/, '');
+  vm.runInContext(`${script}\nsupabaseClient = client;`, context);
+  context.render(state);
+  const first = context.submitAction('correct');
+  await context.submitAction('taboo');
+  assert.equal(submissions, 1);
+  assert.equal(element('engineerTaboo').disabled, true);
+  release();
+  await first;
+  assert.match(element('engineerActionStatus').textContent, /Waiting for the mentor console/);
+  assert.equal(element('engineerGuessed').disabled, true);
+  state = { ...state, card_index: 2, pending_mentee_action: null };
+  context.render(state);
+  assert.equal(element('engineerGuessed').disabled, false);
+  assert.equal(element('engineerActionStatus').textContent, '');
+  submitError = 'Could not record the result.';
+  await context.submitAction('correct');
+  assert.equal(element('engineerActionStatus').textContent, submitError);
+  assert.equal(element('engineerGuessed').disabled, false);
+});
+
+test('mentee migration guards card outcomes and advances under a row lock', () => {
+  const sql = read('supabase/upgrade-mentee-controls.sql');
+  assert.match(sql, /p_action not in \('correct', 'taboo'\)/);
+  assert.match(sql, /card_index = p_card_index and pending_mentee_action is null/);
+  assert.match(sql, /for update;[\s\S]*v_session\.card_index is distinct from p_card_index/);
+  assert.match(sql, /coalesce\(v_session\.pending_mentee_action, p_outcome\)/);
+  assert.match(sql, /pending_mentee_action = null/);
+  assert.match(sql, /grant execute on function public\.admin_advance_game_session[\s\S]*to authenticated/);
+});
+
 test('SQL requires authentication for mentor RPCs and limits public state', () => {
   const sql = read('supabase/schema.sql');
   assert.match(sql, /mentor_id uuid references auth\.users/);
@@ -99,7 +221,8 @@ test('SQL requires authentication for mentor RPCs and limits public state', () =
   assert.doesNotMatch(publicFunction, /admin_token_hash/);
   assert.doesNotMatch(publicFunction, /observations/);
   assert.doesNotMatch(publicFunction, /review/);
-  assert.doesNotMatch(publicFunction, /explanation/);
+  assert.match(publicFunction, /when coalesce\(\(v_session\.current_card->>'clue_shown'\)::boolean, false\) then v_session\.current_card->'explanation'/);
+  assert.match(publicFunction, /else 'null'::jsonb/);
 });
 
 test('Netlify function never exposes a secret key variable', () => {

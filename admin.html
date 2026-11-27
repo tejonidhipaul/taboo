@@ -93,7 +93,7 @@
 
       <div class="control-grid">
         <section class="panel live-card-panel">
-          <div class="panel-title-row"><div><p class="kicker">Mentor preview</p><h2>Current card</h2></div><button id="toggleWords" class="btn btn-secondary" type="button" aria-pressed="false">View words</button></div>
+          <div class="panel-title-row"><div><p class="kicker">Mentor preview</p><h2>Current card</h2></div><div class="card-mentor-actions"><button id="toggleWords" class="btn btn-secondary" type="button" aria-pressed="false">View words</button><button id="toggleClue" class="btn btn-secondary" type="button" aria-pressed="false">Show clue</button></div></div>
           <div id="mentorWaitingCard" class="hidden-card"><span class="hidden-icon waiting-icon" aria-hidden="true">▶</span><strong>The engineer is on the waiting screen</strong><p>Share the link, wait for them to join, then select Start session above.</p></div>
           <div id="hiddenCard" class="hidden-card is-hidden"><span class="hidden-icon" aria-hidden="true">•••</span><strong>Words are hidden</strong><p>The engineer can see the card. Reveal it only when you need to check or coach.</p></div>
           <div id="revealedCard" class="revealed-card is-hidden">
@@ -104,22 +104,21 @@
         </section>
 
         <aside class="panel live-controls">
-          <div class="timer-wrap"><span class="kicker">Round timer</span><div id="timerDisplay" class="timer">01:30</div><div class="button-row"><button id="startTimer" class="btn btn-primary btn-small" type="button">Start</button><button id="pauseTimer" class="btn btn-secondary btn-small" type="button">Pause</button><button id="resetTimer" class="btn btn-ghost btn-small" type="button">Reset</button></div></div>
-          <hr>
-          <h2>Change this session</h2>
-          <label>Theme<select id="liveMode"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option><option value="mixed">Mixed Challenge</option></select></label>
-          <label>Difficulty<select id="liveDifficulty"><option value="beginner">Beginner · 4 words</option><option value="intermediate">Intermediate · 5 words</option><option value="advanced">Advanced · 6 words</option></select></label>
-          <button id="applyChallenge" class="btn btn-accent" type="button">Apply &amp; show next card</button>
-          <p class="microcopy">The engineer’s screen updates immediately. No new session or link is needed.</p>
+          <div class="timer-wrap"><span class="kicker">Round timer</span><div id="timerDisplay" class="timer">01:30</div><div class="button-row"><button id="startTimer" class="btn btn-primary btn-small" type="button">Start</button><button id="pauseTimer" class="btn btn-secondary btn-small" type="button">Pause</button><button id="resetTimer" class="btn btn-ghost btn-small" type="button">Reset</button></div><button id="toggleEngineerTimer" class="btn btn-secondary btn-small engineer-timer-toggle" type="button" aria-pressed="false">Show timer</button><p class="microcopy">Controls timer visibility on the engineer’s screen.</p></div>
+          <div class="challenge-controls"><h2>Change this session</h2>
+            <label>Theme<select id="liveMode"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option><option value="mixed">Mixed Challenge</option></select></label>
+            <label>Difficulty<select id="liveDifficulty"><option value="beginner">Beginner · 4 words</option><option value="intermediate">Intermediate · 5 words</option><option value="advanced">Advanced · 6 words</option></select></label>
+            <button id="applyChallenge" class="btn btn-accent" type="button">Apply &amp; show next card</button>
+            <p class="microcopy">The engineer’s screen updates immediately. No new session or link is needed.</p>
+          </div>
         </aside>
       </div>
 
       <div class="lower-grid">
         <section class="panel score-panel"><div class="panel-title-row"><div><p class="kicker">Progress</p><h2>Score</h2></div><strong id="successRate" class="rate">0%</strong></div><div class="score-grid"><article><span id="scoreCorrect">0</span><small>Correct</small></article><article><span id="scoreSkip">0</span><small>Skipped</small></article><article><span id="scoreTaboo">0</span><small>Taboo</small></article></div></section>
         <section class="panel observations-panel"><p class="kicker">Quick observations</p><h2>What did you notice?</h2><div id="observationChips" class="chip-grid"><button type="button" data-note="Clear explanation">Clear explanation</button><button type="button" data-note="Strong vocabulary">Strong vocabulary</button><button type="button" data-note="Complete sentences">Complete sentences</button><button type="button" data-note="Too much jargon">Too much jargon</button><button type="button" data-note="Long pauses">Long pauses</button><button type="button" data-note="Good structure">Good structure</button></div></section>
+        <section class="panel notes-panel"><div class="panel-title-row"><div><p class="kicker">Mentoring review</p><h2>Notes &amp; export</h2></div><button id="exportSummary" class="btn btn-secondary" type="button">Export CSV</button></div><textarea id="mentorNotes" rows="3" placeholder="Capture strengths, examples, and one practical action for the next session…"></textarea><div class="button-row end"><button id="saveNotes" class="btn btn-primary" type="button">Save notes</button><span id="saveStatus" class="microcopy" aria-live="polite"></span></div></section>
       </div>
-
-      <section class="panel notes-panel"><div class="panel-title-row"><div><p class="kicker">Mentoring review</p><h2>Notes &amp; export</h2></div><button id="exportSummary" class="btn btn-secondary" type="button">Export CSV</button></div><textarea id="mentorNotes" rows="5" placeholder="Capture strengths, examples, and one practical action for the next session…"></textarea><div class="button-row end"><button id="saveNotes" class="btn btn-primary" type="button">Save notes</button><span id="saveStatus" class="microcopy" aria-live="polite"></span></div></section>
 
       <details class="panel library-panel"><summary><strong>Custom card library</strong><span>Add, import or export your own coaching cards</span></summary><div class="custom-grid"><form id="customCardForm" class="stack-form"><label>Target word (one or two words)<input id="customTarget" required></label><label>Theme<select id="customTheme"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option></select></label><label>Forbidden words (4–6, each one or two words)<input id="customForbidden" required placeholder="word one, word two, word three, word four"></label><label>Model explanation<textarea id="customExplanation" rows="3" required></textarea></label><button class="btn btn-primary" type="submit">Add custom card</button><p id="customStatus" class="microcopy"></p></form><div class="import-box"><h3>CSV tools</h3><p class="muted">Columns: target, theme, forbidden words, explanation. Targets and forbidden entries must be one or two words.</p><label class="btn btn-secondary file-button">Import CSV<input id="importCsv" type="file" accept=".csv,text/csv"></label><button id="exportCards" class="btn btn-ghost" type="button">Export custom cards</button><button id="clearCards" class="btn btn-danger-outline" type="button">Clear custom cards</button><p id="customCount" class="microcopy">0 custom cards</p></div></div></details>
     </section>

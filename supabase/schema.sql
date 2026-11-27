@@ -198,7 +198,12 @@ begin
     when v_session.phase = 'active' then jsonb_build_object(
       'target', v_session.current_card->'target',
       'forbidden', coalesce(v_session.current_card->'forbidden', '[]'::jsonb),
-      'category', v_session.current_card->'category'
+      'category', v_session.current_card->'category',
+      'clue', case
+        when coalesce((v_session.current_card->>'clue_shown')::boolean, false) then v_session.current_card->'explanation'
+        else 'null'::jsonb
+      end,
+      'timer_visible', coalesce((v_session.current_card->>'timer_visible')::boolean, false)
     )
     else '{}'::jsonb
   end;
