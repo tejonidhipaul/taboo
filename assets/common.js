@@ -47,8 +47,7 @@ export function timerFor(difficulty, untimed = false) {
 }
 
 export function forbiddenCount(difficulty) {
-  return ({ beginner: 3, intermediate: 5, advanced: 6 })[difficulty] || 5;
-}
+return ({ beginner: 4, intermediate: 5, advanced: 6 })[difficulty] || 5;}
 
 export function shuffle(items) {
   const output = [...items];
