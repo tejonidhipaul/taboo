@@ -1,113 +1,128 @@
-# Say It! — Communication Challenge
+# Say It! Communication Challenge — v2.0
 
-A deploy-ready, real-time Taboo game for one-to-one communication mentoring with Level 1 support engineers.
+A real-time, Taboo-style communication game for one-to-one mentoring with support engineers. The static site runs on Netlify; Supabase provides email/password mentor authentication, protected session state and live updates.
 
-## What is included
+## What changed in v2.0
 
-- Separate **mentor/admin console** and **engineer screen**
-- Login-free engineer access through an unguessable shared session link
-- Live updates through Supabase Realtime Broadcast, with 5-second state polling as a reconnect fallback
-- Admin-controlled cards, start/pause/resume/restart timer, scoring, next card, and session ending
-- Engineer screen that displays only the active target/scenario and forbidden words (plus connection/session status)
-- Four modes: Everyday English, Technical Talk, Customer Challenge, and Mixed Challenge
-- Three difficulty levels:
-  - Beginner: 90 seconds and 3 forbidden words
-  - Intermediate: 60 seconds and 5 forbidden words
-  - Advanced: 45 seconds and 6 forbidden words
-- Optional untimed coaching mode
-- 300 curated built-in cards across six 50-card categories
-- Custom card add/edit/delete, CSV import, and CSV export
-- Model explanations visible only to the mentor
-- Correct / Skip / Taboo scoring and success rate
-- Quick mentoring observations, four skill ratings, mentor notes, and CSV session summary
-- Responsive layouts for Teams, laptops, tablets, and phones
+- The mentor’s target and forbidden words are **hidden by default** on every new card. Use **View words** only when needed.
+- The mentor console now requires a **Supabase Auth email/password account**.
+- Change among **Everyday English, Technical Talk, Customer Challenge and Mixed Challenge** during a live session.
+- Change **Beginner, Intermediate or Advanced** during a live session. The same engineer link continues to work.
+- Beginner now shows **4 forbidden words**; Intermediate shows 5; Advanced shows 6.
+- The included SQL works as both a fresh install and a safe upgrade from v1.
 
-## Architecture
+The package also retains 300 built-in cards, custom cards and CSV import/export, live timer and score controls, observations, mentor notes, CSV session summaries, Realtime notifications and polling fallback.
 
-- **Frontend:** static HTML, CSS, and JavaScript hosted by Netlify
-- **Runtime configuration:** a small Netlify Function exposes the public Supabase URL and publishable key to the browser
-- **Synchronization:** Supabase Realtime Broadcast notifies the engineer screen immediately; the engineer then fetches the latest safe public state
-- **Persistence:** Supabase Postgres stores game state and mentoring results
-- **Security:** direct table access is disabled with Row Level Security. The engineer can call only a restricted public-state function. Admin mutations require a 256-bit key stored in the admin URL fragment and hashed in the database.
-- **Custom library and recent admin links:** stored in the mentor's browser localStorage
+## Project files
 
-The Supabase publishable key is intentionally public, as designed for browser clients. Security comes from RLS, restricted database functions, unguessable session UUIDs, and the admin key—not from hiding the publishable key.
+- `index.html` — landing and engineer-link join page
+- `admin.html` — authenticated mentor console
+- `engineer.html` — login-free engineer screen
+- `assets/` — styles, scripts and 300-card library
+- `netlify/functions/config.mjs` — exposes only the browser-safe Supabase URL and publishable key
+- `supabase/schema.sql` — fresh install or in-place v2 upgrade
+- `supabase/upgrade-v2.sql` — duplicate convenience copy for an existing v1 project
+- `tests/` — local validation tests
 
-## Deploy in about 10 minutes
+## A. Upgrade an existing Say It! site
 
-### 1. Create the Supabase backend
+Do these steps in order so the new authenticated code and database functions switch together.
 
-1. Create a Supabase project.
-2. Open **SQL Editor**.
-3. Paste and run the complete contents of `supabase/schema.sql`.
-4. In **Project Settings → API**, copy:
-   - Project URL
-   - Publishable key (an older project may label it `anon`)
+1. **Back up if desired.** In Supabase, use Table Editor to export `game_sessions`. The upgrade does not drop that table or delete rows.
+2. Open **Supabase → SQL Editor → New query**.
+3. Copy the entire contents of `supabase/upgrade-v2.sql`, paste it into the editor and click **Run**. A successful run normally ends with “Success. No rows returned.”
+4. Open **Supabase → Authentication → Users → Add user**.
+5. Enter the mentor email and a strong password. Select **Auto Confirm User** (wording can vary) so the account can sign in immediately.
+6. For a single-mentor site, disable public registration under **Authentication → Providers → Email** by turning off **Allow new users to sign up**. The game has no sign-up screen, but disabling registration is the stronger setting.
+7. Replace the contents of your GitHub repository with this package while keeping the same repository and Netlify site.
+8. Commit once. Netlify deploys the full update.
+9. Your existing Netlify variables remain valid: `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY`.
+10. Test `/admin.html` in an incognito window: sign in, create a session, copy the engineer link and open it in a second incognito window.
 
-No table needs to be added to the Realtime publication because this app uses Realtime Broadcast rather than Postgres Changes.
+Existing v1 sessions have no mentor owner. They remain in the table for history, but cannot be resumed in the v2 mentor console. Create a new authenticated session after upgrading.
 
-### 2. Deploy to Netlify
+## B. Fresh deployment
 
-Choose either method. A plain drag-and-drop static deploy is not recommended because this project includes a Netlify Function for runtime configuration.
+### 1. Create and configure Supabase
 
-**Git deployment (recommended)**
-1. Push the folder to a Git repository.
-2. Import it in Netlify.
+1. Create a project at Supabase.
+2. In **SQL Editor**, run all of `supabase/schema.sql`.
+3. In **Authentication → Users**, add the mentor’s email/password account and auto-confirm it.
+4. Under **Authentication → Providers → Email**, disable **Allow new users to sign up** when only invited mentors should have access.
+5. In **Project Settings → Data API**, copy the Project URL. It must look like `https://xxxx.supabase.co` with nothing after `.co`.
+6. In **Project Settings → API Keys**, copy the **publishable** key (`sb_publishable_...`). Never use a secret/service-role key in Netlify or browser code.
+
+### 2. Deploy through Git and Netlify
+
+This project includes a Netlify Function, so use a Git-connected Netlify site (recommended) or Netlify CLI—not the simple static drag-and-drop uploader.
+
+1. Create a GitHub repository and upload the **contents** of this folder. `index.html` and `netlify.toml` must be at the repository root.
+2. In Netlify, choose **Add new site → Import an existing project** and select the repository.
 3. Netlify reads `netlify.toml`; no build command is required.
-4. In **Site configuration → Environment variables**, add:
-   - `SUPABASE_URL`
-   - `SUPABASE_PUBLISHABLE_KEY` (recommended), or `SUPABASE_ANON_KEY` for an older key
-5. Deploy the site.
+4. Under **Site configuration → Environment variables**, add:
+   - `SUPABASE_URL` = the exact project URL
+   - `SUPABASE_PUBLISHABLE_KEY` = the full publishable key
+5. Leave “Contains secret values” unchecked for these browser-safe values.
+6. Make the variables available to Functions/Runtime and Production, or use the default all-scopes setting.
+7. Trigger one production deploy.
 
-**Netlify CLI**
-1. Unzip the project and open a terminal in its root folder.
-2. Run `npm install`, then `npx netlify login` and `npx netlify init`.
-3. Add the two environment variables in the Netlify site settings or with `npx netlify env:set`.
-4. Run `npx netlify deploy --prod`. The CLI uses `netlify.toml` to publish both the static site and function.
+### 3. Test end to end
 
-### 3. Smoke test
+1. Open `https://your-site.netlify.app/admin.html` in an incognito window.
+2. Sign in with the mentor account.
+3. Create a session and copy the engineer link.
+4. Open the engineer link in another incognito window or on a phone.
+5. Confirm the engineer sees the card while the mentor console says **Words are hidden**.
+6. Click **View words**, then **Hide words**.
+7. Change the live theme and difficulty, then click **Apply & show next card**. The engineer view should update without a new link.
+8. Test timer, Correct/Skip/Taboo, notes and CSV export.
 
-1. Open `/admin.html` on your Netlify site.
-2. Create a session.
-3. Copy the engineer link and open it in a private/incognito window or on a phone.
-4. Start a card in the mentor console.
-5. Confirm that the engineer screen changes without a refresh.
-6. Test pause/resume, each scoring action, end session, feedback saving, and CSV export.
+## How live theme and difficulty changes work
 
-## Custom-card CSV format
+The dropdowns in the running mentor console do not affect the current engineer card until **Apply & show next card** is clicked. That action updates the session and draws a card from the selected theme with the selected number of forbidden words:
 
-Use this header:
+- Beginner: 4
+- Intermediate: 5
+- Advanced: 6
+
+The words are hidden again automatically whenever a new card is drawn.
+
+## Custom-card CSV
+
+Use these columns:
 
 ```csv
-target,forbidden1,forbidden2,forbidden3,forbidden4,forbidden5,forbidden6,mode,difficulty,example
+target,theme,forbidden_words,explanation
+Cache,technical,"memory;temporary;browser;fast;store;clear","Explain temporary saved information in plain language."
 ```
 
-Allowed modes: `everyday`, `technical`, `customer`  
-Allowed difficulties: `beginner`, `intermediate`, `advanced`
+Allowed themes are `everyday`, `technical`, and `customer`. Separate 4–6 forbidden words with semicolons. Custom cards are stored in that mentor browser’s local storage; export them before clearing browser data or moving devices.
 
-At least three forbidden words are required. The app's own export creates a re-importable CSV.
+## Security design
 
-## Operating notes
+- Mentor actions require a valid Supabase Auth session.
+- Sessions are owned by the authenticated mentor’s user ID.
+- A separate 256-bit per-session control token is generated in the browser; only its SHA-256 hash is stored in Supabase.
+- Row Level Security is enabled and clients receive no direct table privileges.
+- Engineers can call only the public-state function, which omits mentor identity, control-token hash, model explanations, observations and private notes.
+- Realtime broadcasts contain only a session ID and act as a refresh signal; polling is the fallback.
+- The publishable key is intentionally public. Never add the secret/service-role key.
 
-- Share only the engineer link. Do not share the mentor-console URL because its fragment contains the admin key.
-- The engineer does not create an account or sign in.
-- A person with the engineer link can view that session's current public card state. Use a new session for each mentoring appointment.
-- Recent mentor links and custom cards are local to the browser. Export custom cards before clearing browser storage or switching computers.
-- The database keeps session rows for mentoring history. Add an organizational retention process if these notes contain personal data.
-- Netlify and Supabase free tiers are suitable for light mentoring use, subject to each provider's current limits.
+## Local checks
 
-## Project structure
+With Node.js 18 or newer:
 
-```text
-admin.html                    Mentor console
-engineer.html                 Login-free engineer screen
-index.html                    Landing/join screen
-assets/admin.js               Admin game state, cards, scoring, mentoring
-assets/engineer.js            Engineer rendering and live subscription
-assets/common.js              Supabase/config and shared helpers
-assets/cards.js               300-card curated library
-assets/styles.css             Responsive visual design
-netlify/functions/config.mjs  Runtime public configuration
-supabase/schema.sql           Tables, RLS, and restricted RPC functions
-netlify.toml                  Hosting, functions, redirects, security headers
+```bash
+npm test
+npm run check
 ```
+
+No `npm install` is needed because the test suite uses only Node’s standard library. The deployed pages load Supabase JS from jsDelivr.
+
+## Troubleshooting
+
+- **“Supabase is not configured”** — check exact Netlify variable names and redeploy. Open `/.netlify/functions/config`; `supabaseUrl` must end at `.supabase.co`.
+- **“Could not find the function…”** — run the full SQL file in the same Supabase project referenced by Netlify, then run `notify pgrst, 'reload schema';`.
+- **“Invalid login credentials”** — confirm the mentor user exists, is confirmed, and the email/password are exact.
+- **Engineer page does not update immediately** — it polls every three seconds even if Realtime is unavailable. Check the engineer link and Supabase status.
+- **Old session cannot be resumed after upgrade** — v1 rows have no authenticated mentor owner; create a new v2 session.

@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Engineer game screen for the Say It! communication challenge.">
-  <title>Engineer Screen · Say It!</title>
+  <meta name="description" content="Engineer game screen for Say It!">
+  <title>Say It! · Live challenge</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="engineer-body">
-  <header class="engineer-header"><a class="brand" href="index.html"><span class="brand-mark small">SI</span><span>Say It!</span></a><span id="connectionBadge" class="status-chip neutral"><span class="status-dot"></span>Connecting</span></header>
-  <main class="engineer-main">
-    <section id="engineerError" class="engineer-state hidden"><div class="state-icon">!</div><h1>Session unavailable</h1><p id="engineerErrorText">Check the link with your mentor.</p></section>
-    <section id="waitingState" class="engineer-state"><div class="pulse-rings"><span></span><span></span><span></span></div><p class="eyebrow">Live mentoring session</p><h1>Waiting for your mentor</h1><p>The first challenge will appear here automatically.</p></section>
-    <section id="playingState" class="engineer-card-wrap hidden" aria-live="polite">
-      <div class="engineer-card">
-        <p id="engineerPrompt" class="card-kicker">Your word</p>
-        <h1 id="engineerTarget"></h1>
-        <div class="forbidden-engineer"><p>Do not say</p><div id="engineerForbidden" class="forbidden-list"></div></div>
-      </div>
-      <p class="engineer-hint">Describe it clearly without using the forbidden words.</p>
+  <header class="engineer-top"><a class="wordmark light" href="index.html"><span class="brand-mark small">SI</span><span>Say It!</span></a><span id="engineerConnection" class="connection-pill">Connecting…</span></header>
+  <main class="engineer-shell">
+    <section id="engineerLoading" class="engineer-message"><div class="spinner light"></div><h1>Joining your session…</h1><p>Keep this tab open. Your mentor controls the challenge.</p></section>
+    <section id="engineerError" class="engineer-message is-hidden"><p class="eyebrow">Unable to join</p><h1 id="engineerErrorTitle">Session not found</h1><p id="engineerErrorText">Check the link with your mentor.</p></section>
+    <section id="engineerWaiting" class="engineer-message is-hidden"><p class="eyebrow">You’re connected</p><h1>Get ready to describe.</h1><p id="waitingName">Your mentor will send the first card.</p></section>
+    <section id="engineerGame" class="engineer-game is-hidden">
+      <div class="engineer-meta"><span id="engineerTheme" class="pill light-pill">Everyday English</span><span id="engineerDifficulty">Intermediate</span></div>
+      <p class="engineer-prompt">Describe this without saying the forbidden words</p>
+      <h1 id="engineerTarget">Umbrella</h1>
+      <div id="engineerForbidden" class="engineer-forbidden"></div>
+      <div class="engineer-footer"><div><small>Round</small><strong id="engineerRound">1</strong></div><div><small>Time</small><strong id="engineerTimer">01:30</strong></div><div><small>Correct</small><strong id="engineerScore">0</strong></div></div>
     </section>
-    <section id="pausedState" class="engineer-state hidden"><div class="state-icon">Ⅱ</div><p class="eyebrow">Pause</p><h1>Hold that thought</h1><p>Your mentor paused the game. The challenge will return automatically.</p></section>
-    <section id="endedState" class="engineer-state hidden"><div class="state-icon success">✓</div><p class="eyebrow">Session complete</p><h1>Great work!</h1><p>Your mentor will guide you through the feedback.</p></section>
+    <section id="engineerEnded" class="engineer-message is-hidden"><p class="eyebrow">Session complete</p><h1>Well done!</h1><p>Your mentor has ended this challenge.</p></section>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script type="module" src="assets/engineer.js"></script>
 </body>
 </html>

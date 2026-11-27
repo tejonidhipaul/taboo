@@ -1,87 +1,64 @@
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-
-let clientPromise;
-export async function getSupabase() {
-  if (!clientPromise) {
-    clientPromise = fetch('/.netlify/functions/config', { headers: { accept: 'application/json' } })
-      .then(async response => {
-        const config = await response.json().catch(() => ({}));
-        if (!response.ok || !config.supabaseUrl || !config.supabaseAnonKey) {
-          throw new Error('Supabase is not configured. Add SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY in Netlify.');
-        }
-        return createClient(config.supabaseUrl, config.supabaseAnonKey, {
-          auth: { persistSession: false, autoRefreshToken: false },
-          realtime: { params: { eventsPerSecond: 10 } }
-        });
-      });
+export async function createSupabaseClient() {
+  if (!window.supabase?.createClient) throw new Error('The Supabase library did not load. Check your internet connection.');
+  const response = await fetch('/.netlify/functions/config', { cache: 'no-store' });
+  const config = await response.json().catch(() => ({}));
+  if (!response.ok || !config.supabaseUrl || !config.supabaseAnonKey) {
+    throw new Error(config.error || 'Supabase is not configured. Add SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY in Netlify.');
   }
-  return clientPromise;
+  return window.supabase.createClient(config.supabaseUrl, config.supabaseAnonKey, {
+    auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
+    realtime: { params: { eventsPerSecond: 5 } }
+  });
 }
 
 export function randomToken(bytes = 32) {
-  const data = crypto.getRandomValues(new Uint8Array(bytes));
-  return Array.from(data, value => value.toString(16).padStart(2, '0')).join('');
+  const values = new Uint8Array(bytes);
+  crypto.getRandomValues(values);
+  return [...values].map((value) => value.toString(16).padStart(2, '0')).join('');
 }
 
-export function parseAdminHash() {
-  const params = new URLSearchParams(location.hash.slice(1));
-  return { sessionId: params.get('session'), token: params.get('key') };
-}
-
-export function formatTime(totalSeconds) {
-  const seconds = Math.max(0, Number(totalSeconds) || 0);
-  return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
-}
-
-export function modeLabel(mode) {
-  return ({ everyday: 'Everyday English', technical: 'Technical Talk', customer: 'Customer Challenge', mixed: 'Mixed Challenge' })[mode] || mode;
-}
-
-export function difficultyLabel(value) {
-  return value ? value.charAt(0).toUpperCase() + value.slice(1) : '';
-}
-
-export function timerFor(difficulty, untimed = false) {
-  if (untimed) return 0;
-  return ({ beginner: 90, intermediate: 60, advanced: 45 })[difficulty] || 60;
-}
-
-export function forbiddenCount(difficulty) {
-return ({ beginner: 4, intermediate: 5, advanced: 6 })[difficulty] || 5;}
-
-export function shuffle(items) {
-  const output = [...items];
-  for (let i = output.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [output[i], output[j]] = [output[j], output[i]];
-  }
-  return output;
+export function formatTimer(totalSeconds) {
+  const safe = Math.max(0, Number(totalSeconds) || 0);
+  const minutes = Math.floor(safe / 60);
+  const seconds = safe % 60;
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
 export function csvEscape(value) {
-  const text = value == null ? '' : String(value);
-  return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+  const text = String(value ?? '');
+  return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
-export function downloadText(filename, text, type = 'text/csv;charset=utf-8') {
+export function downloadText(filename, text, type = 'text/plain;charset=utf-8') {
   const blob = new Blob([text], { type });
   const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = filename;
-  link.click();
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
   setTimeout(() => URL.revokeObjectURL(url), 500);
 }
 
-export function showToast(message) {
-  const toast = document.getElementById('toast');
-  if (!toast) return;
-  toast.textContent = message;
-  toast.classList.add('visible');
-  clearTimeout(showToast.timeout);
-  showToast.timeout = setTimeout(() => toast.classList.remove('visible'), 2400);
+export function parseCsv(text) {
+  const rows = [];
+  let row = [], field = '', quoted = false;
+  for (let i = 0; i < text.length; i += 1) {
+    const char = text[i];
+    if (quoted) {
+      if (char === '"' && text[i + 1] === '"') { field += '"'; i += 1; }
+      else if (char === '"') quoted = false;
+      else field += char;
+    } else if (char === '"') quoted = true;
+    else if (char === ',') { row.push(field); field = ''; }
+    else if (char === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+    else if (char !== '\r') field += char;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows.filter((candidate) => candidate.some((cell) => cell.trim()));
 }
 
-export function safeFileName(value) {
-  return String(value || 'session').trim().replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
+export function safeFilePart(value) {
+  return String(value || 'session').trim().replace(/[^a-z0-9_-]+/gi, '-').replace(/^-|-$/g, '').toLowerCase() || 'session';
 }

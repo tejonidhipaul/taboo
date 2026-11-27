@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Say It! — a real-time communication game for support-engineer mentoring.">
+  <meta name="description" content="Say It! — a live communication challenge for support engineers.">
   <title>Say It! · Communication Challenge</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -14,7 +14,7 @@
       <h1>Say it <span>without saying it.</span></h1>
       <p class="hero-copy">A live Taboo-style challenge built for Level 1 support engineers. Practise clear descriptions, plain-language explanations, and confident customer communication.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-large" href="admin.html">Open mentor console</a>
+        <a class="btn btn-primary btn-large" href="admin.html">Mentor sign in</a>
       </div>
       <div class="join-box">
         <label for="sessionCode">Have an engineer session link?</label>
@@ -27,24 +27,27 @@
     </section>
     <section class="feature-strip" aria-label="Features">
       <article><strong>300</strong><span>built-in cards</span></article>
-      <article><strong>4</strong><span>game modes</span></article>
+      <article><strong>4</strong><span>live themes</span></article>
       <article><strong>Live</strong><span>screen updates</span></article>
       <article><strong>0</strong><span>engineer logins</span></article>
     </section>
   </main>
   <script>
     const input = document.getElementById('sessionCode');
-    document.getElementById('joinSession').addEventListener('click', () => {
+    const join = () => {
       const raw = input.value.trim();
       const error = document.getElementById('joinError');
+      error.textContent = '';
       if (!raw) { error.textContent = 'Paste the link shared by your mentor.'; return; }
       try {
         const url = new URL(raw, location.href);
         const id = url.searchParams.get('s') || raw;
-        if (!/^[0-9a-f-]{36}$/i.test(id)) throw new Error();
+        if (!/^[0-9a-f-]{36}$/i.test(id)) throw new Error('invalid');
         location.href = `engineer.html?s=${encodeURIComponent(id)}`;
       } catch { error.textContent = 'That does not look like a valid session link.'; }
-    });
+    };
+    document.getElementById('joinSession').addEventListener('click', join);
+    input.addEventListener('keydown', (event) => { if (event.key === 'Enter') join(); });
   </script>
 </body>
 </html>

@@ -1,69 +1,77 @@
-import { getSupabase } from './common.js';
+import { THEME_LABELS, DIFFICULTY_LABELS } from './cards.js';
+import { createSupabaseClient, formatTimer } from './common.js';
 
+const $ = (id) => document.getElementById(id);
 const sessionId = new URLSearchParams(location.search).get('s');
-const views = ['waitingState', 'playingState', 'pausedState', 'endedState', 'engineerError'];
-let supabase;
-let channel;
-let lastUpdated = '';
+let supabaseClient;
+let pollHandle;
+let fetching = false;
+let lastState = null;
 
-function showView(id) {
-  views.forEach(viewId => document.getElementById(viewId).classList.toggle('hidden', viewId !== id));
-}
-
-function setConnection(text, state = 'neutral') {
-  const badge = document.getElementById('connectionBadge');
-  badge.className = `status-chip ${state}`;
-  badge.innerHTML = '<span class="status-dot"></span>' + text;
+function showOnly(panel) {
+  ['engineerLoading', 'engineerError', 'engineerWaiting', 'engineerGame', 'engineerEnded'].forEach((id) => $(id).classList.toggle('is-hidden', id !== panel));
 }
 
 function render(state) {
-  if (!state) return;
-  lastUpdated = state.updated_at || lastUpdated;
-  if (state.status === 'ended' || state.status === 'review') { showView('endedState'); return; }
-  if (state.status === 'paused') { showView('pausedState'); return; }
-  if (state.status !== 'playing' || !state.current_card) { showView('waitingState'); return; }
-
-  const card = state.current_card;
-  document.getElementById('engineerPrompt').textContent = card.mode === 'customer' ? 'Your customer challenge' : 'Your word';
-  document.getElementById('engineerTarget').textContent = card.target;
-  const list = document.getElementById('engineerForbidden');
-  list.replaceChildren(...(card.forbidden || []).map(word => {
-    const span = document.createElement('span');
-    span.textContent = word;
-    return span;
-  }));
-  showView('playingState');
+  lastState = state;
+  $('engineerConnection').textContent = 'Live · connected';
+  if (state.status === 'ended' || state.phase === 'ended') { showOnly('engineerEnded'); return; }
+  const card = state.current_card || {};
+  if (state.phase !== 'active' || !card.target) {
+    $('waitingName').textContent = state.engineer_name ? `${state.engineer_name}, your mentor will send the first card.` : 'Your mentor will send the first card.';
+    showOnly('engineerWaiting');
+    return;
+  }
+  $('engineerTheme').textContent = THEME_LABELS[state.mode] || state.mode;
+  $('engineerDifficulty').textContent = DIFFICULTY_LABELS[state.difficulty] || state.difficulty;
+  $('engineerTarget').textContent = card.target;
+  $('engineerForbidden').replaceChildren(...(card.forbidden || []).map((word) => Object.assign(document.createElement('span'), { textContent: word })));
+  $('engineerRound').textContent = state.card_index || 1;
+  $('engineerTimer').textContent = state.timer_seconds === 0 ? 'Untimed' : formatTimer(state.timer_remaining);
+  $('engineerScore').textContent = state.score_correct || 0;
+  showOnly('engineerGame');
 }
 
-async function refreshState() {
-  if (!supabase || !sessionId) return;
-  const { data, error } = await supabase.rpc('get_public_session_state', { p_session_id: sessionId });
-  if (error || !data) throw error || new Error('Session not found');
-  render(data);
+async function fetchState() {
+  if (fetching || !supabaseClient) return;
+  fetching = true;
+  try {
+    const { data, error } = await supabaseClient.rpc('get_public_session_state', { p_session_id: sessionId });
+    if (error) throw error;
+    if (!data) throw new Error('This session does not exist.');
+    render(data);
+  } catch (error) {
+    if (!lastState) {
+      $('engineerErrorTitle').textContent = 'Unable to join';
+      $('engineerErrorText').textContent = error.message || 'Check the session link with your mentor.';
+      showOnly('engineerError');
+    }
+    $('engineerConnection').textContent = 'Reconnecting…';
+  } finally { fetching = false; }
 }
 
 async function init() {
   if (!sessionId || !/^[0-9a-f-]{36}$/i.test(sessionId)) {
-    document.getElementById('engineerErrorText').textContent = 'The session link is incomplete. Ask your mentor to share it again.';
-    showView('engineerError');
-    setConnection('Invalid link', 'error');
+    $('engineerErrorTitle').textContent = 'Invalid session link';
+    $('engineerErrorText').textContent = 'Ask your mentor to share the complete engineer link again.';
+    showOnly('engineerError');
     return;
   }
   try {
-    supabase = await getSupabase();
-    await refreshState();
-    channel = supabase.channel(`taboo:${sessionId}`, { config: { private: false } })
-      .on('broadcast', { event: 'state_changed' }, () => refreshState().catch(() => {}))
-      .subscribe(status => {
-        if (status === 'SUBSCRIBED') setConnection('Live', 'success');
-        else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') setConnection('Reconnecting', 'warning');
+    supabaseClient = await createSupabaseClient();
+    await fetchState();
+    supabaseClient.channel(`session:${sessionId}`)
+      .on('broadcast', { event: 'session_changed' }, fetchState)
+      .subscribe((status) => {
+        $('engineerConnection').textContent = status === 'SUBSCRIBED' ? 'Live · connected' : 'Connecting…';
       });
-    setInterval(() => refreshState().catch(() => setConnection('Reconnecting', 'warning')), 5000);
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshState().catch(() => {}); });
+    pollHandle = setInterval(fetchState, 3000);
+    window.addEventListener('beforeunload', () => clearInterval(pollHandle));
   } catch (error) {
-    document.getElementById('engineerErrorText').textContent = error?.message || 'Check the link with your mentor.';
-    showView('engineerError');
-    setConnection('Offline', 'error');
+    $('engineerErrorTitle').textContent = 'Unable to connect';
+    $('engineerErrorText').textContent = error.message || 'Check the link and try again.';
+    showOnly('engineerError');
+    $('engineerConnection').textContent = 'Offline';
   }
 }
 
