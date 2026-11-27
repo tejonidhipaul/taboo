@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mentor console for the Say It! communication game.">
+  <title>Mentor Console · Say It!</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark small">SI</span><span>Say It!</span></a>
+    <div class="topbar-actions">
+      <span id="liveStatus" class="status-chip neutral"><span class="status-dot"></span>Connecting</span>
+      <button id="customCardsButton" class="btn btn-ghost" type="button">Custom cards</button>
+      <button id="newSessionButton" class="btn btn-ghost" type="button">New session</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div id="configError" class="alert alert-error hidden" role="alert"></div>
+
+    <section id="setupView" class="setup-layout">
+      <div class="panel setup-panel">
+        <p class="eyebrow">Mentor console</p>
+        <h1>Set up a practice session</h1>
+        <p class="muted">The engineer gets a clean, login-free screen. You keep every control.</p>
+        <form id="setupForm" class="form-stack">
+          <label>Engineer name
+            <input id="engineerName" required maxlength="80" placeholder="e.g. Alex">
+          </label>
+          <fieldset>
+            <legend>Game mode</legend>
+            <div class="mode-grid">
+              <label class="choice-card"><input type="radio" name="mode" value="everyday" checked><span><b>Everyday English</b><small>Objects, places, actions</small></span></label>
+              <label class="choice-card"><input type="radio" name="mode" value="technical"><span><b>Technical Talk</b><small>Software in plain English</small></span></label>
+              <label class="choice-card"><input type="radio" name="mode" value="customer"><span><b>Customer Challenge</b><small>Support situations</small></span></label>
+              <label class="choice-card"><input type="radio" name="mode" value="mixed"><span><b>Mixed Challenge</b><small>Everything together</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Difficulty</legend>
+            <div class="difficulty-grid">
+              <label class="choice-card compact"><input type="radio" name="difficulty" value="beginner" checked><span><b>Beginner</b><small>90 sec · 3 forbidden</small></span></label>
+              <label class="choice-card compact"><input type="radio" name="difficulty" value="intermediate"><span><b>Intermediate</b><small>60 sec · 5 forbidden</small></span></label>
+              <label class="choice-card compact"><input type="radio" name="difficulty" value="advanced"><span><b>Advanced</b><small>45 sec · 6 forbidden</small></span></label>
+            </div>
+          </fieldset>
+          <label class="toggle-row"><input id="untimedMode" type="checkbox"><span><b>Untimed practice</b><small>Useful for coaching and first attempts</small></span></label>
+          <button id="createSessionButton" class="btn btn-primary btn-large" type="submit">Create live session</button>
+        </form>
+      </div>
+      <aside class="panel history-panel">
+        <div class="section-heading"><div><p class="eyebrow">This browser</p><h2>Recent sessions</h2></div></div>
+        <div id="historyList" class="history-list"></div>
+      </aside>
+    </section>
+
+    <section id="gameView" class="hidden">
+      <div class="session-ribbon">
+        <div><p class="eyebrow">Live session</p><h1 id="sessionTitle">Engineer</h1></div>
+        <div class="session-meta"><span id="modeBadge" class="badge"></span><span id="difficultyBadge" class="badge"></span></div>
+      </div>
+
+      <div class="share-panel panel">
+        <div><b>Engineer link</b><p>Share this link in Teams. No sign-in is needed.</p></div>
+        <div class="share-controls"><input id="engineerLink" readonly><button id="copyLinkButton" class="btn btn-secondary" type="button">Copy link</button></div>
+      </div>
+
+      <div class="dashboard-grid">
+        <section class="panel control-panel">
+          <div class="section-heading"><div><p class="eyebrow">Current card</p><h2 id="cardCategory">Waiting to start</h2></div><span id="cardCounter" class="counter">0</span></div>
+          <div id="cardEmpty" class="empty-card"><div class="empty-icon">▶</div><h3>Ready when you are</h3><p>The engineer screen is waiting. Start the first card when they have joined.</p><button id="startGameButton" class="btn btn-primary btn-large" type="button">Start first card</button></div>
+          <div id="cardContent" class="hidden">
+            <div class="admin-card">
+              <p id="cardPromptLabel" class="card-kicker">Your word</p>
+              <h3 id="targetWord"></h3>
+              <div class="forbidden-admin"><span>Forbidden</span><div id="forbiddenWords" class="word-pills"></div></div>
+            </div>
+            <details class="example-box"><summary>Show model explanation</summary><p id="exampleText"></p></details>
+            <div class="timer-block">
+              <div id="timerDisplay" class="timer">01:30</div>
+              <div class="timer-actions"><button id="pauseButton" class="btn btn-secondary" type="button">Pause</button><button id="restartTimerButton" class="btn btn-ghost" type="button">Restart timer</button></div>
+            </div>
+            <div class="score-actions">
+              <button class="btn action-correct" data-score="correct" type="button"><span>✓</span>Correct</button>
+              <button class="btn action-skip" data-score="skipped" type="button"><span>→</span>Skip</button>
+              <button class="btn action-taboo" data-score="taboo" type="button"><span>!</span>Taboo</button>
+            </div>
+            <button id="nextCardButton" class="btn btn-ghost btn-wide" type="button">Next card without scoring</button>
+          </div>
+        </section>
+
+        <aside class="sidebar-stack">
+          <section class="panel score-panel">
+            <div class="section-heading"><div><p class="eyebrow">Round score</p><h2>Progress</h2></div></div>
+            <div class="score-grid"><div><strong id="correctScore">0</strong><span>Correct</span></div><div><strong id="skippedScore">0</strong><span>Skipped</span></div><div><strong id="tabooScore">0</strong><span>Taboo</span></div><div><strong id="successRate">—</strong><span>Success</span></div></div>
+          </section>
+          <section class="panel observation-panel">
+            <div class="section-heading"><div><p class="eyebrow">Mentor notes</p><h2>Quick observations</h2></div></div>
+            <p class="muted small-text">Tap an observation whenever you notice it.</p>
+            <div id="observationButtons" class="observation-grid">
+              <button data-observation="Clear explanation" type="button">Clear explanation</button>
+              <button data-observation="Good alternative vocabulary" type="button">Alternative vocabulary</button>
+              <button data-observation="Complete sentences" type="button">Complete sentences</button>
+              <button data-observation="Excessive hesitation" type="button">Hesitation</button>
+              <button data-observation="Used technical jargon" type="button">Technical jargon</button>
+              <button data-observation="Needs clearer structure" type="button">Needs structure</button>
+            </div>
+            <div id="observationLog" class="observation-log"></div>
+          </section>
+          <button id="endSessionButton" class="btn btn-danger btn-wide" type="button">End session & review</button>
+        </aside>
+      </div>
+
+      <section id="reviewPanel" class="panel review-panel hidden">
+        <div class="section-heading"><div><p class="eyebrow">Mentoring review</p><h2>Communication feedback</h2></div><button id="exportSummaryButton" class="btn btn-secondary" type="button">Export CSV summary</button></div>
+        <div class="review-summary" id="reviewSummary"></div>
+        <div class="feedback-grid">
+          <label>Sentence structure<select id="feedbackSentence"><option value="">Select rating</option><option>Good</option><option>Needs practice</option><option>Needs support</option></select></label>
+          <label>Vocabulary<select id="feedbackVocabulary"><option value="">Select rating</option><option>Good</option><option>Needs practice</option><option>Needs support</option></select></label>
+          <label>Clarity<select id="feedbackClarity"><option value="">Select rating</option><option>Good</option><option>Needs practice</option><option>Needs support</option></select></label>
+          <label>Fluency<select id="feedbackFluency"><option value="">Select rating</option><option>Good</option><option>Needs practice</option><option>Needs support</option></select></label>
+        </div>
+        <label>Mentor notes<textarea id="mentorNotes" rows="5" placeholder="Strengths, examples discussed, and focus for the next session…"></textarea></label>
+        <div class="review-actions"><button id="saveFeedbackButton" class="btn btn-primary" type="button">Save feedback</button><span id="feedbackSaved" class="saved-message" aria-live="polite"></span></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="customCardsDialog" class="modal">
+    <form method="dialog" class="modal-header"><div><p class="eyebrow">Card library</p><h2>Custom cards</h2></div><button class="icon-button" aria-label="Close">×</button></form>
+    <div class="modal-body">
+      <p class="muted">Add product-specific or team-specific practice. Custom cards stay in this browser and join the matching game mode.</p>
+      <form id="customCardForm" class="custom-card-form">
+        <input id="customCardId" type="hidden">
+        <label>Target word or scenario<input id="customTarget" required maxlength="180"></label>
+        <label>Forbidden words <small>(comma-separated, 3–6)</small><input id="customForbidden" required></label>
+        <div class="form-row"><label>Mode<select id="customMode"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option></select></label><label>Difficulty<select id="customDifficulty"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label></div>
+        <label>Model explanation<textarea id="customExample" rows="3" required></textarea></label>
+        <button class="btn btn-primary" type="submit">Save custom card</button>
+      </form>
+      <div class="library-tools"><label class="btn btn-secondary file-button">Import CSV<input id="importCardsInput" type="file" accept=".csv,text/csv"></label><button id="exportCardsButton" class="btn btn-secondary" type="button">Export custom cards</button><span id="cardLibraryCount" class="muted"></span></div>
+      <div id="customCardList" class="custom-card-list"></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script type="module" src="assets/admin.js"></script>
+</body>
+</html>

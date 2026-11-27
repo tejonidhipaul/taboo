@@ -1,0 +1,14 @@
+{
+  "name": "say-it-communication-game",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Real-time Taboo communication mentoring game for Level 1 support engineers",
+  "scripts": {
+    "dev": "netlify dev",
+    "check": "node --check assets/common.js && node --check assets/admin.js && node --check assets/engineer.js && node --check assets/cards.js"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}
