@@ -8,29 +8,34 @@ import { BUILT_IN_CARDS, forbiddenCount, eligibleCards } from '../assets/cards.j
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (name) => fs.readFileSync(path.join(root, name), 'utf8');
 
-test('card library contains 300 unique, complete cards', () => {
-  assert.equal(BUILT_IN_CARDS.length, 300);
-  assert.equal(new Set(BUILT_IN_CARDS.map((card) => card.id)).size, 300);
-  assert.equal(new Set(BUILT_IN_CARDS.map((card) => card.target.toLowerCase())).size, 300);
+test('card library contains 350 unique, complete cards with concise entries', () => {
+  assert.equal(BUILT_IN_CARDS.length, 350);
+  assert.equal(new Set(BUILT_IN_CARDS.map((card) => card.id)).size, 350);
+  assert.equal(new Set(BUILT_IN_CARDS.map((card) => card.target.toLowerCase())).size, 350);
   for (const card of BUILT_IN_CARDS) {
     assert.ok(['everyday', 'technical', 'customer'].includes(card.theme));
+    assert.ok(card.target.trim().split(/\s+/).length <= 2, `Target is longer than two words: ${card.target}`);
     assert.equal(card.forbidden.length, 6);
     assert.equal(new Set(card.forbidden.map((word) => word.toLowerCase())).size, 6);
+    for (const word of card.forbidden) assert.ok(word.trim().split(/\s+/).length <= 2, `Forbidden entry is longer than two words: ${card.target} -> ${word}`);
     assert.ok(card.explanation.length > 30);
   }
 });
 
-test('six categories have exactly 50 cards each', () => {
+test('the revised library contains the PDF, Esko, technical and customer collections', () => {
   const counts = Object.groupBy ? Object.groupBy(BUILT_IN_CARDS, (card) => card.category) : BUILT_IN_CARDS.reduce((all, card) => ((all[card.category] ||= []).push(card), all), {});
-  assert.equal(Object.keys(counts).length, 6);
-  for (const cards of Object.values(counts)) assert.equal(cards.length, 50);
+  assert.equal(Object.keys(counts).length, 8);
+  for (let index = 1; index <= 5; index += 1) assert.equal(counts[`Classic Taboo ${index}`].length, 40);
+  assert.equal(counts['Esko Products'].length, 50);
+  assert.equal(counts['Technical Jargon'].length, 50);
+  assert.equal(counts['Customer Challenge'].length, 50);
 });
 
 test('theme and difficulty behavior matches the UI', () => {
-  assert.equal(eligibleCards(BUILT_IN_CARDS, 'everyday').length, 150);
+  assert.equal(eligibleCards(BUILT_IN_CARDS, 'everyday').length, 200);
   assert.equal(eligibleCards(BUILT_IN_CARDS, 'technical').length, 100);
   assert.equal(eligibleCards(BUILT_IN_CARDS, 'customer').length, 50);
-  assert.equal(eligibleCards(BUILT_IN_CARDS, 'mixed').length, 300);
+  assert.equal(eligibleCards(BUILT_IN_CARDS, 'mixed').length, 350);
   assert.deepEqual(['beginner', 'intermediate', 'advanced'].map(forbiddenCount), [4, 5, 6]);
 });
 
@@ -47,11 +52,30 @@ test('every JavaScript DOM id exists in its page', () => {
 
 test('mentor words are hidden in markup by default and live selectors exist', () => {
   const html = read('admin.html');
-  assert.match(html, /id="hiddenCard" class="hidden-card"/);
+  assert.match(html, /id="hiddenCard" class="hidden-card is-hidden"/);
   assert.match(html, /id="revealedCard" class="revealed-card is-hidden"/);
   assert.match(html, /id="liveMode"/);
   assert.match(html, /id="liveDifficulty"/);
   assert.match(html, /id="applyChallenge"/);
+});
+
+test('new sessions wait for the mentor and show a personalised engineer greeting', () => {
+  const adminHtml = read('admin.html');
+  const adminScript = read('assets/admin.js');
+  const engineerHtml = read('engineer.html');
+  const engineerScript = read('assets/engineer.js');
+  assert.match(adminHtml, /id="engineerLinkInput"/);
+  assert.match(adminHtml, /id="startSession"/);
+  assert.match(adminHtml, /id="mentorWaitingCard"/);
+  assert.match(adminScript, /\$\('startSession'\)\.addEventListener/);
+  assert.match(adminScript, /Session created\. Share the link, then start/);
+  const createSessionBody = adminScript.slice(adminScript.indexOf('async function createLiveSession'), adminScript.indexOf('function escapeCsvRows'));
+  assert.doesNotMatch(createSessionBody, /drawCard\(/, 'Creating a session must not send a card.');
+  const startHandler = adminScript.slice(adminScript.indexOf("$('startSession').addEventListener"), adminScript.indexOf("$('startTimer').addEventListener"));
+  assert.match(startHandler, /await drawCard\(\)/, 'Start session must send the first card.');
+  assert.match(engineerHtml, /id="waitingGreeting"/);
+  assert.match(engineerScript, /`Welcome, \$\{name\}!`/);
+  assert.match(engineerScript, /state\.phase !== 'active'/);
 });
 
 test('SQL requires authentication for mentor RPCs and limits public state', () => {

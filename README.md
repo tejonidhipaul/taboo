@@ -1,6 +1,16 @@
-# Say It! Communication Challenge — v2.0
+# Say It! Communication Challenge — v2.1.0
 
 A real-time, Taboo-style communication game for one-to-one mentoring with support engineers. The static site runs on Netlify; Supabase provides email/password mentor authentication, protected session state and live updates.
+
+## What changed in v2.1.0
+
+- Engineers now land on a waiting screen instead of seeing the first card immediately.
+- The waiting screen greets the engineer by name.
+- The mentor console has a visible engineer-link field and a dedicated **Start session** button.
+- The first card is sent only when the mentor selects **Start session**.
+- The library now contains 350 cards: 200 from the supplied Taboo PDF, 50 Esko products, 50 technical terms, and 50 customer challenges.
+- Every target and forbidden entry is limited to one or two words.
+- Custom cards and CSV imports now follow the same one-or-two-word rule.
 
 ## What changed in v2.0
 
@@ -11,20 +21,26 @@ A real-time, Taboo-style communication game for one-to-one mentoring with suppor
 - Beginner now shows **4 forbidden words**; Intermediate shows 5; Advanced shows 6.
 - The included SQL works as both a fresh install and a safe upgrade from v1.
 
-The package also retains 300 built-in cards, custom cards and CSV import/export, live timer and score controls, observations, mentor notes, CSV session summaries, Realtime notifications and polling fallback.
+The package also retains custom cards and CSV import/export, live timer and score controls, observations, mentor notes, CSV session summaries, Realtime notifications and polling fallback.
 
 ## Project files
 
 - `index.html` — landing and engineer-link join page
 - `admin.html` — authenticated mentor console
 - `engineer.html` — login-free engineer screen
-- `assets/` — styles, scripts and 300-card library
+- `assets/` — styles, scripts and 350-card library
+- `card-library-v2.1.0.csv` — complete, auditable card list
+- `cards.v2.1.0.json` — structured card data
 - `netlify/functions/config.mjs` — exposes only the browser-safe Supabase URL and publishable key
 - `supabase/schema.sql` — fresh install or in-place v2 upgrade
 - `supabase/upgrade-v2.sql` — duplicate convenience copy for an existing v1 project
 - `tests/` — local validation tests
 
-## A. Upgrade an existing Say It! site
+## Quick update from v2.0.x
+
+This release does not change the database schema. If v2 is already working, replace the repository files with this package and commit once. Do **not** rerun Supabase SQL just for v2.1.0. Then hard-refresh the mentor console.
+
+## A. Upgrade an older v1 Say It! site
 
 Do these steps in order so the new authenticated code and database functions switch together.
 
@@ -37,7 +53,7 @@ Do these steps in order so the new authenticated code and database functions swi
 7. Replace the contents of your GitHub repository with this package while keeping the same repository and Netlify site.
 8. Commit once. Netlify deploys the full update.
 9. Your existing Netlify variables remain valid: `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY`.
-10. Test `/admin.html` in an incognito window: sign in, create a session, copy the engineer link and open it in a second incognito window.
+10. Test `/admin.html` in an incognito window: sign in, create a session, copy the engineer link and open it in a second incognito window. Confirm the waiting screen appears before you select **Start session**.
 
 Existing v1 sessions have no mentor owner. They remain in the table for history, but cannot be resumed in the v2 mentor console. Create a new authenticated session after upgrading.
 
@@ -72,10 +88,11 @@ This project includes a Netlify Function, so use a Git-connected Netlify site (r
 2. Sign in with the mentor account.
 3. Create a session and copy the engineer link.
 4. Open the engineer link in another incognito window or on a phone.
-5. Confirm the engineer sees the card while the mentor console says **Words are hidden**.
-6. Click **View words**, then **Hide words**.
-7. Change the live theme and difficulty, then click **Apply & show next card**. The engineer view should update without a new link.
-8. Test timer, Correct/Skip/Taboo, notes and CSV export.
+5. Confirm the engineer sees a personalised waiting screen and no card.
+6. Select **Start session** in the mentor console and confirm the first card appears automatically.
+7. Confirm the mentor console says **Words are hidden**, then click **View words** and **Hide words**.
+8. Change the live theme and difficulty, then click **Apply & show next card**. The engineer view should update without a new link.
+9. Test timer, Correct/Skip/Taboo, notes and CSV export.
 
 ## How live theme and difficulty changes work
 
@@ -96,7 +113,7 @@ target,theme,forbidden_words,explanation
 Cache,technical,"memory;temporary;browser;fast;store;clear","Explain temporary saved information in plain language."
 ```
 
-Allowed themes are `everyday`, `technical`, and `customer`. Separate 4–6 forbidden words with semicolons. Custom cards are stored in that mentor browser’s local storage; export them before clearing browser data or moving devices.
+Allowed themes are `everyday`, `technical`, and `customer`. Separate 4–6 forbidden entries with semicolons. The target and each forbidden entry must be one or two words. Custom cards are stored in that mentor browser’s local storage; export them before clearing browser data or moving devices.
 
 ## Security design
 
@@ -125,4 +142,5 @@ No `npm install` is needed because the test suite uses only Node’s standard li
 - **“Could not find the function…”** — run the full SQL file in the same Supabase project referenced by Netlify, then run `notify pgrst, 'reload schema';`.
 - **“Invalid login credentials”** — confirm the mentor user exists, is confirmed, and the email/password are exact.
 - **Engineer page does not update immediately** — it polls every three seconds even if Realtime is unavailable. Check the engineer link and Supabase status.
+- **Engineer remains on the waiting screen** — select **Start session** in the mentor console. Creating a session intentionally does not send a card.
 - **Old session cannot be resumed after upgrade** — v1 rows have no authenticated mentor owner; create a new v2 session.

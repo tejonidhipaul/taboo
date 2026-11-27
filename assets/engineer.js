@@ -18,7 +18,9 @@ function render(state) {
   if (state.status === 'ended' || state.phase === 'ended') { showOnly('engineerEnded'); return; }
   const card = state.current_card || {};
   if (state.phase !== 'active' || !card.target) {
-    $('waitingName').textContent = state.engineer_name ? `${state.engineer_name}, your mentor will send the first card.` : 'Your mentor will send the first card.';
+    const name = state.engineer_name?.trim();
+    $('waitingGreeting').textContent = name ? `Welcome, ${name}!` : 'Welcome!';
+    $('waitingName').textContent = 'Your mentor will start the first card when ready.';
     showOnly('engineerWaiting');
     return;
   }

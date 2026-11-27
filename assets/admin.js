@@ -35,6 +35,10 @@ function customCards() {
   } catch { return []; }
 }
 
+function isOneOrTwoWords(value) {
+  return value.trim().split(/\s+/).filter(Boolean).length <= 2;
+}
+
 function saveCustomCards(cards) {
   localStorage.setItem(CUSTOM_KEY, JSON.stringify(cards));
   renderCustomCount();
@@ -109,40 +113,34 @@ async function loadSession(id) {
 function engineerLink() {
   return `${location.origin}${location.pathname.replace(/admin\.html$/, '')}engineer.html?s=${encodeURIComponent(activeSession.id)}`;
 }
-function renderLinkBox() {
-  let box = document.getElementById('engineerLinkBox');
-  if (!box) {
-    box = document.createElement('div');
-    box.id = 'engineerLinkBox';
-    box.className = 'panel';
-    box.style.cssText = 'margin:0 0 20px;padding:16px 20px;';
-    box.innerHTML =
-      '<label for="engineerLinkInput">Engineer link: send this to the engineer</label>' +
-      '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px">' +
-      '<input id="engineerLinkInput" readonly style="flex:1;min-width:240px;margin-top:0">' +
-      '<button id="engineerLinkCopy" type="button" class="btn btn-primary">Copy link</button>' +
-      '</div>';
-    const head = document.querySelector('#livePanel .session-head');
-    if (head) head.after(box); else document.getElementById('livePanel').prepend(box);
-    document.getElementById('engineerLinkInput').addEventListener('click', (e) => e.target.select());
-    document.getElementById('engineerLinkCopy').addEventListener('click', copyEngineerLink);
-  }
-  document.getElementById('engineerLinkInput').value = engineerLink();
+
+function renderEngineerLink() {
+  if (!activeSession) return;
+  $('engineerLinkInput').value = engineerLink();
 }
 
 async function copyEngineerLink() {
-  renderLinkBox();
-  const input = document.getElementById('engineerLinkInput');
-  const link = engineerLink();
+  renderEngineerLink();
+  const input = $('engineerLinkInput');
   input.focus();
   input.select();
-  try { await navigator.clipboard.writeText(link); toast('Engineer link copied.'); return; } catch {}
-  try { if (document.execCommand('copy')) { toast('Engineer link copied.'); return; } } catch {}
+  try {
+    await navigator.clipboard.writeText(input.value);
+    toast('Engineer link copied.');
+    return;
+  } catch {}
+  try {
+    if (document.execCommand('copy')) {
+      toast('Engineer link copied.');
+      return;
+    }
+  } catch {}
   toast('Link selected. Press Ctrl+C to copy it.');
 }
+
 function renderSession() {
   if (!activeSession) return;
-  renderLinkBox();
+  renderEngineerLink();
   $('liveTitle').textContent = `${activeSession.engineer_name || 'Engineer'} · ${THEME_LABELS[activeSession.mode] || activeSession.mode}`;
   $('liveMode').value = activeSession.mode;
   $('liveDifficulty').value = activeSession.difficulty;
@@ -159,12 +157,18 @@ function renderSession() {
 
   const card = activeSession.current_card || {};
   const hasCard = Boolean(card.target);
+  const waiting = activeSession.phase === 'waiting' && activeSession.status !== 'ended';
+  const ended = activeSession.status === 'ended';
+  $('mentorWaitingCard').classList.toggle('is-hidden', !waiting);
+  $('startSession').classList.toggle('is-hidden', !waiting);
+  $('startSession').disabled = !waiting;
+  $('launchStatus').textContent = ended ? 'Session ended' : waiting ? `Waiting for ${activeSession.engineer_name || 'the engineer'}` : 'Session in progress';
   $('toggleWords').disabled = !hasCard;
   $('correctCard').disabled = !hasCard;
   $('skipCard').disabled = !hasCard;
   $('tabooCard').disabled = !hasCard;
-  $('hiddenCard').classList.toggle('is-hidden', wordsRevealed && hasCard);
-  $('revealedCard').classList.toggle('is-hidden', !wordsRevealed || !hasCard);
+  $('hiddenCard').classList.toggle('is-hidden', waiting || (wordsRevealed && hasCard));
+  $('revealedCard').classList.toggle('is-hidden', waiting || !wordsRevealed || !hasCard);
   $('toggleWords').textContent = wordsRevealed ? 'Hide words' : 'View words';
   $('toggleWords').setAttribute('aria-pressed', String(wordsRevealed));
   if (hasCard) {
@@ -174,10 +178,13 @@ function renderSession() {
     $('modelExplanation').textContent = card.explanation || 'Ask the engineer to explain the purpose, context and next step clearly.';
   }
   $('connectionStatus').textContent = activeSession.status === 'ended' ? 'Session ended' : 'Connected · changes sync live';
-  const ended = activeSession.status === 'ended';
   document.querySelectorAll('#livePanel button').forEach((button) => {
     if (!['exportSummary', 'copyLink', 'signOut'].includes(button.id)) button.disabled = ended || button.disabled;
   });
+  $('applyChallenge').disabled = ended || waiting;
+  $('startTimer').disabled = ended || waiting || !hasCard;
+  $('pauseTimer').disabled = ended || waiting || !hasCard;
+  $('resetTimer').disabled = ended || waiting || !hasCard;
 }
 
 async function drawCard(overrides = {}) {
@@ -240,11 +247,13 @@ async function createLiveSession(event) {
       p_mode: $('mode').value,
       p_timer_seconds: Number($('timerSeconds').value)
     });
+    if (!activeSession?.id) throw new Error('The session was created without an ID. Re-run the current Supabase upgrade script, then try again.');
     localStorage.setItem(sessionTokenKey(activeSession.id), adminToken);
     history.replaceState({}, '', `admin.html?s=${activeSession.id}`);
     showOnly('livePanel');
-    await drawCard();
-    toast('Session created. Share the engineer link when ready.');
+    wordsRevealed = false;
+    renderSession();
+    toast('Session created. Share the link, then start when the engineer is ready.');
   } catch (error) {
     $('setupError').textContent = error.message || 'Could not create the session.';
     activeSession = null;
@@ -273,12 +282,14 @@ function exportSummary() {
 
 function addCustomCard(event) {
   event.preventDefault();
+  const target = $('customTarget').value.trim();
   const forbidden = $('customForbidden').value.split(',').map((word) => word.trim()).filter(Boolean);
   if (forbidden.length < 4 || forbidden.length > 6) { $('customStatus').textContent = 'Enter between 4 and 6 forbidden words.'; return; }
+  if (!isOneOrTwoWords(target) || forbidden.some((word) => !isOneOrTwoWords(word))) { $('customStatus').textContent = 'Keep the target and every forbidden entry to one or two words.'; return; }
   const cards = customCards();
   cards.push({
     id: `custom-${crypto.randomUUID()}`,
-    target: $('customTarget').value.trim(),
+    target,
     theme: $('customTheme').value,
     category: 'Custom card',
     level: 'intermediate',
@@ -303,7 +314,7 @@ async function importCustomCards(event) {
     const body = rows[0]?.[0]?.toLowerCase() === 'target' ? rows.slice(1) : rows;
     const imported = body.map((row) => {
       const forbidden = String(row[2] || '').split(/[;|]/).map((word) => word.trim()).filter(Boolean).slice(0, 6);
-      if (!row[0]?.trim() || !['everyday', 'technical', 'customer'].includes(row[1]?.trim()) || forbidden.length < 4 || !row[3]?.trim()) return null;
+      if (!row[0]?.trim() || !isOneOrTwoWords(row[0]) || forbidden.some((word) => !isOneOrTwoWords(word)) || !['everyday', 'technical', 'customer'].includes(row[1]?.trim()) || forbidden.length < 4 || !row[3]?.trim()) return null;
       return { id: `custom-${crypto.randomUUID()}`, target: row[0].trim(), theme: row[1].trim(), category: 'Custom card', level: 'intermediate', forbidden, explanation: row[3].trim() };
     }).filter(Boolean);
     saveCustomCards([...customCards(), ...imported]);
@@ -347,7 +358,20 @@ function wireEvents() {
   $('skipCard').addEventListener('click', () => scoreAndAdvance('skip'));
   $('tabooCard').addEventListener('click', () => scoreAndAdvance('taboo'));
   $('applyChallenge').addEventListener('click', () => drawCard({ mode: $('liveMode').value, difficulty: $('liveDifficulty').value }));
+  $('engineerLinkInput').addEventListener('click', (event) => event.target.select());
   $('copyLink').addEventListener('click', copyEngineerLink);
+  $('startSession').addEventListener('click', async () => {
+    const button = $('startSession');
+    setBusy(button, true, 'Starting…');
+    try {
+      await drawCard();
+      toast('Session started. The first card is now visible to the engineer.');
+    } catch (error) {
+      toast(error.message || 'The session could not be started.');
+    } finally {
+      setBusy(button, false, 'Starting…');
+    }
+  });
   $('startTimer').addEventListener('click', async () => {
     if (activeSession.timer_seconds === 0) { toast('This is an untimed coaching session.'); return; }
     if (activeSession.timer_remaining <= 0) activeSession.timer_remaining = activeSession.timer_seconds;

@@ -72,13 +72,30 @@
     <section id="livePanel" class="is-hidden">
       <div class="session-head">
         <div><p class="eyebrow">Live mentoring session</p><h1 id="liveTitle">Session</h1><p id="connectionStatus" class="status-line" aria-live="polite">Connected</p></div>
-        <div class="session-head-actions"><button id="copyLink" class="btn btn-secondary" type="button">Copy engineer link</button><button id="endSession" class="btn btn-danger" type="button">End session</button></div>
+        <div class="session-head-actions"><button id="endSession" class="btn btn-danger" type="button">End session</button></div>
       </div>
+
+      <section class="panel session-launch-panel" aria-labelledby="engineerLinkLabel">
+        <div class="session-link-wrap">
+          <p class="kicker">Engineer access</p>
+          <label id="engineerLinkLabel" for="engineerLinkInput">Engineer link</label>
+          <div class="session-link-row">
+            <input id="engineerLinkInput" type="text" readonly aria-describedby="engineerLinkHelp">
+            <button id="copyLink" class="btn btn-secondary" type="button">Copy link</button>
+          </div>
+          <p id="engineerLinkHelp" class="microcopy">The engineer sees a personalised waiting screen until you start the session.</p>
+        </div>
+        <div class="session-start-wrap">
+          <span id="launchStatus" class="launch-status" aria-live="polite">Waiting to start</span>
+          <button id="startSession" class="btn btn-accent btn-large" type="button">Start session</button>
+        </div>
+      </section>
 
       <div class="control-grid">
         <section class="panel live-card-panel">
           <div class="panel-title-row"><div><p class="kicker">Mentor preview</p><h2>Current card</h2></div><button id="toggleWords" class="btn btn-secondary" type="button" aria-pressed="false">View words</button></div>
-          <div id="hiddenCard" class="hidden-card"><span class="hidden-icon" aria-hidden="true">•••</span><strong>Words are hidden</strong><p>The engineer can see the card. Reveal it only when you need to check or coach.</p></div>
+          <div id="mentorWaitingCard" class="hidden-card"><span class="hidden-icon waiting-icon" aria-hidden="true">▶</span><strong>The engineer is on the waiting screen</strong><p>Share the link, wait for them to join, then select Start session above.</p></div>
+          <div id="hiddenCard" class="hidden-card is-hidden"><span class="hidden-icon" aria-hidden="true">•••</span><strong>Words are hidden</strong><p>The engineer can see the card. Reveal it only when you need to check or coach.</p></div>
           <div id="revealedCard" class="revealed-card is-hidden">
             <p id="cardCategory" class="pill"></p><h3 id="cardTarget">Ready?</h3><p class="forbidden-label">Do not say</p><div id="forbiddenWords" class="forbidden-list"></div>
             <div class="model-box"><strong>Model explanation</strong><p id="modelExplanation"></p></div>
@@ -104,7 +121,7 @@
 
       <section class="panel notes-panel"><div class="panel-title-row"><div><p class="kicker">Mentoring review</p><h2>Notes &amp; export</h2></div><button id="exportSummary" class="btn btn-secondary" type="button">Export CSV</button></div><textarea id="mentorNotes" rows="5" placeholder="Capture strengths, examples, and one practical action for the next session…"></textarea><div class="button-row end"><button id="saveNotes" class="btn btn-primary" type="button">Save notes</button><span id="saveStatus" class="microcopy" aria-live="polite"></span></div></section>
 
-      <details class="panel library-panel"><summary><strong>Custom card library</strong><span>Add, import or export your own coaching cards</span></summary><div class="custom-grid"><form id="customCardForm" class="stack-form"><label>Target word or scenario<input id="customTarget" required></label><label>Theme<select id="customTheme"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option></select></label><label>Forbidden words (4–6, comma-separated)<input id="customForbidden" required placeholder="word one, word two, word three, word four"></label><label>Model explanation<textarea id="customExplanation" rows="3" required></textarea></label><button class="btn btn-primary" type="submit">Add custom card</button><p id="customStatus" class="microcopy"></p></form><div class="import-box"><h3>CSV tools</h3><p class="muted">Columns: target, theme, forbidden words, explanation.</p><label class="btn btn-secondary file-button">Import CSV<input id="importCsv" type="file" accept=".csv,text/csv"></label><button id="exportCards" class="btn btn-ghost" type="button">Export custom cards</button><button id="clearCards" class="btn btn-danger-outline" type="button">Clear custom cards</button><p id="customCount" class="microcopy">0 custom cards</p></div></div></details>
+      <details class="panel library-panel"><summary><strong>Custom card library</strong><span>Add, import or export your own coaching cards</span></summary><div class="custom-grid"><form id="customCardForm" class="stack-form"><label>Target word (one or two words)<input id="customTarget" required></label><label>Theme<select id="customTheme"><option value="everyday">Everyday English</option><option value="technical">Technical Talk</option><option value="customer">Customer Challenge</option></select></label><label>Forbidden words (4–6, each one or two words)<input id="customForbidden" required placeholder="word one, word two, word three, word four"></label><label>Model explanation<textarea id="customExplanation" rows="3" required></textarea></label><button class="btn btn-primary" type="submit">Add custom card</button><p id="customStatus" class="microcopy"></p></form><div class="import-box"><h3>CSV tools</h3><p class="muted">Columns: target, theme, forbidden words, explanation. Targets and forbidden entries must be one or two words.</p><label class="btn btn-secondary file-button">Import CSV<input id="importCsv" type="file" accept=".csv,text/csv"></label><button id="exportCards" class="btn btn-ghost" type="button">Export custom cards</button><button id="clearCards" class="btn btn-danger-outline" type="button">Clear custom cards</button><p id="customCount" class="microcopy">0 custom cards</p></div></div></details>
     </section>
   </main>
 
